@@ -287,8 +287,8 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                   </div>
 
                   <div class="col-12">
-                  <button type="submit" class="btn btn-success" name="submit" value="submit">Pay</button>
-                  <!-- <button type="submit"><a href="https://paypal.com" target="_blank" class="btn btn-info" name="submit" value="submit">PAYPAl</button></a> -->
+                  <button type="submit" class="btn btn-success" name="submit" value="submit">M~Pay</button>
+                  <button type="submit"><a href="https://paypal.com" target="_blank" class="btn btn-info" name="submit" value="submit">PAYPAl</button></a>
                   </div>
                   </form>
                    <!--bs5 input-->

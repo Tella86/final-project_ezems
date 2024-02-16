@@ -1,0 +1,131 @@
+.navbar-mod .navbar-nav > li > a {
+  padding: 5px 12px;
+  margin: 0;
+  border-radius: 3px;
+  color: #fff;
+  line-height: 24px;
+  display: inline-block;
+}
+
+.navbar-mod .navbar-nav > li > a:hover{
+  background-color: #ff9933;
+  color: #fff;
+}
+
+.navbar-mod {
+  border: none;
+}
+
+.navbar-mod .navbar-brand {
+  font-size: 36px;
+  line-height: 50px;
+  color: #fff;
+}
+
+.navbar-mod .navbar-nav > .active > a,
+.navbar-mod .navbar-nav > .active > a:hover,
+.navbar-mod .navbar-nav > .active > a:focus,
+.navbar-mod .navbar-nav > .open > a,
+.navbar-mod .navbar-nav > .open > a:hover,
+.navbar-mod .navbar-nav > .open > a:focus {
+  background-color: #ff9933;
+  color: #fff;
+}
+
+.navbar-mod .navbar-nav .dropdown-menu {
+  background-color: rgba(0,0,0,.85);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+  border-top: 0;
+  border-radius: 0;
+  left: 0;
+}
+
+.navbar-mod .navbar-nav .dropdown-menu:before{
+  position: absolute;
+  top:0;
+}
+
+.navbar-mod .navbar-nav .dropdown-menu > li > a {
+  padding: 8px 15px;
+  color: #fff;
+}
+
+.navbar-mod .navbar-nav .dropdown-menu > li:hover > a,
+.navbar-mod .navbar-nav .dropdown-menu > li:focus > a,
+.navbar-mod .navbar-nav .dropdown-menu > li.active > a {
+  background-color: #ff9933;
+  color: #fff;
+}
+
+.navbar-mod .navbar-nav .dropdown-menu > li:last-child > a {
+  border-radius: 0 0 3px 3px;
+}
+
+.navbar-mod .navbar-nav .dropdown-menu > li.divider {
+  background-color: transparent;
+}
+
+.navbar-mod .navbar-collapse,
+.navbar-mod .navbar-form {
+  border-top: 0;
+  padding-bottom: 0;
+}
+.btn-mod {
+  padding: 8px 20px;
+  background: #663399;
+  color: #fff;
+  border-radius: 4px;
+  border:none;
+  margin-top: 10px;
+}
+
+
+.btn-mod:hover, 
+.btn-mod:focus{
+  background: #663399;
+  outline: none;
+  box-shadow: none;
+  color: #ff9933;
+} 
+#bottoms {
+  background: #f5f5f5;
+  border-bottom: 5px solid #c52d2f;
+  font-size: 14px;
+  /*height: 15px;*/
+}
+
+/*#bottoms h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size:22px;
+  color: #000;
+}*/
+
+#bottoms ul {
+  list-style: none;
+  padding:-5px 0;
+  margin: 0;
+}
+
+#bottoms ul li {
+  display: block;
+  padding: 0;
+}
+
+#bottoms ul li a {
+  color: #808080;
+}
+
+#bottoms ul li a:hover {
+  color: #c52d2f;
+}
+
+#bottoms .widget {
+  margin-bottom: 0;
+}

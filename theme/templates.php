@@ -62,12 +62,12 @@
                     <?php
 if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
     # code...
-    ?>
-                        <!-- <li class="<?php echo (currentpage_public() == 'index.php') ? "active" : false; ?>"><a href="<?php echo web_root; ?>">Home</a></li>  -->
-                        <li hover="ff9933" class="<?php echo (currentpage_public() == 'student') ? "active" : false; ?>">  <a href="<?php echo web_root; ?>student/">Students</a></li>
+    ?><?php }?>
+                        <!-- <li class="<?php echo (currentpage_public() == 'index.php') ? "active" : false; ?>"><a href="<?php echo web_root; ?>">Home</a></li> -->
+                        <li  hover="ff9933"class="<?php echo (currentpage_public() == 'student') ? "active" : false; ?>">  <a href="<?php echo web_root; ?>student/">Registered Voters</a></li>
                         <!-- <li  class="<?php echo (currentpage_public() == 'event') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>event/">Events</a></li> -->
                         <li  class="<?php echo (currentpage_public() == 'candidate') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>candidate/index.php">Candidates</a></li>
-                    <?php }?>
+
                         <li  class="<?php echo (currentpage_public() == 'attendance') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>attendance/">Attendance</a></li>
                         <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
                         <li class="dropdown">
@@ -94,25 +94,36 @@ if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu"   style="" >
-                               <!--  <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=event">Events</a></li>
-                                <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=attendance">Attendance</a></li>
-                                 -->
-                                <li class="<?php echo ($title == 'Events') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=event">Events</a></li>
-                                <li class="<?php echo ($title == 'Attendance') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=attendance">Attendance</a></li>
+                                <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=event">Events</a></li>
+
+
+                                <!-- <li class="<?php echo ($title == 'Events') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=event">Events</a></li> -->
+                                <!-- <li class="<?php echo ($title == 'Attendance') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=attendance">Attendance</a></li> -->
                                  <?php
 if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
     # code...
     ?>
-                               <!--  <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=candidate">Candidates</a></li>
-                                <li class="<?php echo (currentpage_public() == 'tallyofvotes') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=tallyofvotes">Tally of Votes</a></li>
-                                <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=electionwinner">SSG Election Winners</a></li>
-                                -->
+                                 <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=attendance">Attendance</a></li>
+                                <!-- <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=candidate">Candidates</a></li>
+                                <li class="<?php echo (currentpage_public() == 'tallyofvotes') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=tallyofvotes">Tally of Votes</a></li> -->
+                                <!-- <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=electionwinner">SSG Election Winners</a></li> -->
+
                                 <li class="<?php echo ($title == 'Candidate') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=candidate">Candidates</a></li>
+                                <li class="<?php echo ($title == 'Logs') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=logs">Logs</a></li>
+                                <?php }?>
                                 <li class="<?php echo ($title == 'Tally of Votes') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=tallyofvotes">Tally of Votes</a></li>
                                 <li class="<?php echo ($title == 'Election Winners') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=electionwinners">Election Winners</a></li>
                               <!-- <li><a href="shortcodes.html">Shortcodes</a></li> -->
-                                <li class="<?php echo ($title == 'Logs') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=logs">Logs</a></li>
-                             <?php }?>
+                              <?php
+if ($_SESSION['ACCOUNT_TYPE'] == 'Student') {
+    # code...
+    ?>
+                         <li  hover="ff9933"class="<?php echo (currentpage_public() == 'student') ? "active" : false; ?>">  <a href="<?php echo web_root; ?>student/">Students</a></li>
+                        <!-- <li  class="<?php echo (currentpage_public() == 'event') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>event/">Events</a></li> -->
+                        <li  class="<?php echo (currentpage_public() == 'candidate') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>candidate/index.php">Candidates</a></li>
+
+
+ <?php }?>
                             </ul>
                         </li>
                     <!--     <li><a href="blog.html">Blog</a></li>

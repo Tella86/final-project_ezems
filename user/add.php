@@ -1,12 +1,12 @@
-                      <?php 
-                       if (!isset($_SESSION['ACCOUNT_ID'])){
-                          redirect(web_root."index.php");
-                         }
+                      <?php
+if (!isset($_SESSION['ACCOUNT_ID'])) {
+    redirect(web_root . "index.php");
+}
 
-                      // $autonum = New Autonumber();
-                      // $res = $autonum->single_autonumber(2);
+// $autonum = New Autonumber();
+// $res = $autonum->single_autonumber(2);
 
-                       ?> 
+?>
 
 <section id="feature" class="transparent-bg">
         <div class="container">
@@ -14,23 +14,23 @@
                  <h2 class="page-header">Add New User</h2>
                 <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> -->
             </div>
-               
+
             <div class="row">
                 <div class="features">
                   <div class="wow fadeInDown">
                      <form class="form-horizontal span6" action="controller.php?action=add" method="POST">
- 
+
                                 <!-- <div class="form-group">
                                 <div class="col-md-8">
                                   <label class="col-md-4 control-label" for=
                                   "user_id">User Id:</label>
 
-                                  <div class="col-md-8"> --> 
+                                  <div class="col-md-8"> -->
                                     <!--  <input class="form-control input-sm" id="user_id" name="user_id" placeholder=
                                         "Account Id" type="hidden" value="<?php echo $res->AUTO; ?>"> -->
                                 <!--   </div>
                                 </div>
-                              </div> -->           
+                              </div> -->
                                <div class="form-group">
                                 <div class="col-md-8">
                                   <label class="col-md-4 control-label" for=
@@ -88,10 +88,10 @@
                                 </div>
                               </div>
 
-                                <?php 
-                                  if ($_SESSION['ACCOUNT_TYPE']=='Administrator') {
-                                        # code...
-                                 ?>
+                                <?php
+if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
+    # code...
+    ?>
 
 
                               <div class="form-group">
@@ -102,15 +102,17 @@
                                   <div class="col-md-8">
                                    <select class="form-control input-sm" name="U_ROLE" id="U_ROLE">
                                       <option value="Administrator"  >Administrator</option>
-                                      <!-- <option value="Staff"  >Staff</option>  -->
-                                      <option value="SSG">E.Z.E.M.S</option>
-                                      <!-- <option value="Encoder" >Encoder</option> -->
-                                    </select> 
+                                      <option value="Staff"  >Staff</option>
+                                      <option value="Student">Student</option>
+                                      <option value="Encoder" >Encoder</option>
+                                      <option value="Register" >Register</option>
+
+                                    </select>
                                   </div>
                                 </div>
                               </div>
 
-                                <?php } ?>
+                                <?php }?>
 
                           <div class="form-group">
                                 <div class="col-md-8">
@@ -118,13 +120,13 @@
                                   "idno"></label>
 
                                   <div class="col-md-8">
-                                   <button class="btn btn-primary btn-sm save" id="save" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>  Save</button> 
+                                   <button class="btn btn-primary btn-sm save" id="save" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>  Save</button>
                                       <!-- <a href="index.php" class="btn btn-info"><span class="fa fa-arrow-circle-left fw-fa"></span></span>&nbsp;<strong>List of Users</strong></a> -->
                                    </div>
                                 </div>
                               </div>
 
-                           
+
                           <div class="form-group">
                             <div class="rows">
                               <div class="col-md-6">
@@ -132,31 +134,30 @@
                                 "otherperson"></label>
 
                                 <div class="col-md-6">
-                               
+
                                 </div>
                               </div>
 
                               <div class="col-md-6" align="right">
-                               
+
 
                                </div>
-                              
+
                           </div>
                           </div>
 
                           </form>
 
-                  </div> 
+                  </div>
                 </div><!--/.services-->
-            </div><!--/.row-->  
+            </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#feature-->
- 
+
 
     <!-- <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-        
-        </div> 
+
+        </div>
   </section> --><!--/#bottom-->
 
- 

@@ -58,10 +58,19 @@ if (isset($_SESSION['CVCodeNo'])) {
 			border:none;
 			cursor:pointer;
 		}
+    a{
+      font-size: 16px;
+      color: black;
+    }
 </style>
 </head>
 <body>
-
+								<div class="navbar navbar-inner block-header">
+									<div class="container">
+									<div id="" class="muted pull-right">
+									 <a id="return" data-placement="left" title="Click to Return" href="/sems/m.php"><i class="icon-arrow-left"></i> Back</a>
+									</div>
+									</div>
 <header></header>
 <fieldset>
 <form method="post" action="controller.php?action=login">

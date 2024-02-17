@@ -10,7 +10,7 @@
 <?php
 function RandomSourceCode()
 {
-    $var = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    $var = "012STU34ABCDEFGHIJK789LMNOPQR56VWXYZ";
     srand((double) microtime() * 1000000);
     $i = 0;
     $rand_Code = '';

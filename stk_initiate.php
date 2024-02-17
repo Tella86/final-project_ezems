@@ -8,13 +8,13 @@ if (isset($_POST['submit'])) {
     date_default_timezone_set('Africa/Nairobi');
 
     # access token
-    $consumerKey = 'IYihST9GrQXHsSO2sNaAIDvaeBG104EO1JR5bsRpoPWNAOeQ'; //Fill with your app Consumer Key
-    $consumerSecret = '171P6SB9f9RntkqFaaOBKRlehIOs4HujTTLDbqdgYltLy0fIsqcXQfDG9kGvwQIe'; // Fill with your app Secret
+    $consumerKey = 'lTPKZzbSmeoT0Hx2kJMGOMQwvGUCvI7G'; //Fill with your app Consumer Key
+    $consumerSecret = 'gp7uF5GfK1EoBIjI'; // Fill with your app Secret
 
     # define the variales
     # provide the following details, this part is found on your test credentials on the developer account
-    $BusinessShortCode = '174379';
-    $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
+    $BusinessShortCode = '7149030';
+    $Passkey = '1059e4e89b1ac704ea6b1b327df0ccaca297e5b31b9ea323c47cc0d87f31bfe1';
 
     /*
     This are your info, for
@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
 
     $PartyA = $_POST['phone']; // This is your phone number,
     $AccountReference = 'EZEMS';
-    $TransactionDesc = 'Test Payment';
+    $TransactionDesc = 'Payment';
     $Amount = $_POST['amount'];
 
     # Get the timestamp, format YYYYmmddhms -> 20181004151020
@@ -41,8 +41,8 @@ if (isset($_POST['submit'])) {
     $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-    $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-    $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+    $access_token_url = 'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+    $initiate_url = 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
     # callback url
     $CallBackURL = 'https://shimmering-abaft-pegasus.glitch.me/webhook';
@@ -68,13 +68,13 @@ if (isset($_POST['submit'])) {
 
     $curl_post_data = array(
         //Fill in the request parameters with valid values
-        'BusinessShortCode' => $BusinessShortCode,
+        'BusinessShortCode' => '7149030',
         'Password' => $Password,
         'Timestamp' => $Timestamp,
-        'TransactionType' => 'CustomerPayBillOnline',
-        'Amount' => $Amount,
+        'TransactionType' => 'CustomerBuyGoodsOnline',
+        'Amount' => '35000',
         'PartyA' => $PartyA,
-        'PartyB' => $BusinessShortCode,
+        'PartyB' => '7136632',
         'PhoneNumber' => $PartyA,
         'CallBackURL' => $CallBackURL,
         'AccountReference' => $AccountReference,
@@ -89,8 +89,5 @@ if (isset($_POST['submit'])) {
     print_r($curl_response);
 
     echo $curl_response;
-
-    // header('location: login.php');
     header("Location: confirm_payment.php");
-
 }

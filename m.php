@@ -5,6 +5,9 @@ require_once "include/initialize.php";
   <?php
 if (isset($_SESSION['ACCOUNT_ID'])) {
     redirect(web_root . "index.php");
+    $confirmation = RandomSourceCode();
+    echo $confirmation;
+    $_SESSION['confirmation'] = $confirmation;
 }
 
 ?>
@@ -205,8 +208,9 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
         <style>
             /* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"); */
             body {
-              background-color: #eaedf4;
+              /* background-color: #eaedf4; */
               font-family: "Rubik", sans-serif;
+              background-color: #74992e;
 
             }
 
@@ -221,11 +225,11 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
               border: none;
               border-radius: 20px;
               background: #f3f4f6;
-              padding: 5px 20px 5px;
+              /* padding: 5px 20px 5px; */
               color: #8d9297;
             }
             .justify-content-around span {
-              font-size: 12px;
+              font-size: 1px;
             }
 
             .justify-content-around div:hover {
@@ -251,19 +255,27 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
               background-color: green !important;
             }
 
+            h9{
+              font-size: 12px;
+            }
+            a{
+              font-size: 12px;
+              color: black;
+            }
+
 
           </style>
           <div class="span6">
         <div class="pull-right">
         <?php check_message();?>
-                <div id="home" ><!--/. tells about what would be the log-in appearance -->
+                <div id="home" >
         <div class="overlay">
 
         <body oncontextmenu="return false" class="snippet-body">
         <div class="container d-flex justify-content-center">
                 <div class="card mt-5 px-3 py-4">
                 <div class="d-flex flex-row justify-content-around">
-                <div class="mpesa"><h2>Full Package</h2><h2>Ksh.50,000/</h2></div>
+                <div class="mpesa"><h2>One Day Event Package</h2><h2>Ksh.35,000/</h2></div>
 
                     <div class="media mt-4 pl-2">
                     <img src="mpesa.png" class="mr-1" height="75" />
@@ -272,17 +284,16 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
 
                     </div>
                   </div>
-                  <div> <h9>You will receive a popup on your phone. Enter your</h9> <b>MPESA PIN</b></p>
-                  <div class="media mt-3 pl-2"></div><h6>Enter Amount & Number</h6>
-                   <form class="row g-3" action="./stk_initiate.php" method="POST">
-
-                  <div class="col-12">
-                    <label for="inputAddress" class="form-label">Amount</label>
-                    <input type="text" class="form-control" name="amount" placeholder="50000" required>
+                  <div> <h7>You will receive a popup on your phone</h7>
                   </div>
+                <div>
+                  <h7> Enter your MPESA PIN</h7>
+                </div>
+                  <div class="media mt-3 pl-2"></div><h6>Enter Phone Number</h6>
+                   <form class="row g-3" action="./stk_initiate.php" method="POST">
                   <div class="col-12">
-                  <label for="inputAddress2" class="form-label" >Phone Number</label>
-
+                  </div>
+                  <i class="fa fa-user icon"></i>
                   <input id="cardnumber" type="text" class="form-control" name="phone"  maxlength="13" placeholder="254700000000" required>
                   </div>
 
@@ -290,6 +301,16 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                   <button type="submit" class="btn btn-success" name="submit" value="submit">M~Pay</button>
                   <button type="submit"><a href="https://paypal.com" target="_blank" class="btn btn-info" name="submit" value="submit">PAYPAl</button></a>
                   </div>
+                  <div class="container d-flex justify-content-center">
+                  <div class="card mt-5 px-3 py-4">
+                  <div class="d-flex flex-row justify-content-around">
+                  <div class="mpesa"><h9>By Clicking The M~PAY BUTTON, You Agree to Our</h9>
+                  <a href="">Terms And condition</a> and <a href="">Policy Privacy</a>
+                  <h9>Already Paid Click? <a href="login.php">Login Here</a>
+                  <h9>You Want To Vote</h9><a href="../sems/vote/index.php">VOTE HERE</a>
+                  <h9>View Tally</h9><a href="">View Tally</a>
+                  </div>
+
                   </form>
                    <!--bs5 input-->
               </div>

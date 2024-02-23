@@ -308,7 +308,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                   <a href="">Terms And condition</a> and <a href="">Policy Privacy</a>
                   <h9>Already Paid Click? <a href="login.php">Login Here</a>
                   <h9>You Want To Vote</h9><a href="../sems/vote/index.php">VOTE HERE</a>
-                  <h9>View Tally</h9><a href="../sems/report/index.php?view=tallyofvotes">View Tally</a>
+                  <h9>View Tally</h9><a href="../sems/report/index.php">View Tally</a>
                   </div>
 
                   </form>

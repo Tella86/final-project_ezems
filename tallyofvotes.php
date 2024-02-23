@@ -1,8 +1,9 @@
 
  <?php
-if (!isset($_SESSION['ACCOUNT_ID'])) {
-    // redirect(web_root . "/report/index.php");
-}
+require_once "include/initialize.php";
+// if (!isset($_SESSION['ACCOUNT_ID'])) {
+//     redirect(web_root . "/report/index.php");
+// }
 
 ?>
 <style type="text/css">

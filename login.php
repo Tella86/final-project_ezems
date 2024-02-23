@@ -1,10 +1,10 @@
 <?php
 require_once "include/initialize.php";
-
 ?>
   <?php
 if (isset($_SESSION['ACCOUNT_ID'])) {
     redirect(web_root . "index.php");
+
 }
 ?>
 
@@ -102,6 +102,9 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
         <div class="overlay">
         <!--/. Starting code for the log-in interface appearance -->
            <form id="login_form1" class="form-signin" method="post">
+           <?php if ($message != "") {?>
+            <div id="message" class="blink_text"><?php echo $message; ?></div>
+            <?php }?>
         <h3 class="form-signin-heading" style="color:#fff">
           <i class="icon-lock"></i> Please Login
         </h3>

@@ -68,7 +68,7 @@ require_once "include/initialize.php";
 								  </thead>
 								  <tbody>
 
-                  <tr><th colspan="2"><h4 align="center">President</h4></th></tr>
+                  <tr><th colspan="2"><h4 align="center">SOFTWARE PROGRAMER</h4></th></tr>
                   <tr>
 
 

@@ -16,7 +16,10 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content="">
 <meta name="author" content="">
 <title>PAY EZEMS&nbsp;</title>
@@ -189,7 +192,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                       </div>
                     </div>
               </div>
-            <?php //include('title_index.php'); ?>
+
         </div>
       </div>
 

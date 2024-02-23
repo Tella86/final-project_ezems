@@ -9,6 +9,10 @@ if (!isset($_SESSION['CVCodeNo'])) {
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -56,7 +60,7 @@ if (!isset($_SESSION['CVCodeNo'])) {
                              <div class="form-group">
                               <div class="col-md-12">
                                 <label class="col-md-4 control-label" for=
-                                "President">President :</label>
+                                "President">SOFTWARE PROGRAMER :</label>
 
                                 <div class="col-md-8">
 

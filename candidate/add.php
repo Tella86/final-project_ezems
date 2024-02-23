@@ -78,6 +78,9 @@ foreach ($cur as $result) {
                                   <select class="form-control select2" name="PartyList">
                                       <option>Select</option>
                                       <option value="UDA">UDA</option>
+                                      <option value="WEB TECH">WEB TECH</option>
+                                      <option value="PYTHON DJANGO">PYTHON DJANGO</option>
+                                      <option value="DART FLUTTER">DART FLUTTER</option>
                                       <option value="ODM">ODM</option>
                                       <option value="WAIPA">WAIPA</option>
                                       <option value="NARK KENYA">NARK KENYA</option>

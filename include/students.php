@@ -26,11 +26,11 @@ class Student
         return $row_count;
     }
 
-    public function find_all_student($lname = "", $Firstname = "", $mname = "")
+    public function find_all_student($lname = "", $Firstname = "", $mname = "", $sphoto = "")
     {
         global $mydb;
         $mydb->setQuery("SELECT * FROM " . self::$tblname . "
-			WHERE Lastname = '{$lname}' AND Firstname= '{$Firstname}' AND MNAME='{$mname}'");
+			WHERE Lastname = '{$lname}' AND Firstname= '{$Firstname}' AND MNAME='{$mname}' AND SPhoto='{$sphoto}");
         $cur = $mydb->executeQuery();
         $row_count = $mydb->num_rows($cur);
         return $row_count;
@@ -58,7 +58,7 @@ class Student
         $mydb->setQuery("SELECT * FROM `tblstudent` WHERE `StudentID`='" . $U_USERNAME . "'");
         $cur = $mydb->executeQuery();
         if ($cur == false) {
-            die(mysql_error());
+            die(mysqli_error());
         }
         $row_count = $mydb->num_rows($cur); //get the number of count
         if ($row_count == 1) {
@@ -71,6 +71,7 @@ class Student
             $_SESSION['MI'] = $student_found->Middlename;
             $_SESSION['Address'] = $student_found->Address;
             $_SESSION['CourseCode'] = $student_found->CourseCode;
+            $_SESSION['photo'] = $student_found->photo;
             return true;
         } else {
             return false;

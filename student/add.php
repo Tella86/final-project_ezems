@@ -26,12 +26,12 @@ $_SESSION['confirmation'] = $confirmation;
             <div class="row">
                 <div class="features">
 
-                        <form class="form-horizontal span6  wow fadeInDown" action="controller.php?action=add" method="POST">
+                        <form class="form-horizontal span6  wow fadeInDown" action="controller.php?action=add" method="POST" enctype="multipart/form-data">
                         <!-- <form class="form-horizontal span6  wow fadeInDown" action="#" method="POST">  -->
                              <div class="form-group">
                               <div class="col-md-8">
                                 <label class="col-md-4 control-label" for=
-                                "StudentID">Student ID:</label>
+                                "StudentID"></label>
 
                                 <div class="col-md-8">
                                    <!-- <input type="text" id="mytextbox" onkeyup="javascript:capitalize(this.id, this.value);"> -->
@@ -223,8 +223,6 @@ foreach ($cur as $result) {
 }
 ?>
 
-
-
                                   </select>
                                 </div>
                               </div>
@@ -252,7 +250,8 @@ foreach ($cur as $result) {
                                   "image">Upload Picture:</label>
 
                                   <div class="col-md-8">
-                                  <input type="file" name="image" value="" id="image"/>
+                                  <!-- <input type="file" name="image" value="image" id="image"/> -->
+                                  <input type="file" name="image" id="image" accept="image/*" value="image" required>
                                   </div>
                                 </div>
                               </div>

@@ -61,17 +61,18 @@ if (!isset($_SESSION['CVCodeNo'])) {
                                 <div class="col-md-8">
 
                                   <select class="form-control select2" name="President">
+                                  <!-- <input type="radio" name="President" value="option1"> -->
                                     <option value="">Select</option>
                                       <?php
 $query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='President'";
 $mydb->setQuery($query);
 $cur = $mydb->loadResultList();
-
 foreach ($cur as $result) {
     echo '<option value=' . $result->StudentID . '>' . $result->Lastname . ', ' . $result->Firstname . '</option>';
-
+    echo $row['StudPhoto'];
 }
 ?>
+
                                   </select>
 
                                 </div>

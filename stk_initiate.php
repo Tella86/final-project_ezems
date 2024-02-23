@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
         'PartyB' => '7136632',
         'PhoneNumber' => $PartyA,
         'CallBackURL' => $CallBackURL,
-        'AccountReference' => $AccountReference,
+        'AccountReference' => 'EZEMS',
         'TransactionDesc' => $TransactionDesc,
     );
 

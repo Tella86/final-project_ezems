@@ -116,11 +116,27 @@ foreach ($cur as $result) {
                                 <div class="col-md-8">
                                 <textarea class="form-control input-sm" id="Platform" name="Platform" placeholder=
                                       "Platform"   required></textarea>
-                                </div>
+                                <!-- </div>
                               </div>
                             </div>
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                  <label class="col-md-4" align = "left"for=
+                                  "image">Upload Picture:</label>
 
-                       <div class="form-group">
+                                  <div class="col-md-8">
+                                  <input type="file" name="image" value="jpg" id="image"/>
+                                  </div>
+                                </div>
+                              </div> -->
+
+                              <!-- <div class="control-group">
+                            <label class="control-label" for="input01">Image:</label>
+                              <div class="controls">
+                            <input type="file" name="image" class="font">
+                              </div>
+                              </div> -->
+                              <div class="form-group">
                               <div class="col-md-8">
                                 <label class="col-md-4 control-label" for=
                                 "idno"></label>

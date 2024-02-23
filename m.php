@@ -299,7 +299,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
 
                   <div class="col-12">
                   <button type="submit" class="btn btn-success" name="submit" value="submit">M~Pay</button>
-                  <button type="submit"><a href="https://paypal.com" target="_blank" class="btn btn-info" name="submit" value="submit">PAYPAl</button></a>
+                  <button type="submit"><a href="https://paypal.com" target="_blank" class="btn btn-info" name="submit" value="submit">PAYPAL</button></a>
                   </div>
                   <div class="container d-flex justify-content-center">
                   <div class="card mt-5 px-3 py-4">
@@ -308,7 +308,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                   <a href="">Terms And condition</a> and <a href="">Policy Privacy</a>
                   <h9>Already Paid Click? <a href="login.php">Login Here</a>
                   <h9>You Want To Vote</h9><a href="../sems/vote/index.php">VOTE HERE</a>
-                  <h9>View Tally</h9><a href="">View Tally</a>
+                  <h9>View Tally</h9><a href="../sems/report/index.php?view=tallyofvotes">View Tally</a>
                   </div>
 
                   </form>

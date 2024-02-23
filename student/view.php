@@ -1,13 +1,12 @@
-<?php  
-    $student = New Student();
-    $res = $student->select_student($_GET['id']);
+<?php
+$student = new Student();
+$res = $student->select_student($_GET['id']);
 
-     
-    $course = New Course();
-    $resCourse = $course->single_course($res->CourseID);
+$course = new Course();
+$resCourse = $course->single_course($res->CourseID);
 
-   ?>
-    
+?>
+
   <style type="text/css">
   #img_profile{
     width: 100%;
@@ -25,51 +24,51 @@
 <section id="feature" class="transparent-bg">
         <div class="container">
            <div class="center wow fadeInDown">
-                 <h2 class="page-header">Student Profile</h2>
+                 <h2 class="page-header">Voter Profile</h2>
                 <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> -->
             </div>
-               
+
             <div class="row">
                 <div class="features">
                       <div class="col-sm-3 wow fadeInDown">
 
-                              <div class="panel">            
+                              <div class="panel">
                                 <div id="img_profile" class="panel-body">
                                 <a href="" data-target="#studentmodal" data-toggle="modal" >
-                                <img title="profile image" class="img-hover"    src="<?php echo web_root. 'student/'.  $res->StudPhoto; ?>">
+                                <img title="profile image" class="img-hover"    src="<?php echo web_root . 'student/' . $res->StudPhoto; ?>">
                                 </a>
                                  </div>
                               <ul class="list-group">
-                              
-                             
-                                   <li class="list-group-item text-right"><span class="pull-left"><strong>Real name</strong></span> <?php echo $res->Firstname .' '.$res->Lastname; ?> </li>
+
+
+                                   <li class="list-group-item text-right"><span class="pull-left"><strong>Real name</strong></span> <?php echo $res->Firstname . ' ' . $res->Lastname; ?> </li>
                                   <li class="list-group-item text-right"><span class="pull-left"><strong>Course</strong></span> <?php echo $resCourse->CourseCode; ?> </li>
                                   <li class="list-group-item text-right"><span class="pull-left"><strong>Year Level</strong></span> <?php echo $res->YearLevel; ?> </li>
-                                    
-                                
-                              </ul> 
-                                    
+
+
+                              </ul>
+
                             </div>
                         </div>
-                             
+
                             <!--/col-3-->
-                      <div class="col-sm-9 wow fadeInDown"> 
+                      <div class="col-sm-9 wow fadeInDown">
                        <!-- `IDNO`, `Firstname`, `Lastname`, `MNAME`, `SEX`, `BDAY`, `BPLACE`, `STATUS`, `AGE`, `NATIONALITY`,
                       `RELIGION`, `CONTACT_NO`, `HOME_ADD`, `EMAIL`, `ACC_PASSWORD`, `student_status`, `schedID`, `course_year` -->
                       <?php
-                      $currentyear = date('Y');
-                      $nextyear =  date('Y') + 1;
-                      $sy = $currentyear .'-'.$nextyear;
-                      $_SESSION['SY'] = $sy;
-                      // $newDate    = Carbon::createFromFormat('Y-m-d',$_SESSION['SY'] )->addYear(1);
+$currentyear = date('Y');
+$nextyear = date('Y') + 1;
+$sy = $currentyear . '-' . $nextyear;
+$_SESSION['SY'] = $sy;
+// $newDate    = Carbon::createFromFormat('Y-m-d',$_SESSION['SY'] )->addYear(1);
 
-                      ?>
+?>
 
 
                       <form action="controller.php?action=edit" class="form-horizontal" method="post" >
                       <div class="table-responsive">
-                      <div class="col-md-8"><h2>Student Information</h2></div>
-                        <table class="table"> 
+                      <div class="col-md-8"><h2>Voter Information</h2></div>
+                        <table class="table">
                         <tr>
                             <td><label>Id :</label></td>
                             <td >
@@ -81,55 +80,55 @@
                           <tr>
                             <td><label>Name :</label></td>
                             <td>
-                              <label><?php echo  $res->Firstname; ?></label>
-                            </td> 
+                              <label><?php echo $res->Firstname; ?></label>
+                            </td>
                             <td colspan="2">
-                              <label><?php echo $res->Lastname; ?></label> 
-                            </td> 
+                              <label><?php echo $res->Lastname; ?></label>
+                            </td>
                             <td>
-                              <label><?php echo $res->Middlename; ?></label> 
+                              <label><?php echo $res->Middlename; ?></label>
                             </td>
                           </tr>
                            <tr style="background:#eee;">
                             <td></td>
-                            <td style="padding:0;"> Firstname</td> 
-                            <td style="padding:0;" colspan="2">Lastname</td> 
+                            <td style="padding:0;"> Firstname</td>
+                            <td style="padding:0;" colspan="2">Lastname</td>
                             <td style="padding:0;"> Midlename</td>
                           </tr>
                           <tr>
                             <td><label>Address :</label></td>
                             <td colspan="5"  >
-                              <label><?php echo $res->Address; ?></label> 
-                            </td> 
+                              <label><?php echo $res->Address; ?></label>
+                            </td>
                           </tr>
                           <tr>
-                            <td ><label>Sex :</label></td> 
+                            <td ><label>Sex :</label></td>
                             <td colspan="2">
                               <label><?php echo $res->Gender ?></label>
                             </td>
 
                             <td ><label>Date of Birth :</label></td>
-                            <td colspan="2"> 
-                            <div class="input-group " > 
-                                <label><?php echo date_format(date_create($res->BirthDate),'m/d/Y'); ?> </label>  
-                                <i class="fa fa-calendar"></i> 
-                             </div>             
+                            <td colspan="2">
+                            <div class="input-group " >
+                                <label><?php echo date_format(date_create($res->BirthDate), 'm/d/Y'); ?> </label>
+                                <i class="fa fa-calendar"></i>
+                             </div>
                             </td>
-                             
-                          </tr> 
+
+                          </tr>
                           <tr>
                           <td><label>Age :</label></td>
                             <td colspan="2" >
-                              <label><?php echo $res->Age; ?></label> 
+                              <label><?php echo $res->Age; ?></label>
                                   </td>
                            <td  ><label>Contact No.</label></td>
                             <td colspan="2">
-                              <label><?php echo $res->ContactNo; ?></label> 
+                              <label><?php echo $res->ContactNo; ?></label>
                                   </td>
-                          </tr>  
+                          </tr>
                           <tr>
                           <td></td>
-                            <td colspan="5">  
+                            <td colspan="5">
                               <!-- <button class="btn btn-success btn-lg" name="save" type="submit">Save</button> -->
                             </td>
                           </tr>
@@ -137,24 +136,24 @@
                       </div>
                       </form>
                       </div>
- 
-       
-                
+
+
+
                 </div><!--/.services-->
-            </div><!--/.row-->  
+            </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#feature-->
- 
+
 
     <!-- <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-        
-        </div> 
+
+        </div>
   </section> --><!--/#bottom-->
 
 
 
- 
+
   <!-- Modal -->
                     <div class="modal fade" id="studentmodal" tabindex="-1">
                         <div class="modal-dialog">
@@ -170,14 +169,14 @@
                                 "post">
                                     <div class="modal-body">
                                         <div class="form-group">
-                                            <div class="rows"> 
+                                            <div class="rows">
                                                 <div class="col-md-12">
                                                     <div class="rows">
                                                         <div class="col-md-8">
 
-                                                            <input type="hidden" name="StudentID" id="StudentID" value="<?php echo $res->ID; ?>">
+                                                            <input type="hidde" name="StudentID" id="StudentID" value="<?php echo $res->ID; ?>">
                                                               <input name="MAX_FILE_SIZE" type=
-                                                            "hidden" value="1000000"> <input id=
+                                                            "hidde" value="1000000"> <input id=
                                                             "photo" name="photo" type=
                                                             "file">
                                                         </div>

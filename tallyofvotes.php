@@ -296,7 +296,7 @@ foreach ($cur as $row) {
 ?>
 
                    </table>
-                   <a class="btn btn-primary" target="_blank" href="tallyofvotes_print.php">Print</a>
+                   <a class="btn btn-primary" target="_blank" href="m.php">Home</a>
                  </div><!--/.services-->
               </div><!--/.row-->
           </div><!--/.container-->

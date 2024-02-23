@@ -1,7 +1,7 @@
 
  <?php
 if (!isset($_SESSION['ACCOUNT_ID'])) {
-    redirect(web_root . "./sems/report/index.php");
+    redirect(web_root . "/report/index.php");
 }
 
 ?>

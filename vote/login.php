@@ -70,7 +70,7 @@ if (isset($_SESSION['CVCodeNo'])) {
 									<div id="" class="muted pull-right">
                   <div>
                   <button>
-									 <a id="return" data-placement="left" title="Click to Return" href="/sems/m.php"><i class="icon-arrow-left"></i> Back</a><br>
+									 <a id="return" data-placement="left" title="Click to Return" href="/sems/m.php"><i class="icon-arrow-left"></i> Home</a><br>
                    </button>
                   </div>
                   <div>

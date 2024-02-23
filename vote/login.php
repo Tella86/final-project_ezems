@@ -69,6 +69,7 @@ if (isset($_SESSION['CVCodeNo'])) {
 									<div class="container">
 									<div id="" class="muted pull-right">
 									 <a id="return" data-placement="left" title="Click to Return" href="/sems/m.php"><i class="icon-arrow-left"></i> Back</a>
+                   <a id="return" data-placement="left" title="Click to Return" href="/sems/tallyofvotes.php"><i class="icon-arrow-left"></i> View results</a>
 									</div>
 									</div>
 <header></header>

@@ -50,10 +50,10 @@ if (isset($_SESSION['CVCodeNo'])) {
     }
 	.button
 		{
-			width:110px;
+			width:100px;
 			height:50px;
 			background: url("../images/login.png");
-			background-size: 110px 50px;
+			background-size: 100px 50px;
 			background-repeat: no-repeat;
 			border:none;
 			cursor:pointer;
@@ -83,7 +83,7 @@ if (isset($_SESSION['CVCodeNo'])) {
 <fieldset>
 <form method="post" action="controller.php?action=login">
 <?php check_message();?>
-<img src = "../images/law.jpg" height="200px" width="500px" alt="site logo">
+<img src = "../images/law.jpg" height="170px" width="500px" alt="site logo">
 <div id="page">
   <div id="header">
     <div id="container" align="center">

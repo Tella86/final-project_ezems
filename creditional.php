@@ -38,7 +38,7 @@ include_once "confirm_payment.php";
             <!-- <center> -->
             <h6>Username:guest</h6>
             <h6>password:Guest@123</h6>
-            <H6>CALL US 0101086123</H6>
+
 
             <!-- </center> -->
         </body>

@@ -58,7 +58,8 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                               <style>
                                   * {
                                     padding: 0;
-                                    margin: 0;
+                                    margin: 0px;
+
                                   }
                                 /* // Developed by http://ezems.com/ */
 
@@ -91,7 +92,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                                     transition: all 1s ease-in-out;
                                     color: #8254ff;
                                     position: absolute;
-                                    top: 10px;
+                                    top: 0px;
                                     bottom: 0;
                                     left: 0;
                                     right: 0;
@@ -101,26 +102,28 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
 
                                   &:hover {
                                     &::before {
-                                      width: 100%;
+                                      width: 10%;
                                     }
                                   }
                                 }
 
                                 nav {
-                                  margin: 25px;
+                                  margin: 2.5px;
                                   background: green;
-                                  padding: 16px;
+                                  padding: 1pxpx;
+                                  top: 1px;
                                   .menuItems {
                                     list-style: none;
                                     display: flex;
+                                    border-radius:  10px;
 
                                     li {
-                                      margin: 8px;
+                                      margin: 11px;
 
                                       a {
                                         text-decoration: none;
                                         color: white;
-                                        font-size: 14px;
+                                        font-size: 12px;
                                         font-weight: 10px;
                                         /* transition: all 0.0s ease-in-out; */
                                         position: relative;
@@ -131,7 +134,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                                           transition: 0.5s;
                                           color: #8254ff;
                                           position: absolute;
-                                          top: 1PX;
+                                          top: auto;
                                           bottom: 0;
                                           left: 0;
                                           right: 0;
@@ -154,7 +157,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                                     </style>
                         <!-- Developed by http://ezemst.com/ -->
 <div></div>
-<p data-item='EZEMS'>EZEMS</p>
+<!-- <p data-item='EZEMS'>EZEMS</p> -->
 
 <section>
   <div></div>
@@ -164,10 +167,11 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
       <li><a href='about.php' data-item=''>Mission | Vision</a></li>
       <li><a href='history.php' data-item=''>Company History</a></li>
       <li><a href='developers.php' data-item=''>Developers</a></li>
+      <li><a href='./contact-us/index.php' data-item=''>Contact Us</a></li>
       <li><a href='https://youtu.be/hAbaBLnxnzU' target="_blank">Demo</a></li>
     </ul>
   </nav>
-
+<br>
 
                 <body id="login" style="background:url(images/bg/bgtest2.png)">
                 </div>
@@ -186,7 +190,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                 <div class="span12"></div>
                     <div class="row-fluid">
                       <div class="span10">
-                      <img class="index_logo" src="img/santotomas.png">
+                      <img class="index_logo" src="img/santotomas.png"height="200px" width="590px">
                       </div>
 
                       </div>
@@ -218,17 +222,17 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
             }
 
             .card {
-              width: 310px;
+              width: 335px;
               border: none;
-              border-radius: 15px;
+              border-radius: 10px;
               float: right;
             }
 
             .justify-content-around div {
               border: none;
-              border-radius: 20px;
+              border-radius: 5px;
               background: #f3f4f6;
-              /* padding: 5px 20px 5px; */
+              padding: 5px 10px 5px;
               color: #8d9297;
             }
             .justify-content-around span {
@@ -264,6 +268,9 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
             a{
               font-size: 12px;
               color: black;
+            }
+            button{
+              border-radius: 5px;
             }
 
 

@@ -70,7 +70,7 @@ if (isset($_SESSION['password'])) {
 <fieldset>
 <form  action="login.php"method="post">
 <!-- <?php check_message();?> -->
-<img src = "./img/sclogo.png" height="200px" width="500px" alt="site logo">
+<img src = "./img/sclogo.png" height="150px" width="500px" alt="site logo">
 <div id="page">
   <div id="header">
     <div id="container" align="center">

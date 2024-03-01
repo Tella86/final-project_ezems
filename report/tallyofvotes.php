@@ -42,6 +42,7 @@ if (!isset($_SESSION['ACCOUNT_ID'])) {
 }
 </style>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+<link rel="shortcut icon" href="images/ico/favicon.ico">
 
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
       <section id="feature" class="transparent-bg">
@@ -57,7 +58,7 @@ if (!isset($_SESSION['ACCOUNT_ID'])) {
 
 								  <thead>
 								  	<tr>
-								  		<th> <!-- <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> -->Candidate Name </th>
+								  		<th> <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');">Candidate Name </th>
 								  		<th width="14%">No. of Votes</th>
 
 								  		<!-- <th>Status</th> -->

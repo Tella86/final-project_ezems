@@ -1,7 +1,8 @@
                       <?php
-if (!isset($_SESSION['ACCOUNT_ID'])) {
-    redirect(web_root . "index.php");
-}
+require_once 'candcontroller.php';
+// if (!isset($_SESSION['ACCOUNT_ID'])) {
+//     // redirect(web_root . "candidate/index.php");
+// }
 
 // $autonum = New Autonumber();
 // $res = $autonum->single_autonumber(2);
@@ -18,7 +19,7 @@ if (!isset($_SESSION['ACCOUNT_ID'])) {
             <div class="row">
                 <div class="features">
 
-                        <form class="form-horizontal span6 "  action="controller.php?action=add" enctype="multipart/form-data" method="POST">
+                        <form class="form-horizontal span6 "  action="candidate/controller.php?action=add" enctype="multipart/form-data" method="POST">
                              <div class="form-group">
                               <div class="col-md-8">
                                 <label class="col-md-4 control-label" for=
@@ -154,7 +155,9 @@ foreach ($cur as $result) {
                             </div>
                   </form>
 
-
+                  <?php
+require_once "templates.php";
+?>
                 </div><!--/.services-->
             </div><!--/.row-->
         </div><!--/.container-->

@@ -38,31 +38,31 @@ if (!isset($_SESSION['ACCOUNT_ID'])) {
 								  <tbody>
 								  	<?php
 
-$mydb->setQuery("SELECT * FROM `tblcandidate` c, `tblstudent` s, `tblcourse` cr, tbldepartment d
-								  						WHERE c.`StudentID`=s.`StudentID` AND S.`CourseID` =cr.`CourseID`
-								  						AND cr.`DepartmentID`=d.`DepartmentID` ORDER BY CandidateID desc ");
+									$mydb->setQuery("SELECT * FROM `tblcandidate` c, `tblstudent` s, `tblcourse` cr, tbldepartment d
+																							WHERE c.`StudentID`=s.`StudentID` AND S.`CourseID` =cr.`CourseID`
+																							AND cr.`DepartmentID`=d.`DepartmentID` ORDER BY CandidateID desc ");
 
-$cur = $mydb->loadResultList();
+									$cur = $mydb->loadResultList();
 
-foreach ($cur as $result) {
+									foreach ($cur as $result) {
 
-    echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . $result->Middlename . '</td>';
-    echo '<td>' . $result->YearLevel . '</td>';
-    echo '<td>' . $result->Department . '</td>';
-    echo '<td>' . $result->Position . '</td>';
-    echo '<td>' . $result->PartyList . '</td>';
-    echo '<td>' . date_format(date_create($result->RunningDate), 'M d, Y') . '</td>';
-    echo '<td>' . $result->StudPhoto . '</td>';
-    echo '<td align="center" >
-								  		<a title="View Information" href="index.php?view=view&id=' . $result->CandidateID . '"  class="btn btn-info btn-xs  ">View <span class="fa fa-info-circle fw-fa"></span></a>
-								  					 <a title="Update Students" href="index.php?view=edit&id=' . $result->CandidateID . '" class="btn btn-info btn-xs" >Edit <span class="fa fa-pencil fw-fa"></span> </a>
-								  					  <a title="Update Students" href="controller.php?action=delete&canid=' . $result->CandidateID . '&studid=' . $result->StudentID . '" class="btn btn-danger btn-xs" >Remove <span class="fa fa-trash fw-fa"></span> </a>
+										echo '<tr>';
+										echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . $result->Middlename . '</td>';
+										echo '<td>' . $result->YearLevel . '</td>';
+										echo '<td>' . $result->Department . '</td>';
+										echo '<td>' . $result->Position . '</td>';
+										echo '<td>' . $result->PartyList . '</td>';
+										echo '<td>' . date_format(date_create($result->RunningDate), 'M d, Y') . '</td>';
+										echo '<td><img width="50" height="50" src="'.web_root.'candidate/photo/' . $result->CandPhoto.'"> </td>';
+										echo '<td align="center" >
+										<a title="View Information" href="index.php?view=view&id=' . $result->CandidateID . '"  class="btn btn-info btn-xs  ">View <span class="fa fa-info-circle fw-fa"></span></a>
+										<a title="Update Students" href="index.php?view=edit&id=' . $result->CandidateID . '" class="btn btn-info btn-xs" >Edit <span class="fa fa-pencil fw-fa"></span> </a>
+										<a title="Update Students" href="controller.php?action=delete&canid=' . $result->CandidateID . '&studid=' . $result->StudentID . '" class="btn btn-danger btn-xs" >Remove <span class="fa fa-trash fw-fa"></span> </a>
 
-								  					 </td>';
-    echo '</tr>';
-}
-?>
+										</td>';
+										echo '</tr>';
+									}
+									?>
 								  </tbody>
 
 								</table>

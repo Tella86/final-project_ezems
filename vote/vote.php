@@ -25,12 +25,12 @@ if (!isset($_SESSION['CVCodeNo'])) {
     <link href="<?php echo web_root; ?>css/css/prettyPhoto.css" rel="stylesheet">
     <link href="<?php echo web_root; ?>css/css/main.css" rel="stylesheet">
     <link href="<?php echo web_root; ?>css/css/responsive.css" rel="stylesheet">
-	<link href="<?php echo web_root; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet">
-	<!-- datetime picker CSS -->
-	<link rel="stylesheet" href="<?php echo web_root; ?>select2/select2.min.css">
-
- 	<div class="col-lg-4 row" style="float-left"><img src="../img/sclogo.png"></div>
+    <link href="<?php echo web_root; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- datetime picker CSS -->
+    <link rel="stylesheet" href="<?php echo web_root; ?>select2/select2.min.css">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <div class="col-lg-4 row" style="float-left"><img src="../img/sclogo.png"></div>
 </head><!--/head-->
 
 <body class="homepage" >
@@ -55,25 +55,41 @@ if (!isset($_SESSION['CVCodeNo'])) {
                  </div>
                  <div class="col-lg-6">
 
-
                         <form class="form-horizontal span6 " action="controller.php?action=votingproccess" method="POST">
                              <div class="form-group">
                               <div class="col-md-12">
                                 <label class="col-md-4 control-label" for=
-                                "President">SOFTWARE PROGRAMER :</label>
+                                "President">President :</label>
+                                <thead>
+								  	<tr>
+								  		<th>
+								  	</tr>
+								  </thead>
+                  <?php
 
-                                <div class="col-md-8">
+$query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='President'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
+foreach ($cur as $result) {
 
+    echo '<tr>';
+    echo '<td><img width="80" height="80" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '</tr>';
+}
+?>
+                                <div class="col-md-6">
                                   <select class="form-control select2" name="President">
-                                  <!-- <input type="radio" name="President" value="option1"> -->
-                                    <option value="">Select</option>
+                                    <center><option value="">Select</option></center>
+
+
                                       <?php
 $query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='President'";
 $mydb->setQuery($query);
 $cur = $mydb->loadResultList();
 foreach ($cur as $result) {
+
     echo '<option value=' . $result->StudentID . '>' . $result->Lastname . ', ' . $result->Firstname . '</option>';
-    echo $row['StudPhoto'];
+
 }
 ?>
 
@@ -87,7 +103,22 @@ foreach ($cur as $result) {
                               <div class="col-md-12">
                                 <label class="col-md-4 control-label" for=
                                 "VicePresident">Vice-President:</label>
+                                <thead>
+								  	<tr>
+								  		<th>
+								  	</tr>
+								  </thead>
+                  <?php
 
+$query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='Vice-President'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
+
+foreach ($cur as $result) {
+    echo '<td><img width="80" height="80" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '</tr>';
+}
+?>
                                 <div class="col-md-8">
                                     <select class="form-control select2" name="VicePresident">
                                     <option value="">Select</option>
@@ -113,7 +144,21 @@ foreach ($cur as $result) {
                               <div class="col-md-12">
                                 <label class="col-md-4 control-label" for=
                                 "Secretary">Secretary:</label>
+                                <tr>
+								  		<th>
+								  	</tr>
+								  </thead>
+                  <?php
 
+$query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='Secretary'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
+
+foreach ($cur as $result) {
+    echo '<td><img width="80" height="80" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '</tr>';
+}
+?>
                                 <div class="col-md-8">
                                     <select class="form-control select2" name="Secretary">
                                     <option value="">Select</option>
@@ -136,7 +181,21 @@ foreach ($cur as $result) {
                               <div class="col-md-12">
                                 <label class="col-md-4 control-label" for=
                                 "Treasurer">Treasurer:</label>
+                                <tr>
+								  		<th>
+								  	</tr>
+								  </thead>
+                  <?php
 
+$query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='Treasurer'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
+
+foreach ($cur as $result) {
+    echo '<td><img width="80" height="80" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '</tr>';
+}
+?>
                                 <div class="col-md-8">
                                   <select class="form-control select2" name="Treasurer">
                                     <option value="">Select</option>
@@ -160,7 +219,20 @@ foreach ($cur as $result) {
                                <div class="col-md-12">
                                  <label class="col-md-4 control-label" for=
                                  "College-Babaa">College-Babaa:</label>
+                                 <tr>
+								  		<th>
+								  	</tr>
+								  </thead>
+                  <?php
+$query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='College-Babaa'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
 
+foreach ($cur as $result) {
+    echo '<td><img width="80" height="80" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '</tr>';
+}
+?>
                                  <div class="col-md-8">
                                      <select class="form-control select2" name="College-Babaa">
                                      <option value="">Select</option>
@@ -185,7 +257,20 @@ foreach ($cur as $result) {
                               <div class="col-md-12">
                                 <label class="col-md-4 control-label" for=
                                 "College-Mamaa">College-Mamaa:</label>
+                                <tr>
+								  		<th>
+								  	</tr>
+								  </thead>
+                  <?php
+$query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='College-Mamaa'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
 
+foreach ($cur as $result) {
+    echo '<td><img width="80" height="80" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '</tr>';
+}
+?>
                                 <div class="col-md-8">
                                     <select class="form-control select2" name="College-Mamaa">
                                     <option value="">Select</option>
@@ -209,7 +294,20 @@ foreach ($cur as $result) {
                                <div class="col-md-12">
                                  <label class="col-md-4 control-label" for=
                                  "Games-Captain">Games-Captain:</label>
+                                 <tr>
+								  		<th>
+								  	</tr>
+								  </thead>
+                  <?php
+$query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='Games-Captain'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
 
+foreach ($cur as $result) {
+    echo '<td><img width="80" height="80" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '</tr>';
+}
+?>
                                  <div class="col-md-8">
                                      <select class="form-control select2" name="Games-Captain">
                                      <option value="">Select</option>
@@ -233,7 +331,20 @@ foreach ($cur as $result) {
                                <div class="col-md-12">
                                  <label class="col-md-4 control-label" for=
                                  "Class-rep">Class-Rep:</label>
+                                 <tr>
+								  		<th>
+								  	</tr>
+								  </thead>
+                  <?php
+$query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='Class-Rep'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
 
+foreach ($cur as $result) {
+    echo '<td><img width="80" height="80" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '</tr>';
+}
+?>
                                  <div class="col-md-8">
                                      <select class="form-control select2" name="Class-Rep">
                                      <option value="">Select</option>
@@ -258,7 +369,20 @@ foreach ($cur as $result) {
                                <div class="col-md-12">
                                  <label class="col-md-4 control-label" for=
                                  "Class-Secretary">Class-Secretary:</label>
+                                 <tr>
+								  		<th>
+								  	</tr>
+								  </thead>
+                  <?php
+$query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='Class-Secretary'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
 
+foreach ($cur as $result) {
+    echo '<td><img width="80" height="80" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '</tr>';
+}
+?>
                                  <div class="col-md-8">
                                      <select class="form-control select2" name="Class-Secretary">
                                      <option value="">Select</option>
@@ -283,7 +407,20 @@ foreach ($cur as $result) {
                                <div class="col-md-12">
                                  <label class="col-md-4 control-label" for=
                                  "Dorm-Head">Dorm-Head:</label>
+  <tr>
+								  		<th>
+								  	</tr>
+								  </thead>
+                  <?php
+$query = "SELECT * FROM `tblstudent` s , `tblcandidate` c WHERE s.`StudentID`=c.`StudentID` AND DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' ) AND `Position`='Class-Secretary'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
 
+foreach ($cur as $result) {
+    echo '<td><img width="80" height="80" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '</tr>';
+}
+?>
                                  <div class="col-md-8">
                                      <select class="form-control select2" name="Dorm-Head">
                                      <option value="">Select</option>
@@ -342,7 +479,7 @@ foreach ($cur as $result) {
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2023-2024 <a target="_blank" href="<?php echo web_root; ?>" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ENG.ZIROH Events Tallying System</a>. All Rights Reserved.
+                    &copy; 2023-2024 <a target="_blank" href="<?php echo web_root; ?>" title="Free Twitter Bootstrap WordPress Themes and HTML templates">EZEMS</a>. All Rights Reserved.
                 </div>
 
             </div>

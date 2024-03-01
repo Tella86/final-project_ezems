@@ -9,7 +9,7 @@ require_once "include/initialize.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Vote EZEMS Event Tallying</title>
+    <title>Mission|Vission|Mandate</title>
 
     <!-- core CSS -->
     <link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,7 @@ require_once "include/initialize.php";
     <link href="<?php echo web_root; ?>css/css/responsive.css" rel="stylesheet">
 	<link href="<?php echo web_root; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
 	<!-- datetime picker CSS -->
 	<link rel="stylesheet" href="<?php echo web_root; ?>select2/select2.min.css">
 

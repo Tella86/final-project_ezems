@@ -32,6 +32,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
 <link href="<?php echo web_root; ?>css/css/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
 <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen">
 <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
+<link rel="shortcut icon" href="images/ico/favicon.ico">
 
  <div class="navbar">
      <div class="navbar-inner">
@@ -46,14 +47,15 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                   <ul class="nav navbar-nav" id="footer_nav">
                     <li class="divider-vertical"></li>
 
-
                         <li class="active"><a href="vote/index.php"><h3><i class="icon-info-sign"></i>&nbsp;VOTE</h3></a></li>
                         <li class="divider-vertical"></li>
 
                         <li class="active"><a href="attendance/check_attendance.php"><h3><i class="icon-info-sign"></i>&nbsp;ATTENDANCE</h3></a></li>
                         <li class="divider-vertical"></li>
-
-
+                        <li class="active"><a href="add.php"><h3><i class="icon-info-sign"></i>&nbsp;VOTER REGISTRATION</h3></a></li>
+                        <li class="divider-vertical"></li>
+                        <li class="active"><a href="candadd.php"><h3><i class="icon-info-sign"></i>&nbsp;CANDIDATE REGISTRATION</h3></a></li>
+                        <li class="divider-vertical"></li>
 
                     <li class="divider-vertical"></li>
                   </ul>
@@ -84,8 +86,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                       <div class="span12">
                         <div class="motto">
 
-                        <h3><p>WELCOME&nbsp;&nbsp;TO:</p></h3>
-                        <h2><p>EZEMS&nbsp;</p></h2>
+                        <h3><p>WELCOME&nbsp;&nbsp;TO EZEMS</p></h3>
                         </div>
                       </div>
                     </div>
@@ -225,7 +226,7 @@ echo $date->format('l, F jS, Y');
                     <ul class="nav navbar-nav" id="footer_nav">
                       <li class="divider-vertical"></li>
 
-                          <li class="active"><a href="<?php echo web_root; ?>.php"><i class="icon-home"></i>&nbsp;Home</a></li>
+                          <li class="active"><a href="<?php echo web_root; ?>m.php"><i class="icon-home"></i>&nbsp;Home</a></li>
                           <li class="divider-vertical"></li>
 
                         <li class="active"><a href="about.php"><i class="icon-info-sign"></i>&nbsp;Mission & Vision</a></li>

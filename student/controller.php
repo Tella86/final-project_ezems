@@ -3,7 +3,7 @@ require_once "../include/initialize.php";
 if (!isset($_SESSION['ACCOUNT_ID'])) {
     redirect(web_root . "index.php");
 }
-
+error_reporting(0);
 $action = (isset($_GET['action']) && $_GET['action'] != '') ? $_GET['action'] : '';
 $db = new Database();
 
@@ -63,26 +63,63 @@ function doInsert()
                     message("Student ID already in use!", "error");
                     redirect("index.php?view=add");
                 } else {
-                    $stud = new Student();
-                    $stud->StudentID = $_POST['StudentID'];
-                    $stud->Firstname = $_POST['Firstname'];
-                    $stud->Lastname = $_POST['Lastname'];
-                    $stud->Middlename = $_POST['Middlename'];
-                    $stud->CourseID = $_POST['CourseID'];
-                    // $stud->photo = $_FILES['photo'];
-                    $stud->Address = $_POST['Address'];
-                    $stud->BirthDate = $birthdate;
-                    $stud->Age = $age;
-                    $stud->Gender = $_POST['optionsRadios'];
-                    $stud->ContactNo = $_POST['ContactNo'];
-                    $stud->YearLevel = $_POST['YearLevel'];
-                    $stud->create();
 
-                    // $autonum = New Autonumber();  `SUBJ_ID`, `SUBJ_CODE`, `SUBJ_DESCRIPTION`, `UNIT`, `PRE_REQUISITE`, `COURSE_ID`, `AY`, `SEMESTER`
-                    // $autonum->auto_update(2);
+                    // image upload
+                    $allowedMimeTypes = array("image/jpeg", "image/png");
+                    $allowedExtensions = array("jpg", "jpeg", "png");
+                
+                    $fileMimeType = $_FILES['photo']['type'];
+                    $fileExtension = pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
+                
+                    if (!in_array($fileMimeType, $allowedMimeTypes) || !in_array(strtolower($fileExtension), $allowedExtensions)) {
+                        // Invalid file format or extension
+                        message("Invalid image file format. Allowed formats: JPG, JPEG, PNG,", "error");
+                        redirect("index.php?view=add");
+                    }
+                    $errofile = $_FILES['image']['error'];
+                    $type = $_FILES['image']['type'];
+                    $temp = $_FILES['image']['tmp_name'];
+                    $myfile = $_FILES['image']['name'];
+                    $location = "photo/" . $myfile;
 
-                    message("New student created successfully!", "success");
-                    redirect("index.php");
+                    if ($errofile > 0) {
+                        message("No Image Selected!", "error");
+                        redirect("index.php?view=add");
+                    }else{
+                        @$file = $_FILES['image']['tmp_name'];
+                        @$image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+                        @$image_name = addslashes($_FILES['image']['name']);
+                        @$image_size = getimagesize($_FILES['image']['tmp_name']);
+                
+                    }
+                    if ($image_size == false) {
+                        message("Uploaded file is not an image!", "error");
+                        redirect("index.php?view=add");
+                    }else{
+                        move_uploaded_file($temp, $location);
+                        // end 0f image upload
+
+                        $stud = new Student();
+                        $stud->StudentID = $_POST['StudentID'];
+                        $stud->Firstname = $_POST['Firstname'];
+                        $stud->Lastname = $_POST['Lastname'];
+                        $stud->Middlename = $_POST['Middlename'];
+                        $stud->CourseID = $_POST['CourseID'];
+                        $stud->Address = $_POST['Address'];
+                        $stud->BirthDate = $birthdate;
+                        $stud->Age = $age;
+                        $stud->Gender = $_POST['optionsRadios'];
+                        $stud->ContactNo = $_POST['ContactNo'];
+                        $stud->YearLevel = $_POST['YearLevel'];
+                        $stud->StudPhoto = $myfile;
+                        $stud->create();
+
+                        // $autonum = New Autonumber();  `SUBJ_ID`, `SUBJ_CODE`, `SUBJ_DESCRIPTION`, `UNIT`, `PRE_REQUISITE`, `COURSE_ID`, `AY`, `SEMESTER`
+                        // $autonum->auto_update(2);
+
+                        message("New student created successfully!", "success");
+                        redirect("index.php");
+                    }
 
                 }
 
@@ -143,16 +180,29 @@ function doEdit()
 
 function doDelete()
 {
+    global $db;
     $id = $_GET['studid'];
 
-    $student = new Student();
-    $student->delete($id);
+    // $student = new Student();
+    // $student->delete($id);
+    // if($student){
+    //     message("Student(s) already Deleted!", "success");
+    //     redirect('index.php');
+    // }
 
-    $stud = new Student();
+    $sql = "DELETE  FROM tblstudent WHERE ID='" . $_GET['studid']. "'";
+    $res = mysqli_query($db->conn, $sql);
+    if ($res) {
+        message("Student(s) already Deleted!", "success");
+        redirect('index.php');
+    }else{
+        message("Failed To delete!", "error");
+        redirect('index.php');
+    }
+
+    // $stud = new Student();
     // $stud->Stud_Status = '';
-    $stud->update($_GET['studid']);
-    message("Student(s) already Deleted!", "success");
-    redirect('index.php');
+    // $stud->update($_GET['studid']);
 
 }
 function doupdateimage()

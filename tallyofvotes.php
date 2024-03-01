@@ -43,7 +43,7 @@ require_once "include/initialize.php";
 }
 </style>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
-
+<link rel="shortcut icon" href="images/ico/favicon.ico">
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
       <section id="feature" class="transparent-bg">
         <div class="container">
@@ -68,7 +68,7 @@ require_once "include/initialize.php";
 								  </thead>
 								  <tbody>
 
-                  <tr><th colspan="2"><h4 align="center">SOFTWARE PROGRAMER</h4></th></tr>
+                  <tr><th colspan="2"><h4 align="center">President</h4></th></tr>
                   <tr>
 
 

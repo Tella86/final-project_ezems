@@ -1,5 +1,5 @@
                       <?php
-require_once '../shortcodes/stcontroller.php';
+require_once 'stcontroller.php';
 // if (!isset($_SESSION['ACCOUNT_ID'])) {
 //     redirect(web_root . "index.php");
 // }
@@ -7,15 +7,8 @@ $confirmation = createRandomPassword();
 // echo $confirmation;
 $_SESSION['confirmation'] = $confirmation;
 
-// if (!isset($_SESSION['ACCOUNT_ID'])) {
-//     redirect(web_root . "index.php");
-// }
-
-//$autonum = new Autonumber();
-//$res = $autonum->single_autonumber(2);
-
 ?>
-
+<center>
  <section id="feature" class="transparent-bg">
         <div class="container">
            <div class="center wow fadeInDown">
@@ -26,7 +19,7 @@ $_SESSION['confirmation'] = $confirmation;
             <div class="row">
                 <div class="features">
 
-                        <form class="form-horizontal span6  wow fadeInDown" action="controller.php?action=add" method="POST" enctype="multipart/form-data">
+                        <form class="form-horizontal span6  wow fadeInDown" action="student/controller.php?action=add" method="POST" enctype="multipart/form-data">
                         <!-- <form class="form-horizontal span6  wow fadeInDown" action="#" method="POST">  -->
                              <div class="form-group">
                               <div class="col-md-8">
@@ -110,6 +103,7 @@ $_SESSION['confirmation'] = $confirmation;
                                     <div class="col-lg-4">
                                       <div class="radio">
                                         <label><input id="optionsRadios2"   name="optionsRadios" type="radio" value="Male"> Male</label>
+
                                       </div>
                                     </div>
 
@@ -117,21 +111,6 @@ $_SESSION['confirmation'] = $confirmation;
                               </div>
                             </div>
 
-                             <!-- <div class="form-group">
-                              <div class="col-md-8">
-                                <label class="col-md-4 control-label" for=
-                                "BirthDate">Date of birth:</label>
-
-                                <div class="col-md-8">
-                                   <div class="input-group" id="">
-                                        <div class="input-group-addon">
-                                          <i class="fa fa-calendar"></i>
-                                        </div>
-                                        <input id="datemask2" name="BirthDate"  value="" type="text" class="form-control " size="7" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask required>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>  -->
                              <div class="form-group">
                               <div class="rows">
                                 <div class="col-md-8">
@@ -265,12 +244,17 @@ foreach ($cur as $result) {
                                 <div class="col-md-8">
                                  <button class="btn btn-mod btn-sm studsave" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>  Save</button>
                                     <!-- <a href="index.php" class="btn btn-info"><span class="fa fa-arrow-circle-left fw-fa"></span></span>&nbsp;<strong>List of Users</strong></a> -->
-                                 </div>
+
+                                  </div>
                               </div>
                             </div>
                   </form>
 
-
+                  </center>
+                  <?php
+require_once "templates.php";
+message("New Candidate created successfully!", "success");
+?>
                 </div><!--/.services-->
             </div><!--/.row-->
         </div><!--/.container-->

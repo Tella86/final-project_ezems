@@ -5,7 +5,7 @@ if (!isset($_SESSION['ACCOUNT_ID'])) {
 
 ?>
 
-
+<link rel="shortcut icon" href="images/ico/favicon.ico">
       <section id="feature" class="transparent-bg">
         <div class="container">
            <div class="center wow fadeInDown">
@@ -31,7 +31,7 @@ if (!isset($_SESSION['ACCOUNT_ID'])) {
 								  		<th>Address</th>
 								  		<th>Contact No</th>
 								  		<th>CourseCode</th>
-                                          <th>Photo</th>
+                                        <th>Photo</th>
 								  		<th width="20%" >Action</th>
 
 								  	</tr>
@@ -52,7 +52,7 @@ foreach ($cur as $result) {
     echo '<td>' . $result->Address . '</td>';
     echo '<td>' . $result->ContactNo . '</td>';
     echo '<td>' . $result->CourseCode . '-' . $result->Description . '</a></td>';
-    echo '<td>' . $result->StudPhoto . '-' . '</td>';
+    echo '<td><img width="50" height="50" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
     echo '<td align="center" > <a title="View Information" href="index.php?view=view&id=' . $result->ID . '"  class="btn btn-info btn-xs  ">View <span class="fa fa-info-circle fw-fa"></span></a>
                                                    <a title="Update Students" href="index.php?view=edit&id=' . $result->ID . '" class="btn btn-info btn-xs" >Edit <span class="fa fa-pencil fw-fa"></span> </a>
                                                    <a title="Update Students" href="controller.php?action=delete&studid=' . $result->ID . '&studid=' . $result->ID . '" class="btn btn-danger btn-xs" >Remove <span class="fa fa-trash fw-fa"></span> </a>

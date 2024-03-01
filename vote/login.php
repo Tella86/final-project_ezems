@@ -13,7 +13,7 @@ if (isset($_SESSION['CVCodeNo'])) {
 <meta name="description" content="">
 <meta name="author" content="">
 <title>EZEMS&nbsp;</title>
-
+<link rel="shortcut icon" href="images/ico/favicon.ico">
 <!-- Bootstrap core CSS -->
 <link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo web_root; ?>css/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
@@ -29,6 +29,7 @@ if (isset($_SESSION['CVCodeNo'])) {
 <link href="<?php echo web_root; ?>css/css/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
 <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen">
 <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
+
 <style>
 	fieldset
 		{

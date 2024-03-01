@@ -1,7 +1,7 @@
 <?php
-require_once "../include/initialize.php";
+require_once "include/initialize.php";
 if (!isset($_SESSION['ACCOUNT_ID'])) {
-    redirect(web_root . "index.php");
+    // redirect(web_root . "index.php");
 }
 
 // error_reporting(0);
@@ -54,7 +54,7 @@ function doInsert()
 
                 $allowedMimeTypes = array("image/jpeg", "image/png");
                 $allowedExtensions = array("jpg", "jpeg", "png");
-            
+
                 $fileMimeType = $_FILES['photo']['type'];
                 $fileExtension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
 
@@ -63,7 +63,7 @@ function doInsert()
                     message("Invalid image file format. Allowed formats: JPG, JPEG, PNG,", "error");
                     redirect("index.php?view=add");
                 }
-            
+
                 $errofile = $_FILES['image']['error'];
                 $type = $_FILES['image']['type'];
                 $temp = $_FILES['image']['tmp_name'];
@@ -73,17 +73,17 @@ function doInsert()
                 if ($errofile > 0) {
                     message("No Image Selected!", "error");
                     redirect("index.php?view=add");
-                }else{
+                } else {
                     @$file = $_FILES['image']['tmp_name'];
                     @$image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
                     @$image_name = addslashes($_FILES['image']['name']);
                     @$image_size = getimagesize($_FILES['image']['tmp_name']);
-            
+
                 }
                 if ($image_size == false) {
                     message("Uploaded file is not an image!", "error");
                     redirect("index.php?view=add");
-                }else{
+                } else {
                     move_uploaded_file($temp, $location);
 
                     $candidate = new Candidate();
@@ -94,19 +94,18 @@ function doInsert()
                     $candidate->Platform = $_POST['Platform'];
                     $candidate->CandPhoto = $myfile;
                     $candidate->create();
-    
+
                     $stud = new Student();
                     $stud->Cand_Status = 'Candidate';
                     $stud->update($_POST['StudentID']);
-    
+
                     // $autonum = New Autonumber();  `SUBJ_ID`, `SUBJ_CODE`, `SUBJ_DESCRIPTION`, `UNIT`, `PRE_REQUISITE`, `COURSE_ID`, `AY`, `SEMESTER`
                     // $autonum->auto_update(2);
-    
+
                     message("New Candidate created successfully!", "success");
                     redirect("index.php");
 
                 }
-
 
             }
 

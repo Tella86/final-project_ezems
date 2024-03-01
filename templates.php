@@ -63,94 +63,7 @@
 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav mod-menu" style="font-size:13px;"  >
-                    <?php
-if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
-    # code...
-    ?><?php }?>
-                        <!-- <li class="<?php echo (currentpage_public() == 'index.php') ? "active" : false; ?>"><a href="<?php echo web_root; ?>">Home</a></li> -->
-                        <li  hover="ff9933"class="<?php echo (currentpage_public() == 'student') ? "active" : false; ?>">  <a href="<?php echo web_root; ?>student/">Registered Voters</a></li>
-                        <!-- <li  class="<?php echo (currentpage_public() == 'event') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>event/">Events</a></li> -->
-                        <li  class="<?php echo (currentpage_public() == 'candidate') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>candidate/index.php">Candidates</a></li>
 
-                        <li  class="<?php echo (currentpage_public() == 'attendance') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>attendance/">Attendance</a></li>
-                        <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu"  style=""  >
-                                <li class="<?php echo (currentpage_public() == 'event') ? "active" : false; ?>"><a href="<?php echo web_root; ?>event/">List of Events</a></li>
-                                <li class="<?php echo (currentpage_public() == 'eventwinner') ? "active" : false; ?>"><a href="<?php echo web_root; ?>eventwinner/">List of Winners</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utilities <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu"   style="" >
-                               <?php
-if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
-    # code...
-    ?>
-                                <li class="<?php echo (currentpage_public() == 'course') ? "active" : false; ?>"><a href="<?php echo web_root; ?>course/index.php">Courses</a></li>
-                                <li class="<?php echo (currentpage_public() == 'department') ? "active" : false; ?>"><a href="<?php echo web_root; ?>department/index.php">Departments</a></li>
-                                <li class="<?php echo (currentpage_public() == 'user') ? "active" : false; ?>"><a href="<?php echo web_root; ?>user/index.php">Users</a></li>
-                                <?php }?>
-                                <li class="<?php echo (currentpage_public() == 'shortcodes') ? "active" : false; ?>"><a href="<?php echo web_root; ?>shortcodes/">Voting Codes</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu"   style="" >
-                                <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=event">Events</a></li>
-
-
-                                <!-- <li class="<?php echo ($title == 'Events') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=event">Events</a></li> -->
-                                <!-- <li class="<?php echo ($title == 'Attendance') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=attendance">Attendance</a></li> -->
-                                 <?php
-if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
-    # code...
-    ?>
-                                 <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=attendance">Attendance</a></li>
-                                <!-- <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=candidate">Candidates</a></li>
-                                <li class="<?php echo (currentpage_public() == 'tallyofvotes') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=tallyofvotes">Tally of Votes</a></li> -->
-                                <!-- <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=electionwinner">SSG Election Winners</a></li> -->
-
-                                <li class="<?php echo ($title == 'Candidate') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=candidate">Candidates</a></li>
-                                <li class="<?php echo ($title == 'Logs') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=logs">Logs</a></li>
-                                <?php }?>
-                                <li class="<?php echo ($title == 'Tally of Votes') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=tallyofvotes">Tally of Votes</a></li>
-                                <li class="<?php echo ($title == 'Election Winners') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=electionwinners">Election Winners</a></li>
-                              <!-- <li><a href="shortcodes.html">Shortcodes</a></li> -->
-                              <?php
-if ($_SESSION['ACCOUNT_TYPE'] == 'Student') {
-    # code...
-    ?>
-                        <!-- <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=candidate">Candidates</a></li>
-                                <li class="<?php echo (currentpage_public() == 'tallyofvotes') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=tallyofvotes">Tally of Votes</a></li>
-                                <li class="<?php echo (currentpage_public() == 'report') ? "active" : false; ?>"><a href="<?php echo web_root; ?>report/index.php?view=electionwinner">SSG Election Winners</a></li> -->
-                         <!-- <li  hover="ff9933"class="<?php echo (currentpage_public() == 'student') ? "active" : false; ?>">  <a href="<?php echo web_root; ?>student/">Students</a></li> -->
-                        <!-- <li  class="<?php echo (currentpage_public() == 'event') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>event/">Events</a></li> -->
-                        <!-- <li  class="<?php echo (currentpage_public() == 'candidate') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>candidate/index.php">Candidates</a></li> -->
-
-
- <?php }?>
-                            </ul>
-                        </li>
-                    <!--     <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact-us.html">Contact</a></li>   -->
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello!, <?php echo $_SESSION['ACCOUNT_NAME']; ?> <b class="caret"></b></a>
-                        <ul class="dropdown-menu"  style="" >
-                            <li>
-                                <a href="<?php echo web_root; ?>user/index.php?view=edit&id=<?php echo $_SESSION['ACCOUNT_ID']; ?>">Edit</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo web_root; ?>user/index.php?view=view&id=<?php echo $_SESSION['ACCOUNT_ID']; ?>">View</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo web_root; ?>logout.php">Logout</a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
@@ -163,27 +76,8 @@ if ($_SESSION['ACCOUNT_TYPE'] == 'Student') {
         </div>
 
 
-                 <?php
-if ($title != 'Home') {
-    echo ' <div class="row  breadcrumb"> <a href="' . web_root . 'index.php" title="Home" >Home</a>  /
-                        <a href="index.php" title="' . $title . '" >' . $title . '</a>
-                        ' . (isset($header) ? ' / ' . $header : '') . ' </div>';
-}?>
 
         </div>
-
-    <?php require_once $content;?>
-
-  <section id="bottoms" style="border-bottom:5px solid #0000 ">
-        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms"  >
-            <ul class="nav navbar-nav" id="footer_nav">
-                <li class="active"><a href="" target="-blank" class=""></i>&nbsp;Home</a></li>
-                <li class="active"><a href="about.php"><i class="icon-info-sign"></i>&nbsp;Mission & Vision</a></li>
-                <li class="active"><a href="history.php"><i class="icon-file"></i>&nbsp;Company History</a></li>
-                <li class="active"><a href="developers.php"><i class="icon-group"></i>&nbsp;Developers</a></li>
-            </ul>
-        </div>
-
 
 </section><!--/#bottom-->
 
@@ -191,7 +85,7 @@ if ($title != 'Home') {
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                  <CENTER> &copy; 2023-2024 <a target="_blank" href="" title="Free Twitter Bootstrap WordPress Themes and HTML templates">EZEMS</a>. All Rights Reserved.</CENTER>
+                  <center> &copy; 2023-2024 <a target="_blank" href="" title="Free Twitter Bootstrap WordPress Themes and HTML templates">EZEMS</a>. All Rights Reserved.</center>
                 </div>
               <!--   <div class="col-sm-6">
                     <ul class="pull-right">

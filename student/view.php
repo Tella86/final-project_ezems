@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 $student = new Student();
 $res = $student->select_student($_GET['id']);
 
@@ -35,7 +36,7 @@ $resCourse = $course->single_course($res->CourseID);
                               <div class="panel">
                                 <div id="img_profile" class="panel-body">
                                 <a href="" data-target="#studentmodal" data-toggle="modal" >
-                                <img title="profile image" class="img-hover"    src="<?php echo web_root . 'student/' . $res->StudPhoto; ?>">
+                                <img title="profile image" class="img-hover"    src="<?php echo web_root . 'student/photo/' . $res->StudPhoto; ?>">
                                 </a>
                                  </div>
                               <ul class="list-group">
@@ -56,13 +57,13 @@ $resCourse = $course->single_course($res->CourseID);
                        <!-- `IDNO`, `Firstname`, `Lastname`, `MNAME`, `SEX`, `BDAY`, `BPLACE`, `STATUS`, `AGE`, `NATIONALITY`,
                       `RELIGION`, `CONTACT_NO`, `HOME_ADD`, `EMAIL`, `ACC_PASSWORD`, `student_status`, `schedID`, `course_year` -->
                       <?php
-$currentyear = date('Y');
-$nextyear = date('Y') + 1;
-$sy = $currentyear . '-' . $nextyear;
-$_SESSION['SY'] = $sy;
-// $newDate    = Carbon::createFromFormat('Y-m-d',$_SESSION['SY'] )->addYear(1);
+                        $currentyear = date('Y');
+                        $nextyear = date('Y') + 1;
+                        $sy = $currentyear . '-' . $nextyear;
+                        $_SESSION['SY'] = $sy;
+                        // $newDate    = Carbon::createFromFormat('Y-m-d',$_SESSION['SY'] )->addYear(1);
 
-?>
+                        ?>
 
 
                       <form action="controller.php?action=edit" class="form-horizontal" method="post" >

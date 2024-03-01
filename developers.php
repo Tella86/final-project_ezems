@@ -21,6 +21,7 @@ require_once "include/initialize.php";
     <link href="<?php echo web_root; ?>css/css/responsive.css" rel="stylesheet">
 	<link href="<?php echo web_root; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
 	<!-- datetime picker CSS -->
 	<link rel="stylesheet" href="<?php echo web_root; ?>select2/select2.min.css">
 
@@ -29,11 +30,12 @@ require_once "include/initialize.php";
  	<style>
 	fieldset
 		{
-			text-align:center; width: 500px;
-			background-color:white;
+			text-align: center;
+			width: 500px;
+			background-color: white;
 			height: auto;
-			margin-left:30%;
-			margin-top:85px;
+			margin-left: 30%;
+			margin-top: 85px;
 			border-radius: 10px;
 			box-shadow: 2px 4px 10px rgba(0,0,0,.6)
 		}

@@ -38,6 +38,7 @@
 
 }
 </style>
+<link rel="shortcut icon" href="images/ico/favicon.ico">
   <section id="feature" class="transparent-bg"   >
         <div class="container bg">
           <div class="row">

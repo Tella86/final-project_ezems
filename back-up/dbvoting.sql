@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 26, 2024 at 03:49 PM
--- Server version: 8.0.36
--- PHP Version: 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Feb 27, 2024 at 03:01 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,12 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tblautonumber` (
-  `AutoID` int NOT NULL,
+  `AutoID` int(11) NOT NULL,
   `AutoStart` varchar(30) NOT NULL,
-  `AutoEnd` int NOT NULL,
-  `AutoInc` int NOT NULL,
+  `AutoEnd` int(11) NOT NULL,
+  `AutoInc` int(11) NOT NULL,
   `AutoType` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblautonumber`
@@ -49,16 +49,16 @@ INSERT INTO `tblautonumber` (`AutoID`, `AutoStart`, `AutoEnd`, `AutoInc`, `AutoT
 --
 
 CREATE TABLE `tblcandidate` (
-  `CandidateID` int NOT NULL,
+  `CandidateID` int(11) NOT NULL,
   `StudentID` varchar(50) NOT NULL,
   `Position` varchar(30) NOT NULL,
   `PartyList` varchar(99) NOT NULL,
   `RunningDate` date NOT NULL,
   `Platform` longtext NOT NULL,
-  `TotalVotes` int NOT NULL,
+  `TotalVotes` int(11) NOT NULL,
   `CandPhoto` varchar(200) NOT NULL,
   `Remarks` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblcandidate`
@@ -66,9 +66,9 @@ CREATE TABLE `tblcandidate` (
 
 INSERT INTO `tblcandidate` (`CandidateID`, `StudentID`, `Position`, `PartyList`, `RunningDate`, `Platform`, `TotalVotes`, `CandPhoto`, `Remarks`) VALUES
 (25, '87565', 'President', 'PartyList 2', '2024-02-09', 'shanzu', 4, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', ''),
-(42, 'idx4dyst', 'President', 'WEB TECH', '2024-02-23', 'KILIFI GOA', 3, '', ''),
-(43, 'A0VN6AKV', 'President', 'DART FLUTTER', '2024-02-23', 'KILIFI GOA', 2, '', ''),
-(44, 'MM5S13PL', 'President', 'PYTHON DJANGO', '2024-01-23', 'KILIFI GOA', 1, '', '');
+(42, 'idx4dyst', 'President', 'WEB TECH', '2024-02-23', 'KILIFI GOA', 4, '', ''),
+(45, '12312312', 'President', 'UDA', '2024-03-23', 'kssjdd', 2, 'gym2.jpg', ''),
+(46, 'OS6GP55K', 'Secretary', 'UDA', '2025-08-08', 'KIAMBU', 0, 'gym13.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -77,9 +77,9 @@ INSERT INTO `tblcandidate` (`CandidateID`, `StudentID`, `Position`, `PartyList`,
 --
 
 CREATE TABLE `tblconfirmcode` (
-  `CodeID` int NOT NULL,
+  `CodeID` int(11) NOT NULL,
   `Code` varchar(90) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -88,11 +88,11 @@ CREATE TABLE `tblconfirmcode` (
 --
 
 CREATE TABLE `tblcourse` (
-  `CourseID` int NOT NULL,
+  `CourseID` int(11) NOT NULL,
   `CourseCode` varchar(30) NOT NULL,
   `Description` varchar(255) NOT NULL,
-  `DepartmentID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `DepartmentID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblcourse`
@@ -115,10 +115,10 @@ INSERT INTO `tblcourse` (`CourseID`, `CourseCode`, `Description`, `DepartmentID`
 --
 
 CREATE TABLE `tbldepartment` (
-  `DepartmentID` int NOT NULL,
+  `DepartmentID` int(11) NOT NULL,
   `Department` varchar(30) NOT NULL,
   `Description` varchar(99) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbldepartment`
@@ -138,14 +138,14 @@ INSERT INTO `tbldepartment` (`DepartmentID`, `Department`, `Description`) VALUES
 --
 
 CREATE TABLE `tblevents` (
-  `EventID` int NOT NULL,
+  `EventID` int(11) NOT NULL,
   `Event` varchar(99) NOT NULL,
   `Description` varchar(255) NOT NULL,
   `EventDate` date NOT NULL,
   `EventTime` varchar(30) NOT NULL,
   `EventPhoto` varchar(125) NOT NULL,
-  `Incharge` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Incharge` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblevents`
@@ -163,11 +163,11 @@ INSERT INTO `tblevents` (`EventID`, `Event`, `Description`, `EventDate`, `EventT
 --
 
 CREATE TABLE `tbleventwinner` (
-  `EWID` int NOT NULL,
-  `EventID` int NOT NULL,
+  `EWID` int(11) NOT NULL,
+  `EventID` int(11) NOT NULL,
   `EWinners` varchar(90) NOT NULL,
-  `ACCOUNT_ID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `ACCOUNT_ID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbleventwinner`
@@ -187,18 +187,19 @@ INSERT INTO `tbleventwinner` (`EWID`, `EventID`, `EWinners`, `ACCOUNT_ID`) VALUE
 --
 
 CREATE TABLE `tbllogs` (
-  `LOGID` int NOT NULL,
-  `USERID` int NOT NULL,
+  `LOGID` int(11) NOT NULL,
+  `USERID` int(11) NOT NULL,
   `LOGDATETIME` datetime NOT NULL,
   `LOGROLE` varchar(30) NOT NULL,
   `LOGMODE` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbllogs`
 --
 
 INSERT INTO `tbllogs` (`LOGID`, `USERID`, `LOGDATETIME`, `LOGROLE`, `LOGMODE`) VALUES
+(0, 1, '2024-02-27 07:03:10', 'Administrator', 'Logged in'),
 (147, 1, '2024-02-08 07:56:07', 'Administrator', 'Logged in'),
 (148, 1, '2024-02-08 07:57:04', 'Administrator', 'Logged out'),
 (149, 1, '2024-02-08 07:57:17', 'Administrator', 'Logged in'),
@@ -351,10 +352,10 @@ INSERT INTO `tbllogs` (`LOGID`, `USERID`, `LOGDATETIME`, `LOGROLE`, `LOGMODE`) V
 --
 
 CREATE TABLE `tblsales` (
-  `SalesId` int NOT NULL,
+  `SalesId` int(11) NOT NULL,
   `Product` varchar(90) NOT NULL,
   `TotalSales` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblsales`
@@ -373,7 +374,7 @@ INSERT INTO `tblsales` (`SalesId`, `Product`, `TotalSales`) VALUES
 --
 
 CREATE TABLE `tblstudent` (
-  `ID` int NOT NULL,
+  `ID` int(11) NOT NULL,
   `StudentID` varchar(255) NOT NULL,
   `Firstname` varchar(99) NOT NULL,
   `Lastname` varchar(99) NOT NULL,
@@ -381,21 +382,20 @@ CREATE TABLE `tblstudent` (
   `Address` varchar(255) NOT NULL,
   `Gender` varchar(30) NOT NULL,
   `BirthDate` date NOT NULL,
-  `Age` int NOT NULL,
+  `Age` int(11) NOT NULL,
   `ContactNo` varchar(30) NOT NULL,
   `YearLevel` varchar(11) NOT NULL,
-  `CourseID` int NOT NULL,
-  `StudPhoto` varchar(200) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `Cand_Status` varchar(200) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `CourseID` int(11) NOT NULL,
+  `StudPhoto` varchar(200) NOT NULL,
+  `Cand_Status` varchar(200) NOT NULL,
   `Code` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblstudent`
 --
 
 INSERT INTO `tblstudent` (`ID`, `StudentID`, `Firstname`, `Lastname`, `Middlename`, `Address`, `Gender`, `BirthDate`, `Age`, `ContactNo`, `YearLevel`, `CourseID`, `StudPhoto`, `Cand_Status`, `Code`) VALUES
-(1, '023256469', 'KENJIE', 'PALACIOS', 'ECHALAR', 'KABANKALAN CITY', 'Male', '1992-11-20', 24, '0232546886', 'Fourth', 3, 'photo/5047.jpg', '', ''),
 (2, '12312312', 'JAKE', 'PALMA', 'ECHALAR', 'KABANKALAN CITY', 'Male', '1990-11-11', 26, '12312312312', 'Second', 4, 'photo/IMG-20211025-WA0009.jpg', '', ''),
 (3, '8583362', 'JANRY', 'TAN', 'MELMOM', 'KABANKALAN CITY', 'Male', '1991-08-16', 25, '12312312312', 'First', 3, 'photo/6308.jpg', '', ''),
 (4, '0010266936', 'JASON', 'BATUTU', 'RERE', 'KABANKALAN CITY', 'Male', '1994-02-14', 23, '21312312312321', 'First', 3, '', '', ''),
@@ -456,7 +456,9 @@ INSERT INTO `tblstudent` (`ID`, `StudentID`, `Firstname`, `Lastname`, `Middlenam
 (84, 'WXGO1GBL', 'SHARID', 'ABDHALA', 'HAMISI', 'KWALE', 'Male', '1961-12-10', 62, '0727000000', 'First', 5, '', '', ''),
 (85, 'ERP4ZXJ3', 'ALFRED', 'KASHURU', 'K', 'KILIFI', 'Male', '1989-12-11', 34, '07809765432', 'First', 5, '', '', ''),
 (86, 'A0VN6AKV', 'ALLAN', 'NGOCHILA', 'A', 'PLP', 'Male', '1996-11-10', 27, '0797790312', 'First', 10, '', '', ''),
-(87, 'MM5S13PL', 'EVANS ', 'MUTUKU', 'E', 'PLP', 'Male', '1980-11-12', 43, '0977655414516', 'First', 9, '', '', '');
+(87, 'MM5S13PL', 'EVANS ', 'MUTUKU', 'E', 'PLP', 'Male', '1980-11-12', 43, '0977655414516', 'First', 9, '', '', ''),
+(88, 'OS6GP55K', 'JEFF', 'ISAAC', 'KAMAU', 'KIAMBU', 'Male', '1994-05-15', 29, '0702427761', 'Second', 4, 'gym5.jpg', '', ''),
+(90, 'JL2W5WZS', 'JOHN', 'KAMAU', 'KINUTHIA', 'KIAMBU', 'Male', '1994-06-20', 29, '0702427761', 'Third', 5, 'team-2.jpg', '', '');
 
 -- --------------------------------------------------------
 
@@ -465,7 +467,7 @@ INSERT INTO `tblstudent` (`ID`, `StudentID`, `Firstname`, `Lastname`, `Middlenam
 --
 
 CREATE TABLE `tbltimetable` (
-  `TimeTableID` int NOT NULL,
+  `TimeTableID` int(11) NOT NULL,
   `StudentID` varchar(90) NOT NULL,
   `TimeInAM` varchar(30) NOT NULL,
   `TimeOutAM` varchar(30) NOT NULL,
@@ -473,7 +475,7 @@ CREATE TABLE `tbltimetable` (
   `TimeOutPM` varchar(30) NOT NULL,
   `AttendDate` date NOT NULL,
   `AttendEvent` varchar(90) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbltimetable`
@@ -497,13 +499,13 @@ INSERT INTO `tbltimetable` (`TimeTableID`, `StudentID`, `TimeInAM`, `TimeOutAM`,
 --
 
 CREATE TABLE `tblverifytimeintimeout` (
-  `VerifyID` int NOT NULL,
+  `VerifyID` int(11) NOT NULL,
   `StudentID` varchar(90) NOT NULL,
   `TimeIn` varchar(30) NOT NULL,
   `TimeOut` varchar(30) NOT NULL,
   `Verification` varchar(90) NOT NULL,
   `DateValidation` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblverifytimeintimeout`
@@ -523,18 +525,19 @@ INSERT INTO `tblverifytimeintimeout` (`VerifyID`, `StudentID`, `TimeIn`, `TimeOu
 --
 
 CREATE TABLE `tblvotes` (
-  `VotesId` int NOT NULL,
+  `VotesId` int(11) NOT NULL,
   `Voters` varchar(90) NOT NULL,
   `Candidate` varchar(90) NOT NULL,
   `VoteDate` date NOT NULL,
   `Course` varchar(90) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblvotes`
 --
 
 INSERT INTO `tblvotes` (`VotesId`, `Voters`, `Candidate`, `VoteDate`, `Course`) VALUES
+(0, 'fb8kxbxk', 'idx4dyst', '2024-02-27', ''),
 (1, 'vrajnsp8', '023256469', '2024-02-08', ''),
 (2, '0ewhhetb', '023256469', '2024-02-08', ''),
 (3, 'x34v8mmg', '023256469', '2024-02-08', ''),
@@ -589,19 +592,18 @@ INSERT INTO `tblvotes` (`VotesId`, `Voters`, `Candidate`, `VoteDate`, `Course`) 
 --
 
 CREATE TABLE `tblvotingcode` (
-  `VCID` int NOT NULL,
+  `VCID` int(11) NOT NULL,
   `CodeNo` varchar(30) NOT NULL,
   `GenerateDate` date NOT NULL,
   `CVUse` tinyint(1) NOT NULL,
-  `AuthPrint` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `AuthPrint` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblvotingcode`
 --
 
 INSERT INTO `tblvotingcode` (`VCID`, `CodeNo`, `GenerateDate`, `CVUse`, `AuthPrint`) VALUES
-(50, 'fb8kxbxk', '2024-02-09', 1, 201779),
 (51, '6jmoctui', '2024-02-09', 1, 201779),
 (53, '3ieka2u0', '2024-02-09', 1, 201781),
 (58, 'svkz64tw', '2024-02-17', 1, 201786),
@@ -742,14 +744,14 @@ INSERT INTO `tblvotingcode` (`VCID`, `CodeNo`, `GenerateDate`, `CVUse`, `AuthPri
 --
 
 CREATE TABLE `useraccounts` (
-  `ACCOUNT_ID` int NOT NULL,
+  `ACCOUNT_ID` int(11) NOT NULL,
   `ACCOUNT_NAME` varchar(255) NOT NULL,
   `ACCOUNT_USERNAME` varchar(255) NOT NULL,
   `ACCOUNT_PASSWORD` text NOT NULL,
   `ACCOUNT_TYPE` varchar(30) NOT NULL,
-  `EMPID` int NOT NULL,
+  `EMPID` int(11) NOT NULL,
   `USERIMAGE` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `useraccounts`
@@ -784,12 +786,6 @@ ALTER TABLE `tblautonumber`
 ALTER TABLE `tblcandidate`
   ADD PRIMARY KEY (`CandidateID`),
   ADD KEY `StudentID` (`StudentID`);
-
---
--- Indexes for table `tblconfirmcode`
---
-ALTER TABLE `tblconfirmcode`
-  ADD PRIMARY KEY (`CodeID`);
 
 --
 -- Indexes for table `tblcourse`
@@ -872,94 +868,16 @@ ALTER TABLE `useraccounts`
 --
 
 --
--- AUTO_INCREMENT for table `tblautonumber`
---
-ALTER TABLE `tblautonumber`
-  MODIFY `AutoID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `tblcandidate`
 --
 ALTER TABLE `tblcandidate`
-  MODIFY `CandidateID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
-
---
--- AUTO_INCREMENT for table `tblconfirmcode`
---
-ALTER TABLE `tblconfirmcode`
-  MODIFY `CodeID` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tblcourse`
---
-ALTER TABLE `tblcourse`
-  MODIFY `CourseID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `tbldepartment`
---
-ALTER TABLE `tbldepartment`
-  MODIFY `DepartmentID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `tblevents`
---
-ALTER TABLE `tblevents`
-  MODIFY `EventID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `tbleventwinner`
---
-ALTER TABLE `tbleventwinner`
-  MODIFY `EWID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `tbllogs`
---
-ALTER TABLE `tbllogs`
-  MODIFY `LOGID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=291;
-
---
--- AUTO_INCREMENT for table `tblsales`
---
-ALTER TABLE `tblsales`
-  MODIFY `SalesId` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `CandidateID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `tblstudent`
 --
 ALTER TABLE `tblstudent`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
-
---
--- AUTO_INCREMENT for table `tbltimetable`
---
-ALTER TABLE `tbltimetable`
-  MODIFY `TimeTableID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `tblverifytimeintimeout`
---
-ALTER TABLE `tblverifytimeintimeout`
-  MODIFY `VerifyID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `tblvotes`
---
-ALTER TABLE `tblvotes`
-  MODIFY `VotesId` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
-
---
--- AUTO_INCREMENT for table `tblvotingcode`
---
-ALTER TABLE `tblvotingcode`
-  MODIFY `VCID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202;
-
---
--- AUTO_INCREMENT for table `useraccounts`
---
-ALTER TABLE `useraccounts`
-  MODIFY `ACCOUNT_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

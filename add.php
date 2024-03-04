@@ -8,6 +8,7 @@ $confirmation = createRandomPassword();
 $_SESSION['confirmation'] = $confirmation;
 
 ?>
+<link rel="shortcut icon" href="images/ico/favicon.ico">
 <center>
  <section id="feature" class="transparent-bg">
         <div class="container">

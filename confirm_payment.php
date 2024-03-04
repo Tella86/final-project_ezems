@@ -1,8 +1,9 @@
 <?php
 require_once "include/initialize.php";
-if (isset($_SESSION['password'])) {
-    // redirect("confirm_payment.php");
-}
+// require_once "../templates.php";
+// if (isset($_SESSION['password'])) {
+//     // redirect("confirm_payment.php");
+// }
 
 // $confirmation = RandomPassword();
 // // echo $confirmation;
@@ -21,7 +22,7 @@ if (isset($_SESSION['password'])) {
 <!-- Bootstrap core CSS -->
 <link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo web_root; ?>css/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-
+<link rel="shortcut icon" href="images/ico/favicon.ico">
 <link href="<?php echo web_root; ?>css/css/index_background.css" rel="stylesheet" media="screen">
 <link href="<?php echo web_root; ?>css/css/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
 <link href="<?php echo web_root; ?>css/css/my_style.css" rel="stylesheet" media="screen">
@@ -70,7 +71,7 @@ if (isset($_SESSION['password'])) {
 <fieldset>
 <form  action="login.php"method="post">
 <!-- <?php check_message();?> -->
-<img src = "./img/sclogo.png" height="150px" width="500px" alt="site logo">
+<img src = "img/sclogo.png" height="150px" width="500px" alt="site logo">
 <div id="page">
   <div id="header">
     <div id="container" align="center">
@@ -213,4 +214,4 @@ myInput.onkeyup = function() {
           </div>
        </div>
     </div>
-    <?php unset($_SESSION['code']);?>
+<?php unset($_SESSION['code']);?>

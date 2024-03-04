@@ -289,7 +289,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                 <div class="mpesa"><h2>One Day Event Package</h2><h2>Ksh.35,000/</h2></div>
 
                     <div class="media mt-4 pl-2">
-                    <img src="mpesa.png" class="mr-1" height="75" />
+                    <img src="daraja/mpesa.png" class="mr-1" height="75" />
                     <div >
                   </div>
 
@@ -301,7 +301,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                   <h7> Enter your MPESA PIN</h7>
                 </div>
                   <div class="media mt-3 pl-2"></div><h6>Enter Phone Number</h6>
-                   <form class="row g-3" action="./stk_initiate.php" method="POST">
+                   <form class="row g-3" action="stk_initiate.php" method="POST">
                   <div class="col-12">
                   </div>
                   <i class="fa fa-user icon"></i>

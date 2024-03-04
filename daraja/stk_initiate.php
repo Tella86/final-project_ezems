@@ -1,28 +1,22 @@
 <?php
+// require_once "../confirm_payment.php";
 
+if (!isset($_SESSION['ACCOUNT_ID'])) {
+    // redirect(web_root . "login.php");
+
+}
 if (isset($_POST['submit'])) {
 
     date_default_timezone_set('Africa/Nairobi');
 
     # access token
-    $consumerKey = 'IYihST9GrQXHsSO2sNaAIDvaeBG104EO1JR5bsRpoPWNAOeQ'; //Fill with your app Consumer Key
-    $consumerSecret = '171P6SB9f9RntkqFaaOBKRlehIOs4HujTTLDbqdgYltLy0fIsqcXQfDG9kGvwQIe'; // Fill with your app Secret
+    $consumerKey = 'lTPKZzbSmeoT0Hx2kJMGOMQwvGUCvI7G'; //Fill with your app Consumer Key
+    $consumerSecret = 'gp7uF5GfK1EoBIjI'; // Fill with your app Secret
 
     # define the variales
     # provide the following details, this part is found on your test credentials on the developer account
-    $Initiator = 'API_Usename';
-    // $SecurityCredential = 'FKXl/KPzT8hFOnozI+unz7mXDgTRbrlrZ+C1Vblxpbz7jliLAFa0E/…../uO4gzUkABQuCxAeq+0Hd0A==';
-    $CommandID = 'BusinessBuyGoods';
-    $SenderIdentifierType = '4';
-    $RecieverIdentifierType = '4';
-    $PartyA = '7149030';
-    $PartyB = '7136632';
-    $AccountReference = '353353';
-    // $QueueTimeOutURL = 'https://mydomain.com/b2b/businessbuygoods/queue/';
-    // $ResultURL = 'https://mydomain.com/b2b/businessbuygoods/result/';
-
-    $BusinessShortCode = '174379';
-    $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
+    $BusinessShortCode = '7149030';
+    $Passkey = '1059e4e89b1ac704ea6b1b327df0ccaca297e5b31b9ea323c47cc0d87f31bfe1';
 
     /*
     This are your info, for
@@ -36,8 +30,8 @@ if (isset($_POST['submit'])) {
 
     $PartyA = $_POST['phone']; // This is your phone number,
     $AccountReference = 'EZEMS';
-    $TransactionDesc = 'Test Payment';
-    $Amount = $_POST['amount'];
+    $TransactionDesc = 'Payment';
+    $Amount = $_POST = 'amount';
 
     # Get the timestamp, format YYYYmmddhms -> 20181004151020
     $Timestamp = date('YmdHis');
@@ -49,11 +43,12 @@ if (isset($_POST['submit'])) {
     $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-    $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-    $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+    $access_token_url = 'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+    $initiate_url = 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
     # callback url
-    $CallBackURL = 'https://shimmering-abaft-pegasus.glitch.me/webhook';
+    // $CallBackURL = 'https://shimmering-abaft-pegasus.glitch.me/webhook';
+    $CallBackURL = 'https://formerly-gentle-hamster.ngrok-free.app/stk_initiate.php/';
 
     $curl = curl_init($access_token_url);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -76,16 +71,16 @@ if (isset($_POST['submit'])) {
 
     $curl_post_data = array(
         //Fill in the request parameters with valid values
-        'BusinessShortCode' => $BusinessShortCode,
+        'BusinessShortCode' => '7149030',
         'Password' => $Password,
         'Timestamp' => $Timestamp,
-        'TransactionType' => 'CustomerPayBillOnline',
-        'Amount' => $Amount,
+        'TransactionType' => 'CustomerBuyGoodsOnline',
+        'Amount' => '1',
         'PartyA' => $PartyA,
-        'PartyB' => $BusinessShortCode,
+        'PartyB' => '7136632',
         'PhoneNumber' => $PartyA,
         'CallBackURL' => $CallBackURL,
-        'AccountReference' => $AccountReference,
+        'AccountReference' => 'EZEMS',
         'TransactionDesc' => $TransactionDesc,
     );
 
@@ -97,5 +92,5 @@ if (isset($_POST['submit'])) {
     print_r($curl_response);
 
     echo $curl_response;
-
+    header("Location: confirm_payment.php");
 }

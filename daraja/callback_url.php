@@ -19,3 +19,4 @@ fwrite($log, $mpesaResponse);
 fclose($log);
 
 echo $response;
+// redirect("./sems/login.php");

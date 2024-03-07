@@ -18,13 +18,13 @@
 				<!-- Secondary Column -->
 					<div class="column secondary">
 						<div class="header">
-							2x a Week
-							<span>Php1,000</span>
+							2 Years Package
+							<span>65,000</span>
 						</div>
 						<div class="included">
 							<ul class="checkmarks">
-								<li>Includes Annual Membership</li>
-								<li><b>Twice a Week session</li>
+								<li>Includes Full Subscription</li>
+								<li><b>Two Years Subscription</li>
 								<li><b>Cool Great</b> Things</li>
 								<li>Has everything</li>
 							</ul>

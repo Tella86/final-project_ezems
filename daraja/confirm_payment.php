@@ -1,5 +1,5 @@
 <?php
-require_once "include/initialize.php";
+require_once "../include/initialize.php";
 // require_once "../templates.php";
 // if (isset($_SESSION['password'])) {
 //     // redirect("confirm_payment.php");
@@ -32,7 +32,7 @@ require_once "include/initialize.php";
 
 <link href="<?php echo web_root; ?>css/css/fullcalendar/fullcalendar.css" rel="stylesheet" media="screen">
 <link href="<?php echo web_root; ?>css/css/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
-<!-- <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen"> -->
+<link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen">
 <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
 <style>
 	fieldset
@@ -49,7 +49,10 @@ require_once "include/initialize.php";
 		{
 			padding: 10px;
 		}
-	
+	body
+		{
+			background:url(../images/bg/bgtest2.png);
+    }
 	.button
 		{
 			width:110px;
@@ -68,7 +71,7 @@ require_once "include/initialize.php";
 <fieldset>
 <form  action="login.php"method="post">
 <!-- <?php check_message();?> -->
-<img src = "img/sclogo.png" height="150px" width="500px" alt="site logo">
+<img src = "../img/sclogo.png" height="150px" width="500px" alt="site logo">
 <div id="page">
   <div id="header">
     <div id="container" align="center">
@@ -98,7 +101,7 @@ require_once "include/initialize.php";
 </div>
 <div class="col-12">
   <button type="submit" class="btn btn-success" name="submit" value="submit">Confirm Pay</button>
-  <a href="creditional.php" class="btn btn-primary">Get login Details</a>
+  <a href="/creditional.php" class="btn btn-primary">Get login Details</a>
 </div>
 </form>
 </div>

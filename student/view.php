@@ -57,13 +57,13 @@ $resCourse = $course->single_course($res->CourseID);
                        <!-- `IDNO`, `Firstname`, `Lastname`, `MNAME`, `SEX`, `BDAY`, `BPLACE`, `STATUS`, `AGE`, `NATIONALITY`,
                       `RELIGION`, `CONTACT_NO`, `HOME_ADD`, `EMAIL`, `ACC_PASSWORD`, `student_status`, `schedID`, `course_year` -->
                       <?php
-                        $currentyear = date('Y');
-                        $nextyear = date('Y') + 1;
-                        $sy = $currentyear . '-' . $nextyear;
-                        $_SESSION['SY'] = $sy;
-                        // $newDate    = Carbon::createFromFormat('Y-m-d',$_SESSION['SY'] )->addYear(1);
+$currentyear = date('Y');
+$nextyear = date('Y') + 1;
+$sy = $currentyear . '-' . $nextyear;
+$_SESSION['SY'] = $sy;
+// $newDate    = Carbon::createFromFormat('Y-m-d',$_SESSION['SY'] )->addYear(1);
 
-                        ?>
+?>
 
 
                       <form action="controller.php?action=edit" class="form-horizontal" method="post" >
@@ -95,6 +95,7 @@ $resCourse = $course->single_course($res->CourseID);
                             <td style="padding:0;"> Firstname</td>
                             <td style="padding:0;" colspan="2">Lastname</td>
                             <td style="padding:0;"> Midlename</td>
+
                           </tr>
                           <tr>
                             <td><label>Address :</label></td>

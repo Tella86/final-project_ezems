@@ -6,7 +6,6 @@ require_once 'stcontroller.php';
 $confirmation = createRandomPassword();
 // echo $confirmation;
 $_SESSION['confirmation'] = $confirmation;
-
 ?>
 <link rel="shortcut icon" href="images/ico/favicon.ico">
 <center>
@@ -16,7 +15,7 @@ $_SESSION['confirmation'] = $confirmation;
                  <h2 class="page-header">Voter Registration</h2>
                 <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> -->
             </div>
-
+    
             <div class="row">
                 <div class="features">
 
@@ -25,12 +24,12 @@ $_SESSION['confirmation'] = $confirmation;
                              <div class="form-group">
                               <div class="col-md-8">
                                 <label class="col-md-4 control-label" for=
-                                "StudentID"></label>
+                                "StudentID">VoterID</label>
 
                                 <div class="col-md-8">
                                    <!-- <input type="text" id="mytextbox" onkeyup="javascript:capitalize(this.id, this.value);"> -->
                                    <input class="form-control input-sm" id="StudentID"type="hidden" value= "<?php echo $_SESSION['confirmation']; ?>" name="StudentID">
-
+                                   <align left><?php echo $confirmation;?> </left>
 
                                 </div>
                                 <div id="checkid_message"></div>

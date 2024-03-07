@@ -1,8 +1,9 @@
 <?php
 require_once "include/initialize.php";
+// require_once "templates.php";
 
 ?>
-  <?php
+<?php
 if (isset($_SESSION['ACCOUNT_ID'])) {
     redirect(web_root . "index.php");
     $confirmation = RandomSourceCode();
@@ -14,382 +15,389 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta content="text/html; charset=utf-8" http-equiv="content-type" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="">
-<meta name="author" content="">
-<title>PAY EZEMS&nbsp;</title>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>PAY EZEMS&nbsp;</title>
 
-<!-- Bootstrap core CSS -->
-<link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php echo web_root; ?>css/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <!-- Bootstrap core CSS -->
+    <link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo web_root; ?>css/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="<?php echo web_root; ?>css/css/index_background.css" rel="stylesheet" media="screen">
+    <link href="<?php echo web_root; ?>css/css/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
+    <link href="<?php echo web_root; ?>css/css/my_style.css" rel="stylesheet" media="screen">
+    <link href="<?php echo web_root; ?>css/css/styles.css" rel="stylesheet" media="screen">
+    <link href="<?php echo web_root; ?>css/css/index.css" rel="stylesheet" media="screen">
+    <link href="<?php echo web_root; ?>css/css/DT_bootstrap.css" rel="stylesheet" media="screen">
+    <link href="<?php echo web_root; ?>css/css/fullcalendar/fullcalendar.css" rel="stylesheet" media="screen">
+    <link href="<?php echo web_root; ?>css/css/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" rel="stylesheet"
+        media="screen">
+    <!-- <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen"> -->
+    <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
 
-<link href="<?php echo web_root; ?>css/css/index_background.css" rel="stylesheet" media="screen">
-<link href="<?php echo web_root; ?>css/css/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
-<link href="<?php echo web_root; ?>css/css/my_style.css" rel="stylesheet" media="screen">
-<link href="<?php echo web_root; ?>css/css/styles.css" rel="stylesheet" media="screen">
-<link href="<?php echo web_root; ?>css/css/index.css" rel="stylesheet" media="screen">
-<link href="<?php echo web_root; ?>css/css/DT_bootstrap.css" rel="stylesheet" media="screen">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span
+                        class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" id="footer_nav">
+                        <li class="divider-vertical"></li>
 
-<link href="<?php echo web_root; ?>css/css/fullcalendar/fullcalendar.css" rel="stylesheet" media="screen">
-<link href="<?php echo web_root; ?>css/css/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
-<link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen">
-<link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
-<link rel="shortcut icon" href="images/ico/favicon.ico">
+                        <li class="divider-vertical"></li>
+                    </ul>
+                </div>
 
- <div class="navbar">
-     <div class="navbar-inner">
-         <div class="container-fluid">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-      </a>
-                  <div class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav" id="footer_nav">
-                    <li class="divider-vertical"></li>
+                <style>
+                * {
+                    padding: 0;
+                    margin: 0px;
 
-                    <li class="divider-vertical"></li>
-                  </ul>
-                                </div>
+                }
+                /* // Developed by http://ezems.com/ */
+                body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    min-height: 10vh;
+                    font-family: Hack, monospace;
+                }
 
-                              <style>
-                                  * {
-                                    padding: 0;
-                                    margin: 0px;
+                div {
+                    color: #727272;
+                    text-align: center;
+                }
 
-                                  }
-                                /* // Developed by http://ezems.com/ */
+                p {
+                    margin: 16px;
+                    font-size: 96px;
+                    color: #ccc;
+                    text-transform: uppercase;
+                    font-weight: 600px;
+                    transition: all 1s ease-in-out;
+                    position: relative;
 
-                                body {
-                                  display: flex;
-                                  flex-direction: column;
-                                  justify-content: center;
-                                  align-items: center;
-                                  position: relative;
-                                  min-height: 10vh;
-                                  font-family: Hack, monospace;
-                                }
+                    &::before {
+                        content: attr(data-item);
+                        transition: all 1s ease-in-out;
+                        color: #8254ff;
+                        position: absolute;
+                        top: 0px;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        width: 0;
+                        overflow: hidden;
+                    }
 
-                                div {
-                                  color: #727272;
-                                  text-align: center;
-                                }
+                    &:hover {
+                        &::before {
+                            width: 10%;
+                        }
+                    }
+                }
 
-                                p {
-                                  margin: 16px;
-                                  font-size: 96px;
-                                  color: #ccc;
-                                  text-transform: uppercase;
-                                  font-weight: 600px;
-                                  transition: all 1s ease-in-out;
-                                  position: relative;
+                nav {
+                    margin: 2.5px;
+                    background: green;
+                    padding: 1pxpx;
+                    top: 1px;
 
-                                  &::before {
+                    .menuItems {
+                        list-style: none;
+                        display: flex;
+                        border-radius: 10px;
+
+                        li {
+                            margin: 11px;
+
+                            a {
+                                text-decoration: none;
+                                color: white;
+                                font-size: 12px;
+                                font-weight: 10px;
+                                /* transition: all 0.0s ease-in-out; */
+                                position: relative;
+                                text-transform: uppercase;
+
+                                &::before {
                                     content: attr(data-item);
-                                    transition: all 1s ease-in-out;
+                                    transition: 0.5s;
                                     color: #8254ff;
                                     position: absolute;
-                                    top: 0px;
+                                    top: auto;
                                     bottom: 0;
                                     left: 0;
                                     right: 0;
                                     width: 0;
                                     overflow: hidden;
-                                  }
+                                }
 
-                                  &:hover {
+                                &:hover {
                                     &::before {
-                                      width: 10%;
+                                        width: 10%;
+                                        transition: all 0.5s ease-in-out;
                                     }
-                                  }
                                 }
+                            }
+                        }
+                    }
+                }
+                </style>
+                <!-- Developed by http://ezemst.com/ -->
+                <div></div>
+                <!-- <p data-item='EZEMS'>EZEMS</p> -->
 
-                                nav {
-                                  margin: 2.5px;
-                                  background: green;
-                                  padding: 1pxpx;
-                                  top: 1px;
-                                  .menuItems {
-                                    list-style: none;
-                                    display: flex;
-                                    border-radius:  10px;
+                <section>
+                    <div></div>
+                    <nav>
+                        <ul class="menuItems">
+                            <li><a href='#' data-item=''>Home</a></li>
+                            <li><a href='about.php' data-item=''>Mission | Vision</a></li>
+                            <li><a href='history.php' data-item=''>Company History</a></li>
+                            <li><a href='developers.php' data-item=''>Developers</a></li>
+                            <li><a href='./contact-us/index.php' data-item=''>Contact Us</a></li>
+                            <li><a href='https://youtu.be/hAbaBLnxnzU' target="_blank">Demo</a></li>
+                        </ul>
+                    </nav>
+                    <br>
 
-                                    li {
-                                      margin: 11px;
+<body id="login" style="background:url(images/bg/bgtest2.png)">
+    </div>
 
-                                      a {
-                                        text-decoration: none;
-                                        color: white;
-                                        font-size: 12px;
-                                        font-weight: 10px;
-                                        /* transition: all 0.0s ease-in-out; */
-                                        position: relative;
-                                        text-transform: uppercase;
+    <div class="container">
+        <div class="row-fluid">
 
-                                        &::before {
-                                          content: attr(data-item);
-                                          transition: 0.5s;
-                                          color: #8254ff;
-                                          position: absolute;
-                                          top: auto;
-                                          bottom: 0;
-                                          left: 0;
-                                          right: 0;
-                                          width: 0;
-                                          overflow: hidden;
-                                        }
+            <div class="span6">
+                <div class="title_index">
+                    <div class="span12">
+                        <div class="motto">
 
-                                        &:hover {
-                                          &::before {
-                                            width: 10%;
-                                            transition: all 0.5s ease-in-out;
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-
-
-                                    </style>
-                        <!-- Developed by http://ezemst.com/ -->
-<div></div>
-<!-- <p data-item='EZEMS'>EZEMS</p> -->
-
-<section>
-  <div></div>
-  <nav>
-    <ul class="menuItems">
-      <li><a href='#' data-item=''>Home</a></li>
-      <li><a href='about.php' data-item=''>Mission | Vision</a></li>
-      <li><a href='history.php' data-item=''>Company History</a></li>
-      <li><a href='developers.php' data-item=''>Developers</a></li>
-      <li><a href='./contact-us/index.php' data-item=''>Contact Us</a></li>
-      <li><a href='https://youtu.be/hAbaBLnxnzU' target="_blank">Demo</a></li>
-    </ul>
-  </nav>
-<br>
-
-                <body id="login" style="background:url(images/bg/bgtest2.png)">
-                </div>
-
-                <div class="container">
-                    <div class="row-fluid">
-
-                      <div class="span6">
-                        <div class="title_index">
-                        <div class="span12">
-                                        <div class="motto">
-
-                        <!-- <h3><p>WELCOME&nbsp;&nbsp;TO:</p></h3> -->
+                            <!-- <h3><p>WELCOME&nbsp;&nbsp;TO:</p></h3> -->
                         </div>
-              <div class="row-fluid">
-                <div class="span12"></div>
-                    <div class="row-fluid">
-                      <div class="span10">
-                      <img class="index_logo" src="img/santotomas.png"height="200px" width="590px">
-                      </div>
+                        <div class="row-fluid">
+                            <div class="span12"></div>
+                            <div class="row-fluid">
+                                <div class="span10">
+                                    <img class="index_logo" src="img/santotomas.png" height="200px" width="590px">
+                                </div>
 
-                      </div>
+                            </div>
+                        </div>
                     </div>
-              </div>
 
-        </div>
-      </div>
+                </div>
+            </div>
 
-                  <link
-                    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-                    rel="stylesheet"/>
-                  <link href="" rel="stylesheet" />
-                  <!-- CSS only -->
-                  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-                  <script>
-                    type="text/javascript"
-                    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-                  </script>
-                  <link rel="stylesheet" href="style.css">
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+            <link href="" rel="stylesheet" />
+            <!-- CSS only -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+            <script>
+            type = "text/javascript"
+            src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+            </script>
+            <!-- <link rel="stylesheet" href="style.css"> -->
 
-        <style>
+            <style>
             /* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"); */
             body {
-              /* background-color: #eaedf4; */
-              font-family: "Rubik", sans-serif;
-              background-color: #74992e;
+                /* background-color: #eaedf4; */
+                font-family: "Rubik", sans-serif;
+                background-color: #74992e;
 
             }
 
             .card {
-              width: 335px;
-              border: none;
-              border-radius: 10px;
-              float: right;
+                width: 335px;
+                border: none;
+                border-radius: 10px;
+                float: right;
             }
 
             .justify-content-around div {
-              border: none;
-              border-radius: 5px;
-              background: #f3f4f6;
-              padding: 5px 10px 5px;
-              color: #8d9297;
+                border: none;
+                border-radius: 5px;
+                background: #f3f4f6;
+                padding: 5px 10px 5px;
+                color: #8d9297;
             }
+
             .justify-content-around span {
-              font-size: 1px;
+                font-size: 1px;
             }
 
             .justify-content-around div:hover {
-              background: #545ebd;
-              color: #fff;
-              cursor: pointer;
+                background: #545ebd;
+                color: #fff;
+                cursor: pointer;
             }
 
             .justify-content-around div:nth-child(1) {
-              background: #545ebd;
-              color: #fff;
+                background: #545ebd;
+                color: #fff;
             }
 
             span.mt-0 {
-              color: #8d9297;
-              font-size: 12px;
+                color: #8d9297;
+                font-size: 12px;
             }
 
             h6 {
-              font-size: 18px;
+                font-size: 18px;
             }
+
             .mpesa {
-              background-color: green !important;
+                background-color: green !important;
             }
 
-            h9{
-              font-size: 12px;
-            }
-            a{
-              font-size: 12px;
-              color: black;
-            }
-            button{
-              border-radius: 5px;
+            h9 {
+                font-size: 12px;
             }
 
+            a {
+                font-size: 12px;
+                color: black;
+            }
 
-          </style>
-          <div class="span6">
-        <div class="pull-right">
-        <?php check_message();?>
-                <div id="home" >
-        <div class="overlay">
+            button {
+                border-radius: 5px;
+            }
+            </style>
+            <div class="span6">
+                <div class="pull-right">
+                    <?php check_message();?>
+                    <div id="home">
+                        <div class="overlay">
 
-        <body oncontextmenu="return false" class="snippet-body">
-        <div class="container d-flex justify-content-center">
-                <div class="card mt-5 px-3 py-4">
-                <div class="d-flex flex-row justify-content-around">
-                <div class="mpesa"><h2>One Day Event Package</h2><h2>Ksh.35,000/</h2></div>
+                            <body oncontextmenu="return false" class="snippet-body">
+                                <div class="container d-flex justify-content-center">
+                                    <div class="card mt-5 px-3 py-4">
+                                        <div class="d-flex flex-row justify-content-around">
+                                            <div class="mpesa">
+                                                <h2>One Day Event Package</h2>
+                                                <h2>Ksh.35,000/</h2>
+                                            </div>
 
-                    <div class="media mt-4 pl-2">
-                    <img src="daraja/mpesa.png" class="mr-1" height="75" />
-                    <div >
-                  </div>
+                                            <div class="media mt-4 pl-2">
+                                                <img src="daraja/mpesa.png" class="mr-1" height="75" />
+                                                <div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h7>You will receive a popup on your phone</h7>
+                                        </div>
+                                        <div>
+                                            <h7>Enter your MPESA PIN</h7>
+                                        </div>
+                                        <div class="media mt-3 pl-2"></div>
+                                        <h6>Enter Phone Number</h6>
+                                        <form class="row g-3" action="stk_initiate.php" method="POST">
+                                            <div class="col-12">
+                                            </div>
+                                            <i class="fa fa-user icon"></i>
+                                            <input id="cardnumber" type="text" class="form-control" name="phone"
+                                                maxlength="13" placeholder="254700000000" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-success" name="submit"
+                                            value="submit">M~Pay</button>
+                                        <button type="submit"><a href="https://paypal.com" target="_blank"
+                                                class="btn btn-info" name="submit" value="submit">PAYPAL</button></a>
+                                    </div>
+                                    <div class="container d-flex justify-content-center">
+                                        <div class="card mt-5 px-3 py-4">
+                                            <div class="d-flex flex-row justify-content-around">
+                                                <div class="mpesa">
+                                                    <h9>By Clicking The M~PAY BUTTON, You Agree to Our</h9>
+                                                    <a href="">Terms And condition</a> and <a href="">Policy Privacy</a>
+                                                    <h9>Already Paid Click? <a href="login.php">Login Here</a>
+                                                        <h9>You Want To Vote</h9><a href="../sems/vote/index.php">VOTE
+                                                            HERE</a>
+                                                        <h9>View Tally</h9><a href="tallyofvotes.php">View Tally</a>
+                                                </div>
+                                                </form>
+                                                <?php
+                            ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript"
+                                    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+                                </script>
+                                <script type="text/javascript" src="script.js"></script>
+                                <script type="text/javascript" src=""></script>
+                                <script type="text/Javascript"></script>
 
-                    </div>
-                  </div>
-                  <div> <h7>You will receive a popup on your phone</h7>
-                  </div>
-                <div>
-                  <h7> Enter your MPESA PIN</h7>
-                </div>
-                  <div class="media mt-3 pl-2"></div><h6>Enter Phone Number</h6>
-                   <form class="row g-3" action="stk_initiate.php" method="POST">
-                  <div class="col-12">
-                  </div>
-                  <i class="fa fa-user icon"></i>
-                  <input id="cardnumber" type="text" class="form-control" name="phone"  maxlength="13" placeholder="254700000000" required>
-                  </div>
+                                <div class="row-fluid">
+                                    <div class="col-md-12 ">
+                                        <h4 style="color:#fff"><span id="tick2">
+                                            </span>&nbsp;|
 
-                  <div class="col-12">
-                  <button type="submit" class="btn btn-success" name="submit" value="submit">M~Pay</button>
-                  <button type="submit"><a href="https://paypal.com" target="_blank" class="btn btn-info" name="submit" value="submit">PAYPAL</button></a>
-                  </div>
-                  <div class="container d-flex justify-content-center">
-                  <div class="card mt-5 px-3 py-4">
-                  <div class="d-flex flex-row justify-content-around">
-                  <div class="mpesa"><h9>By Clicking The M~PAY BUTTON, You Agree to Our</h9>
-                  <a href="">Terms And condition</a> and <a href="">Policy Privacy</a>
-                  <h9>Already Paid Click? <a href="login.php">Login Here</a>
-                  <h9>You Want To Vote</h9><a href="../sems/vote/index.php">VOTE HERE</a>
-                  <h9>View Tally</h9><a href="tallyofvotes.php">View Tally</a>
-                  </div>
+                                            <script>
+                                            // <!--/. tells about the time  -->
+                                            function show2() {
+                                                if (!document.all && !document.getElementById)
+                                                    return
+                                                thelement = document.getElementById ? document.getElementById("tick2") :
+                                                    document.all.tick2
+                                                var Digital = new Date()
+                                                var hours = Digital.getHours()
+                                                var minutes = Digital.getMinutes()
+                                                var seconds = Digital.getSeconds()
+                                                var dn = "PM"
+                                                if (hours < 12)
+                                                    dn = "AM"
+                                                if (hours > 12)
+                                                    hours = hours - 12
+                                                if (hours == 0)
+                                                    hours = 12
+                                                if (minutes <= 9)
+                                                    minutes = "0" + minutes
+                                                if (seconds <= 9)
+                                                    seconds = "0" + seconds
+                                                var ctime = hours + ":" + minutes + ":" + seconds + " " + dn
+                                                thelement.innerHTML = ctime
+                                                setTimeout("show2()", 1000)
+                                            }
+                                            window.onload = show2
+                                            //-->
+                                            </script>
+                                            <!--/. Script where the format of the interface time,month,day and year relies -->
 
-                  </form>
-                   <!--bs5 input-->
-              </div>
-            </div>
-          </div>
-        </div>
-        <script
-          type="text/javascript"
-          src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
-        ></script>
-        <script type="text/javascript" src="script.js"></script>
-        <script type="text/javascript" src=""></script>
-        <script type="text/Javascript"></script>
-
-            <div class="row-fluid">
-            <div class="col-md-12 ">
-            <h4 style="color:#fff"><span id="tick2" >
-              </span>&nbsp;|
-
-<script>
-// <!--/. tells about the time  -->
-function show2(){
-if (!document.all&&!document.getElementById)
-return
-thelement=document.getElementById? document.getElementById("tick2"): document.all.tick2
-var Digital=new Date()
-var hours=Digital.getHours()
-var minutes=Digital.getMinutes()
-var seconds=Digital.getSeconds()
-var dn="PM"
-if (hours<12)
-dn="AM"
-if (hours>12)
-hours=hours-12
-if (hours==0)
-hours=12
-if (minutes<=9)
-minutes="0"+minutes
-if (seconds<=9)
-seconds="0"+seconds
-var ctime=hours+":"+minutes+":"+seconds+" "+dn
-thelement.innerHTML=ctime
-setTimeout("show2()",1000)
-}
-window.onload=show2
-//-->
-
-</script> <!--/. Script where the format of the interface time,month,day and year relies -->
-
-    <?php
+                                            <?php
 $date = new DateTime();
 echo $date->format('l, F jS, Y');
 ?>
 
-    <div>
-  </div>
+                                            <div>
+                                            </div>
 
-<div>
-</div>
-      <div>
-        </div>
-<div>
+                                            <div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                            <div>
 
-</div>
-</body>
+                                            </div>
+                                            
+                            </body>
 
-<?php
-?>
-</head>
+  
+                            </head>
 
 </html>

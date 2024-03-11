@@ -29,11 +29,11 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
     <!-- Bootstrap core CSS -->
     <link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo web_root; ?>css/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <link href="<?php echo web_root; ?>css/css/index_background.css" rel="stylesheet" media="screen">
+    <!-- <link href="<?php echo web_root; ?>css/css/index_background.css" rel="stylesheet" media="screen"> -->
     <link href="<?php echo web_root; ?>css/css/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
     <link href="<?php echo web_root; ?>css/css/my_style.css" rel="stylesheet" media="screen">
     <link href="<?php echo web_root; ?>css/css/styles.css" rel="stylesheet" media="screen">
-    <link href="<?php echo web_root; ?>css/css/index.css" rel="stylesheet" media="screen">
+    <!-- <link href="<?php echo web_root; ?>css/css/index.css" rel="stylesheet" media="screen"> -->
     <link href="<?php echo web_root; ?>css/css/DT_bootstrap.css" rel="stylesheet" media="screen">
     <link href="<?php echo web_root; ?>css/css/fullcalendar/fullcalendar.css" rel="stylesheet" media="screen">
     <link href="<?php echo web_root; ?>css/css/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" rel="stylesheet"
@@ -64,7 +64,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                     margin: 0px;
 
                 }
-                /* // Developed by http://ezems.com/ */
+                /* // Developed by http://ezems.info/ */
                 body {
                     display: flex;
                     flex-direction: column;
@@ -315,8 +315,9 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-success" name="submit"
                                             value="submit">M~Pay</button>
-                                        <button type="submit"><a href="https://paypal.com" target="_blank"
-                                                class="btn btn-info" name="submit" value="submit">PAYPAL</button></a>
+                                            <div class="col-12">
+                                        <button type="submit"><a href="https://funny-newt-personally.ngrok-free.app/sems/confirm_payment.php" target="_blank"
+                                                class="btn btn-info" name="submit" value="submit">Confirm_Payment</button></a>
                                     </div>
                                     <div class="container d-flex justify-content-center">
                                         <div class="card mt-5 px-3 py-4">

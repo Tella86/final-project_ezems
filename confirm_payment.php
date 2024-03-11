@@ -1,10 +1,21 @@
 <?php
 require_once "include/initialize.php";
-// require_once "../templates.php";
-// if (isset($_SESSION['password'])) {
-//     // redirect("confirm_payment.php");
-// }
 
+if (isset($_SESSION['$stkCallbackResponse'])) {
+    redirect("daraja/callback.php");
+
+    header("Content-Type: application/json");
+$stkCallbackResponse = file_get_contents('php://input');
+$logfile = "Mpesastkresponse.json";
+$log = fopen($logfile, "a");
+fwrite($log, $stkCallbackResponse);
+fclose($log);
+
+$data = json_decode($stkCallbackResponse);
+}
+
+// $data = json_decode($stkCallbackResponse);
+// echo $stkCallbackresponse;
 // $confirmation = RandomPassword();
 // // echo $confirmation;
 // $_SESSION['confirmation'] = $confirmation;

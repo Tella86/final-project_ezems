@@ -30,7 +30,7 @@ if (!isset($_SESSION['CVCodeNo'])) {
     <!-- datetime picker CSS -->
     <link rel="stylesheet" href="<?php echo web_root; ?>select2/select2.min.css">
     <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <div class="col-lg-4 row" style="float-left"><img src="../img/sclogo.png"></div>
+    <!-- <div class="col-lg-4 row" style="float-left"><img src="../img/sclogo.png"></div> -->
 </head><!--/head-->
 
 <body class="homepage" >

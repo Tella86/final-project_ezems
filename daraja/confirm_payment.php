@@ -69,7 +69,7 @@ require_once "../include/initialize.php";
 
 <header></header>
 <fieldset>
-<form  action="login.php"method="post">
+<form  action="sems/login.php"method="post">
 <!-- <?php check_message();?> -->
 <img src = "../img/sclogo.png" height="150px" width="500px" alt="site logo">
 <div id="page">

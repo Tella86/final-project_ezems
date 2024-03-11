@@ -46,8 +46,9 @@ if (isset($_POST['submit'])) {
     $initiate_url = 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
     # callback url
-    // $CallBackURL = 'https://ezems.pagekite.me//callback.php';
+    // $CallBackURL = 'https://ezems.pagekite.me/sems/daraja/callback.php';
     $CallBackURL = 'https://funny-newt-personally.ngrok-free.app/sems/callback.php';
+    
   
     
 
@@ -94,5 +95,6 @@ if (isset($_POST['submit'])) {
     print_r($curl_response);
 
     echo $curl_response;
-    // header("Location: confirm_payment.php");
+    // header("Location: ../confirm_payment.php");
+    // header("Location: m.php");
 }

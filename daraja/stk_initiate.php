@@ -1,9 +1,9 @@
 <?php
 
-if (!isset($_SESSION['ACCOUNT_ID'])) {
+// if (!isset($_SESSION['ACCOUNT_ID'])) {
 // redirect(web_root . "login.php");
 
-}
+// }
 if (isset($_POST['submit'])) {
 
     date_default_timezone_set('Africa/Nairobi');
@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
     $initiate_url = 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
     # callback url
-    // $CallBackURL = 'http://ezems.infinityfreeapp.com/callback_url.php';
+    // $CallBackURL = 'https://ezems.pagekite.me/sems/daraja/callback.php';
     $CallBackURL = 'https://funny-newt-personally.ngrok-free.app/sems/callback.php';
   
     
@@ -94,5 +94,6 @@ if (isset($_POST['submit'])) {
     print_r($curl_response);
 
     echo $curl_response;
-    header("Location: confirm_payment.php");
+    // header("Location: ../confirm_payment.php");
+    // header("Location:../m.php");
 }

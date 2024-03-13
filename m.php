@@ -41,7 +41,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
         media="screen">
     <!-- <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen"> -->
     <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <!-- <link rel="shortcut icon" href="images/ico/favicon.ico"> -->
 
     <div class="navbar">
         <div class="navbar-inner">

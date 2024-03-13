@@ -13,8 +13,9 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
+date_default_timezone_set('Africa/Nairobi');
 // Retrieve form data
+$InvoiceDate = $_POST ['InvoiceDate'];
 $invoiceNumber = $_POST['invoiceNumber'];
 $description = $_POST['description'];
 $quantity = $_POST['quantity'];
@@ -23,8 +24,8 @@ $total = $_POST['total'];
 $Phone= $_POST['Phone'];
 
 // Prepare and execute SQL statement
-$sql = "INSERT INTO  tblinvoice (invoiceNumber, description, quantity, price, total,Phone)
- VALUES ('$invoiceNumber', '$description', '$quantity', '$price', '$total', '$Phone')";
+$sql = "INSERT INTO  tblinvoice (InvoiceDate, invoiceNumber, description, quantity, price, total,Phone)
+ VALUES ('$InvoiceDate', '$invoiceNumber', '$description', '$quantity', '$price', '$total', '$Phone')";
 
 if ($conn->query($sql) === TRUE) {
   echo "successfully subscribed";

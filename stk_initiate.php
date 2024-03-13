@@ -100,6 +100,6 @@ if (isset($_POST['submit'])) {
     echo $curl_response;
 
 
-    // header("Location: confirm_payment.php");
+    header("Location: confirm_payment.php");
     // header("Location: m.php");
 }

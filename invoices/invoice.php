@@ -1,7 +1,7 @@
 <?php
 function RandomSourceCode()
 {
-    $var = "012STU34ABCDEFGHIJK789LMNOPQR56VWXYZ";
+    $var = "EZEMS0123456789ABCDFGHIJKLMNOPQRSTUVWXY";
     srand((double) microtime() * 1000000);
     $i = 0;
     $rand_Code = '';
@@ -75,18 +75,22 @@ function hidePrintButton($printinvoice) {
         <P>KILIFI</P>
     </center>
     <center>
-        <P>TELL:0101086123</P>
+        <P>TELL:254101086123</P>
     </center>
-    <?php 
+    
+    <form id="invoiceForm" action="contoller.php" method="post">
+
+        <table>
+        <?php 
+    date_default_timezone_set('Africa/Nairobi');
 echo "<div style='text-align: left;'>";
-$date= date("d-m-Y ");echo "Invoice Date:" . $date;
+$currentDateTime= date("d-m-Y H:i:s");echo "Invoice Date:" . $currentDateTime;
 echo "</div>";
     
     ?>
-    <form id="invoiceForm" action="contoller.php" method="post">
-        <table>
             <thead>
                 <tr>
+                <th>Invoice Date</th>
                     <th>Invoice Number</th>
                     <th>Description</th>
                     <th>Quantity</th>
@@ -96,13 +100,19 @@ echo "</div>";
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr> 
+                <td><input class="form-control input-sm" name="InvoiceDate" type="shown"
+                            value="<?php  date_default_timezone_set('Africa/Nairobi');
+
+$currentDateTime= date("d-m-Y H:i:s");echo "" . $currentDateTime;
+ ?>" </td>
+
                     <td><input class="form-control input-sm" name="invoiceNumber" type="shown"
                             value="<?php echo $_SESSION['confirmation']; ?>" </td>
                     <td><select id="description" name="description" required>
-                            <option value="Basic Package ($1/Voter)">Basic Package ($1/Voter)</option>
-                            <option value="Standard Package ($242/Yearly)">Standard Package ($242/Yearly)</option>
-                            <option value="Premium Package ($1035/Life Time)">Premium Package ($1035/Life Time)</option>
+                            <option value="Basic Package (kSH.145/Per Voter)">Basic Package (kSH.145/Per Voter)</option>
+                            <option value="Standard Package (KSH.35090/P.a)">Standard Package (KSH.35090/P.a)</option>
+                            <option value="Premium Package (KSH.150000/Life Time))">Premium Package (KSH.150000/Life Time)</option>
                     </td>
                     <td><input type="number" name="quantity" oninput="calculateTotal(this)"></td>
                     <td><input type="number" name="price" oninput="calculateTotal(this)"></td>

@@ -27,7 +27,7 @@ $ResultCode = $data->Body->stkCallback->ResultCode;
 $ResultDesc = $data->Body->stkCallback->ResultDesc;
 $Amount = $data->Body->stkCallback->CallbackMetadata->Item[0]->Value;
 $TransactionID = $data->Body->stkCallback->CallbackMetadata->Item[1]->Value;
-$TransactionDate = $data->Body->stkCallback->CallbackMetadata->Item[1]->Value;
+$TransactionDate = $data->Body->stkCallback->CallbackMetadata->Item[2]->Value;
 $PhoneNumber = $data->Body->stkCallback->CallbackMetadata->Item[4]->Value;
 // //CHECK IF THE TRANSACTION WAS SUCCESSFULL
 if ($ResultCode == 0) {

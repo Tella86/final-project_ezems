@@ -56,11 +56,12 @@
         }
     </style>
 </head>
+
 <body>
 
 
     <div class="main">
-
+   
         <div class="contact-container row">
             <div class="details-container col-6">
                 <h2>Contact Us</h2>

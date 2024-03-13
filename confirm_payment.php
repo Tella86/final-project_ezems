@@ -2,7 +2,7 @@
 require_once "include/initialize.php";
 
 if (isset($_SESSION['$stkCallbackResponse'])) {
-    redirect("daraja/callback.php");
+    redirect("callback.php");
 
     header("Content-Type: application/json");
 $stkCallbackResponse = file_get_contents('php://input');
@@ -83,6 +83,16 @@ $data = json_decode($stkCallbackResponse);
 <div id="page">
   <div id="header">
     <div id="container" align="center">
+    <?php
+$query = "SELECT * FROM  transactions WHERE 'TransactionID' = 'MpesaReceiptNumber'";
+$mydb->setQuery($query);
+$cur = $mydb->loadResultList();
+
+foreach ($cur as $result) {
+    echo  $result->ransactionIDtID ;
+
+}
+?>
       <table>
 
       <tbody>

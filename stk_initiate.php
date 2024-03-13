@@ -1,21 +1,29 @@
 <?php
 
-// if (!isset($_SESSION['ACCOUNT_ID'])) {
-// redirect(web_root . "login.php");
-
-// }
 if (isset($_POST['submit'])) {
 
     date_default_timezone_set('Africa/Nairobi');
 
     # access token
     $consumerKey = 'lTPKZzbSmeoT0Hx2kJMGOMQwvGUCvI7G'; //Fill with your app Consumer Key
-    $consumerSecret = 'gp7uF5GfK1EoBIjI'; // Fill with your app Secret
+    $consumerSecret = 'gp7uF5GfK1EoBIjI';
 
     # define the variales
     # provide the following details, this part is found on your test credentials on the developer account
+    $Initiator = 'API_Usename';
+    // $SecurityCredential = 'FKXl/KPzT8hFOnozI+unz7mXDgTRbrlrZ+C1Vblxpbz7jliLAFa0E/…../uO4gzUkABQuCxAeq+0Hd0A==';
+    $CommandID = 'BusinessBuyGoods';
+    $SenderIdentifierType = '4';
+    $RecieverIdentifierType = '4';
+    $PartyA = '7149030';
+    $PartyB = '7136632';
+    $AccountReference = '353353';
+    // $QueueTimeOutURL = 'https://mydomain.com/b2b/businessbuygoods/queue/';
+    // $ResultURL = 'https://mydomain.com/b2b/businessbuygoods/result/';
+
     $BusinessShortCode = '7149030';
     $Passkey = '1059e4e89b1ac704ea6b1b327df0ccaca297e5b31b9ea323c47cc0d87f31bfe1';
+
 
     /*
     This are your info, for
@@ -30,7 +38,7 @@ if (isset($_POST['submit'])) {
     $PartyA = $_POST['phone']; // This is your phone number,
     $AccountReference = 'EZEMS';
     $TransactionDesc = 'Payment';
-    $Amount = $_POST = 'amount';
+    $Amount = $_POST['amount'];
 
     # Get the timestamp, format YYYYmmddhms -> 20181004151020
     $Timestamp = date('YmdHis');
@@ -46,12 +54,7 @@ if (isset($_POST['submit'])) {
     $initiate_url = 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
     # callback url
-    // $CallBackURL = 'https://ezems.pagekite.me/sems/daraja/callback.php';
     $CallBackURL = 'https://funny-newt-personally.ngrok-free.app/sems/callback.php';
-    
-  
-    
-
 
     $curl = curl_init($access_token_url);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -78,7 +81,7 @@ if (isset($_POST['submit'])) {
         'Password' => $Password,
         'Timestamp' => $Timestamp,
         'TransactionType' => 'CustomerBuyGoodsOnline',
-        'Amount' => '1',
+        'Amount' => $Amount,
         'PartyA' => $PartyA,
         'PartyB' => '7136632',
         'PhoneNumber' => $PartyA,
@@ -95,6 +98,8 @@ if (isset($_POST['submit'])) {
     print_r($curl_response);
 
     echo $curl_response;
-    // header("Location: ../confirm_payment.php");
+
+
+    // header("Location: confirm_payment.php");
     // header("Location: m.php");
 }

@@ -26,6 +26,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
     <meta name="author" content="">
     <title>PAY EZEMS&nbsp;</title>
 
+
     <!-- Bootstrap core CSS -->
     <link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo web_root; ?>css/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
@@ -55,128 +56,14 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                         <li class="divider-vertical"></li>
 
                         <li class="divider-vertical"></li>
-                    </ul>
+
                 </div>
 
-                <style>
-                * {
-                    padding: 0;
-                    margin: 0px;
 
-                }
-                /* // Developed by http://ezems.info/ */
-                body {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    min-height: 10vh;
-                    font-family: Hack, monospace;
-                }
-
-                div {
-                    color: #727272;
-                    text-align: center;
-                }
-
-                p {
-                    margin: 16px;
-                    font-size: 96px;
-                    color: #ccc;
-                    text-transform: uppercase;
-                    font-weight: 600px;
-                    transition: all 1s ease-in-out;
-                    position: relative;
-
-                    &::before {
-                        content: attr(data-item);
-                        transition: all 1s ease-in-out;
-                        color: #8254ff;
-                        position: absolute;
-                        top: 0px;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        width: 0;
-                        overflow: hidden;
-                    }
-
-                    &:hover {
-                        &::before {
-                            width: 10%;
-                        }
-                    }
-                }
-
-                nav {
-                    margin: 2.5px;
-                    background: green;
-                    padding: 1pxpx;
-                    top: 1px;
-
-                    .menuItems {
-                        list-style: none;
-                        display: flex;
-                        border-radius: 10px;
-
-                        li {
-                            margin: 11px;
-
-                            a {
-                                text-decoration: none;
-                                color: white;
-                                font-size: 12px;
-                                font-weight: 10px;
-                                /* transition: all 0.0s ease-in-out; */
-                                position: relative;
-                                text-transform: uppercase;
-
-                                &::before {
-                                    content: attr(data-item);
-                                    transition: 0.5s;
-                                    color: #8254ff;
-                                    position: absolute;
-                                    top: auto;
-                                    bottom: 0;
-                                    left: 0;
-                                    right: 0;
-                                    width: 0;
-                                    overflow: hidden;
-                                }
-
-                                &:hover {
-                                    &::before {
-                                        width: 10%;
-                                        transition: all 0.5s ease-in-out;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                </style>
-                <!-- Developed by http://ezemst.com/ -->
-                <div></div>
-                <!-- <p data-item='EZEMS'>EZEMS</p> -->
-
-                <section>
-                    <div></div>
-                    <nav>
-                        <ul class="menuItems">
-                            <li><a href='#' data-item=''>Home</a></li>
-                            <li><a href='about.php' data-item=''>Mission | Vision</a></li>
-                            <li><a href='history.php' data-item=''>Company History</a></li>
-                            <li><a href='developers.php' data-item=''>Developers</a></li>
-                            <li><a href='./contact-us/index.php' data-item=''>Contact Us</a></li>
-                            <li><a href='https://youtu.be/hAbaBLnxnzU' target="_blank">Demo</a></li>
-                        </ul>
-                    </nav>
-                    <br>
-
-<body id="login" style="background:url(images/bg/bgtest2.png)">
+<body bg="red;">
     </div>
-
+    <?php include 'incld/header.php';?>
+    <!-- </div> -->
     <div class="container">
         <div class="row-fluid">
 
@@ -214,9 +101,9 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
             <style>
             /* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"); */
             body {
-                /* background-color: #eaedf4; */
+                background-color: #eaedf4;
                 font-family: "Rubik", sans-serif;
-                background-color: #74992e;
+                /* background-color: #74992e; */
 
             }
 
@@ -230,7 +117,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
             .justify-content-around div {
                 border: none;
                 border-radius: 5px;
-                background: #f3f4f6;
+                /* background: #f3f4f6; */
                 padding: 5px 10px 5px;
                 color: #8d9297;
             }
@@ -240,13 +127,13 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
             }
 
             .justify-content-around div:hover {
-                background: #545ebd;
+                /* background: #545ebd; */
                 color: #fff;
                 cursor: pointer;
             }
 
             .justify-content-around div:nth-child(1) {
-                background: #545ebd;
+                /* background: #545ebd; */
                 color: #fff;
             }
 
@@ -274,8 +161,12 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
 
             button {
                 border-radius: 5px;
+                float: center;
             }
             </style>
+            <?php $message = "kindly subscribe By Clicking the Subscribe Button before making payment!";
+echo "<script type='text/javascript'>alert('$message');</script>"?>
+            <!-- <a href="https://localhost/sems/incld/subscription.html"><button>subscribe</button></a> -->
             <div class="span6">
                 <div class="pull-right">
                     <?php check_message();?>
@@ -287,8 +178,14 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                                     <div class="card mt-5 px-3 py-4">
                                         <div class="d-flex flex-row justify-content-around">
                                             <div class="mpesa">
-                                                <h2>One Day Event Package</h2>
-                                                <h2>Ksh.35,000/</h2>
+                                                <h2>Select Your Package</h2>
+                                                <select id="package" name="package" required>
+                                                    <option value="basic">Basic Package ($1/Voter)</option>
+                                                    <option value="standard">Standard Package ($242/Yearly)</option>
+                                                    <option value="premium">Premium Package ($1035/Life Time)</option>
+                                                </select><br>
+                                                <!-- <h2>One Day Event Package</h2>
+                                                <h2>Ksh.35,000/</h2> -->
                                             </div>
 
                                             <div class="media mt-4 pl-2">
@@ -298,107 +195,124 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                                             </div>
                                         </div>
                                         <div>
-                                            <h7>You will receive a popup on your phone</h7>
+                                            <center>
+                                                <h7>You will receive a popup on your phone</h7>
                                         </div>
                                         <div>
-                                            <h7>Enter your MPESA PIN</h7>
+                                            <center>
+                                                <h7>Enter your MPESA PIN</h7>
+                                            </center>
                                         </div>
                                         <div class="media mt-3 pl-2"></div>
-                                        <h6>Enter Phone Number</h6>
-                                        <form class="row g-3" action="stk_initiate.php" method="POST">
-                                            <div class="col-12">
-                                            </div>
-                                            <i class="fa fa-user icon"></i>
-                                            <input id="cardnumber" type="text" class="form-control" name="phone"
-                                                maxlength="13" placeholder="254700000000" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-success" name="submit"
-                                            value="submit">M~Pay</button>
-                                            <div class="col-12">
-                                        <button type="submit"><a href="https://funny-newt-personally.ngrok-free.app/sems/confirm_payment.php" target="_blank"
-                                                class="btn btn-info" name="submit" value="submit">Confirm_Payment</button></a>
-                                    </div>
-                                    <div class="container d-flex justify-content-center">
-                                        <div class="card mt-5 px-3 py-4">
-                                            <div class="d-flex flex-row justify-content-around">
-                                                <div class="mpesa">
-                                                    <h9>By Clicking The M~PAY BUTTON, You Agree to Our</h9>
-                                                    <a href="">Terms And condition</a> and <a href="">Policy Privacy</a>
-                                                    <h9>Already Paid Click? <a href="login.php">Login Here</a>
-                                                        <h9>You Want To Vote</h9><a href="../sems/vote/index.php">VOTE
-                                                            HERE</a>
-                                                        <h9>View Tally</h9><a href="tallyofvotes.php">View Tally</a>
+                                        <center>
+                                            <!-- <h6>Enter Phone Number</h6> -->
+                                            <form class="row g-3" action="./stk_initiate.php" method="POST">
+
+                                                <div class="col-12">
+                                                    <label for="inputAddress" class="form-label">Amount</label>
+                                                    <input type="text" class="form-control" name="amount"
+                                                        placeholder="Enter Amount">
                                                 </div>
-                                                </form>
-                                                <?php
-                            ?>
+                                                <div class="col-12">
+                                                    <label for="inputAddress2" class="form-label">Phone Number</label>
+                                                    <input type="text" class="form-control" name="phone"
+                                                        placeholder="Enter Phone Number">
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-success" name="submit"
+                                                        value="submit">M~PAY</button>
+                                                </div>
+                                            </form>
+
+                                            <div class="media mt-3 pl-2"></div>
+
+                                            <button type="submit"><a href="https://paypal.com" target="_blank"
+                                                    class="btn btn-info" name="submit"
+                                                    value="submit">PAYPAL</button></a>
+                                        </center>
+                                    </div>
+                                </div>
+
+                                <div class="container d-flex justify-content-center">
+                                    <div class="card mt-5 px-3 py-4">
+                                        <div class="d-flex flex-row justify-content-around">
+                                            <div class="mpesa">
+                                                <h9>By Clicking The M~PAY BUTTON, You Agree to Our</h9>
+                                                <a href="">Terms And condition</a> and <a href="">Policy Privacy</a>
+                                                <h9>Already Paid Click? <a href="login.php">Login Here</a>
+                                                    <h9>You Want To Vote</h9><a href="../sems/vote/index.php">VOTE
+                                                        HERE</a>
+                                                    <h9>View Tally</h9><a href="tallyofvotes.php">View Tally</a>
                                             </div>
+                                            </form>
+
                                         </div>
                                     </div>
                                 </div>
-                                <script type="text/javascript"
-                                    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
-                                </script>
-                                <script type="text/javascript" src="script.js"></script>
-                                <script type="text/javascript" src=""></script>
-                                <script type="text/Javascript"></script>
+                        </div>
+                        <script type="text/javascript"
+                            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+                        </script>
+                        <script type="text/javascript" src="script.js"></script>
+                        <script type="text/javascript" src=""></script>
+                        <script type="text/Javascript"></script>
 
-                                <div class="row-fluid">
-                                    <div class="col-md-12 ">
-                                        <h4 style="color:#fff"><span id="tick2">
-                                            </span>&nbsp;|
+                        <div class="row-fluid">
+                            <div class="col-md-12 ">
+                                <h4 style="color:indigo"><span id="tick2">
+                                    </span>&nbsp;|
 
-                                            <script>
-                                            // <!--/. tells about the time  -->
-                                            function show2() {
-                                                if (!document.all && !document.getElementById)
-                                                    return
-                                                thelement = document.getElementById ? document.getElementById("tick2") :
-                                                    document.all.tick2
-                                                var Digital = new Date()
-                                                var hours = Digital.getHours()
-                                                var minutes = Digital.getMinutes()
-                                                var seconds = Digital.getSeconds()
-                                                var dn = "PM"
-                                                if (hours < 12)
-                                                    dn = "AM"
-                                                if (hours > 12)
-                                                    hours = hours - 12
-                                                if (hours == 0)
-                                                    hours = 12
-                                                if (minutes <= 9)
-                                                    minutes = "0" + minutes
-                                                if (seconds <= 9)
-                                                    seconds = "0" + seconds
-                                                var ctime = hours + ":" + minutes + ":" + seconds + " " + dn
-                                                thelement.innerHTML = ctime
-                                                setTimeout("show2()", 1000)
-                                            }
-                                            window.onload = show2
-                                            //-->
-                                            </script>
-                                            <!--/. Script where the format of the interface time,month,day and year relies -->
+                                    <script>
+                                    // <!--/. tells about the time  -->
+                                    function show2() {
+                                        if (!document.all && !document.getElementById)
+                                            return
+                                        thelement = document.getElementById ? document.getElementById("tick2") :
+                                            document.all.tick2
+                                        var Digital = new Date()
+                                        var hours = Digital.getHours()
+                                        var minutes = Digital.getMinutes()
+                                        var seconds = Digital.getSeconds()
+                                        var dn = "PM"
+                                        if (hours < 12)
+                                            dn = "AM"
+                                        if (hours > 12)
+                                            hours = hours - 12
+                                        if (hours == 0)
+                                            hours = 12
+                                        if (minutes <= 9)
+                                            minutes = "0" + minutes
+                                        if (seconds <= 9)
+                                            seconds = "0" + seconds
+                                        var ctime = hours + ":" + minutes + ":" + seconds + " " + dn
+                                        thelement.innerHTML = ctime
+                                        setTimeout("show2()", 1000)
+                                    }
+                                    window.onload = show2
+                                    //-->
+                                    </script>
+                                    <!--/. Script where the format of the interface time,month,day and year relies -->
 
-                                            <?php
+                                    <?php
 $date = new DateTime();
 echo $date->format('l, F jS, Y');
 ?>
 
-                                            <div>
-                                            </div>
+                                    <div>
+                                    </div>
 
-                                            <div>
-                                            </div>
-                                            <div>
-                                            </div>
-                                            <div>
+                                    <div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                    <div>
 
-                                            </div>
-                                            
-                            </body>
+                                    </div>
 
-  
-                            </head>
+</body>
+
+
+</head>
 
 </html>

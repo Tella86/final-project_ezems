@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscription Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+  <div>
+     <style>
+        /* Resetting default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+    width: 1350px;
+    
+}
+
+/* Styling the navigation bar */
+nav {
+    background-color: #333; /* Dark background color */
+    
+    
+    
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensure overflow is hidden */
+}
+
+nav ul li {
+    float: right; /* Float the list items to create horizontal layout */
+    
+}
+
+nav ul li a {
+    display: block; /* Display the links as block elements for styling */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 14px 14px; /* Padding around the links */
+}
+nav a .class{
+    align-self: auto;
+}
+nav ul li a:hover {
+    background-color: #555; /* Darker background color on hover */
+}
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <br>
+        <!-- <a class="navbar-brand" href=""><img style="width:50px" src="../img/ust.jpg" alt="logo"></a> -->
+          
+    <ul>
+    <li><a href="https://localhost/sems/incld/subscription.html">Subscribe</a></li>
+        <li><a href="https://youtu.be/hAbaBLnxnzU">Demo</a></li>
+        <li><a href="./contact-us/index.php">Contact Us</a></li>
+        <li><a href="developers.php">Developerst</a></li>
+        <li><a href="history.php">Company History</a></li>
+        <li><a href="about.php">Mission | Vision</a></li>
+        <li><a href="../m.php">Home</a></li>
+    </ul>
+    <br>
+</nav>
+  </div>
+
+<div class="container">
+  <h2>Subscribe to our Package</h2>
+  <form action="controller.php" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="package">Select Package:</label><br>
+    <select id="package" name="package" required>
+      <option value="basic">Basic Package ($1/Voter)</option>
+      <option value="standard">Standard Package ($242/Yearly)</option>
+      <option value="premium">Premium Package ($1035/Life Time)</option>
+    </select><br>
+    <label for="phone">M~pesa Number:</label><br>
+    <input type="text" id="phone" name="phone" required><br>
+    <label for="Amount">Amount:</label><br>
+    <input type="text" id="Amount" name="Amount" placeholder="Amount" required><br>
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" name="date" value="<?php echo date('Y-m-d'); ?>"><br><br>
+    <input type="submit" value="Subscribe">
+  </form>
+</div>
+
+</body>
+</html>

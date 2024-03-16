@@ -291,6 +291,7 @@ foreach ($cur as $row) {
     echo '<td class="col-lg-3">' . $row->TotalVotes . '</td>';
     echo '<td class="col-lg-3">' . $row->PartyList . '</td>';
     echo '</tr>';
+    
 
 }
 ?>
@@ -300,7 +301,9 @@ foreach ($cur as $row) {
                  </div><!--/.services-->
               </div><!--/.row-->
           </div><!--/.container-->
-      </section><!--/#feature-->
+          <?php
+      
+      ?>
 
 
 

@@ -299,6 +299,7 @@ foreach ($cur as $row) {
                    <button>
                    <a class="btn btn-primary" target="_blank" href="m.php">Home</a>
                    </button>
+                   <?php include ('templates.php');?>
                  </div><!--/.services-->
               </div><!--/.row-->
           </div><!--/.container-->

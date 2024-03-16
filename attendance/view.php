@@ -16,7 +16,7 @@
 <section id="feature" class="transparent-bg">
         <div class="container">
            <div class="center wow fadeInDown">
-                 <h3 class="page-header">Eng.Ziroh Event Tallying System</h3>
+                 <h3 class="page-header">EZEMS</h3>
                 <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> -->
             </div>
                
@@ -84,7 +84,19 @@
                                   }
                                   window.onload=show2
                                   //-->
-                                  
+                                  function calculateAttendance(totalVoters, attendedelection) {
+    if (totalVoters <= 0 || attendedelection < 0 || attendedelection > totalVoters) {
+        return "Invalid input";
+    }
+
+    const attendancePercentage = (attendedelection / totalVoters) * 100;
+    return attendancePercentage.toFixed(2) + "%";
+}
+
+// Example usage:
+const totalVoters = 20;
+const attendedelection = 16;
+console.log(calculateAttendance(totalVoters, attendedelection)); // Output: "80.00%"
                           </script> <!--/. Script where the format of the interface time,month,day and year relies -->
 
                           <?php

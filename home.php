@@ -37,15 +37,21 @@
   color: #000;
 
 }
+.attendance-icon {
+    font-size: 28px;
+    color: #007bff; /* Change color as needed */
+  }
 </style>
 <link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <section id="feature" class="transparent-bg"   >
         <div class="container bg">
           <div class="row">
             <div class="center wow fadeInDown ">
             <ul class="nav navbar-nav ssgmenu motto" id="footer_nav">
-                <li ><a href="vote/index.php" target="_blank"><i class="icon-home"></i>VOTE</a></li>
-                <li ><a href="attendance/check_attendance.php" target="_blank"><i class="icon-info-sign"></i>ATTENDANCE</a></li>
+               <li ><a href="attendance/check_attendance.php" target="_blank"><i class="attendance-icon">&#128197;</i>ATTENDANCE</a></li>
+                <li ><a href="vote/index.php" target="_blank"><i class="fas fa-vote-yea"></i>VOTE</a></li>
+                
             </ul>
             </div>
           </div>
@@ -118,6 +124,7 @@ echo $date->format('l, F jS, Y');
                           </h2>
 
                           </div>
+                          
                         </div>
                       </div>
                         <!-- <img class="img-responsive img-blog" src="img/ssgback.png" style="width:100%; height:400px"   alt="" /> -->

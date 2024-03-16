@@ -7,10 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="../images/ico/favicon.ico">
+
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
 
     <style>
         * {
@@ -56,12 +55,11 @@
         }
     </style>
 </head>
-
 <body>
 
 
     <div class="main">
-   
+
         <div class="contact-container row">
             <div class="details-container col-6">
                 <h2>Contact Us</h2>

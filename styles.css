@@ -1,0 +1,12 @@
+.session-timeout-notification
+{ 
+   width: 100%;
+    background-color: #BADA55;
+    border-bottom: 1px solid #000;
+    color: #c01065;
+    display: none;
+    padding: 4px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

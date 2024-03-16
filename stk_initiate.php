@@ -95,11 +95,30 @@ if (isset($_POST['submit'])) {
     curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
     $curl_response = curl_exec($curl);
-    print_r($curl_response);
+    // print_r($curl_response);
 
-    echo $curl_response;
+    // echo $curl_response;
 
 
-    header("Location: confirm_payment.php");
+    // header("Location: confirm_payment.php");
     // header("Location: m.php");
 }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirm Payment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-o5/Hhx+7dOuigT+5WCnS2qcy5qQGtC1lQRYKqqzoBPltZ0VUz3GElqfb3MtdQdDlWdYhX4+g3qCFtHswY61t5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<!-- Your payment confirmation icon -->
+
+</body>
+</html>
+<class="divider-vertical"></li>
+                        <class="active"><a href="confirm_payment.php">
+                                <h3><i class="fas fa-check-circle" style="color: green;"></i>&nbsp;confirm_payment</h3>
+                            </a></li>

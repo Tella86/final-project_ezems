@@ -17,6 +17,7 @@ unset($_SESSION['ACCOUNT_NAME']);
 unset($_SESSION['ACCOUNT_USERNAME']);
 unset($_SESSION['ACCOUNT_PASSWORD']);
 unset($_SESSION['ACCOUNT_TYPE']);
+
 // 4. Destroy the session
 // session_destroy();
 redirect(web_root . "m.php?logout=1");

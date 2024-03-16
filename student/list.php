@@ -32,6 +32,7 @@ if (!isset($_SESSION['ACCOUNT_ID'])) {
 								  		<th>Contact No</th>
 								  		<th>CourseCode</th>
                                         <th>Photo</th>
+                                        <th>Status</th>
 								  		<th width="20%" >Action</th>
 
 								  	</tr>
@@ -53,6 +54,7 @@ foreach ($cur as $result) {
     echo '<td>' . $result->ContactNo . '</td>';
     echo '<td>' . $result->CourseCode . '-' . $result->Description . '</a></td>';
     echo '<td><img width="50" height="50" src="' . web_root . 'student/photo/' . $result->StudPhoto . '"> </td>';
+    echo '<td>' . $result->Voter_Status . '</td>';
     echo '<td align="center" > <a title="View Information" href="index.php?view=view&id=' . $result->ID . '"  class="btn btn-info btn-xs  ">View <span class="fa fa-info-circle fw-fa"></span></a>
                                                    <a title="Update Students" href="index.php?view=edit&id=' . $result->ID . '" class="btn btn-info btn-xs" >Edit <span class="fa fa-pencil fw-fa"></span> </a>
                                                    <a title="Update Students" href="controller.php?action=delete&studid=' . $result->ID . '&studid=' . $result->ID . '" class="btn btn-danger btn-xs" >Remove <span class="fa fa-trash fw-fa"></span> </a>

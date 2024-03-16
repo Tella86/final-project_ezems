@@ -43,7 +43,7 @@ if (isset($_POST["message"])) {
 
             <p>In the meantime, feel free to explore our website for additional resources. If you have any urgent matters, please don't hesitate to contact us directly at (254) 101086123.</p>
 
-            <p>Once again, thank you for choosing Lorem Ipsum Inc.. We look forward to assisting you and appreciate your continued support.</p>
+            <p>Once again, thank you for choosing EZEMS. We look forward to assisting you and appreciate your continued support.</p>
             <p>Best regards,</p>
             <p>EZEMS</p>
         ";

@@ -21,46 +21,6 @@ switch ($action) {
 			
 					# code...
 
-					
-						// $sql = "SELECT * FROM `tblvotes`
-						// 		WHERE `Voters` ='".$_POST['VotingCodes']."' AND DATE_FORMAT( `VoteDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' )";
-					 //  	$mydb->setQuery($sql);
-	     //      			$res= $mydb->executeQuery();
-						// $maxr = $mydb->num_rows($res);
-						// if ($maxr > 0 ) {
-						// 	# code...
-						// 	message("Voting codes does not exist or already used!", "error");
-						// 	redirect("login.php");
-						// }else{
-
-
-						// 	  $sql = "SELECT * FROM `tblstudent` WHERE StudentID='" . $_POST['VotingCodes'] . "'";
-					 //          $mydb->setQuery($sql);
-					 //         $r = $mydb->executeQuery();
-
-						// 		$maxrow = $mydb->num_rows($r);
-
-
-						// 		if ($maxrow > 0) {
-						// 				$row = $mydb->loadSingleResult();
-						// 				$_SESSION['CVCodeNo'] = $_POST['VotingCodes'];
-						// 				message("You logged in successfully!", "success");
-						// 				redirect("vote.php");
-						// 		}else{
-
-						// 			message("Vot$row = $mydb->loadSingleResult();
-						// 				$_SESSION['CVCodeNo'] = $_POST['VotingCodes'];
-						// 				message("You logged in successfully!", "success");
-						// 				redirect("vote.php");ing codes does not exist or already used!", "error");
-						// 			redirect("login.php");
-
-						// 		}
-
-
-
-						
-						// }
-
 
 						$sql = "SELECT * FROM `tblvotingcode`
 						WHERE `CodeNo` ='".$_POST['VotingCodes']."'";
@@ -323,9 +283,10 @@ switch ($action) {
 		$mydb->setQuery($sql);
 	    $mydb->executeQuery();
 		?>
-
+<
 		<script type="text/javascript">
-		alert("Votes have already been submitted.")
+		alert("THANK YOU FOR VOTING CONTINUE MAINTEINIG PEACE.")
+		
 		</script>
 	<?php
 	    // message("Voting codes does not exist or already used!", "error");

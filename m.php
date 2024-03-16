@@ -1,7 +1,11 @@
 <?php
 require_once "include/initialize.php";
 // require_once "templates.php";
-
+if(isset($_SESSION["username"])) {
+	if(isLoginSessionExpired()) {
+		header("Location:logout.php?session_expired=1");
+	}
+}
 ?>
 <?php
 if (isset($_SESSION['ACCOUNT_ID'])) {
@@ -43,6 +47,10 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
     <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
     <!-- <link rel="shortcut icon" href="images/ico/favicon.ico"> -->
 
+    <link rel="stylesheet" href="admin/css/font-awesome.css">
+
+
+
     <div class="navbar">
         <div class="navbar-inner">
             <div class="container-fluid">
@@ -60,7 +68,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                 </div>
 
 
-<body bg="red;">
+<body>
     </div>
     <?php include 'incld/header.php';?>
     <!-- </div> -->
@@ -163,6 +171,18 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                 border-radius: 5px;
                 float: center;
             }
+
+            .alert {
+                color: white;
+                border: red 1px solid;
+                background: red;
+                padding: 20px;
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 31px;
+                border-radius: 4px;
+                width: 305px;
+            }
             </style>
             <?php $message = "kindly subscribe By Clicking the Subscribe Button before making payment!";
 echo "<script type='text/javascript'>alert('$message');</script>"?>
@@ -180,9 +200,12 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                             <div class="mpesa">
                                                 <h2>Select Your Package</h2>
                                                 <select id="package" name="package" required>
-                                                    <option value="basic">Basic Package ($1/Voter)</option>
-                                                    <option value="standard">Standard Package ($242/Yearly)</option>
-                                                    <option value="premium">Premium Package ($1035/Life Time)</option>
+                                                    <option value="Basic Package (kSH.145/Per Voter)">Basic Package
+                                                        (kSH.145/Per Voter)</option>
+                                                    
+                                                    <option value="Premium Package (KSH.150000/Life Time)">Premium
+                                                        Package
+                                                        (KSH.150000/P.a)</option>
                                                 </select><br>
                                                 <!-- <h2>One Day Event Package</h2>
                                                 <h2>Ksh.35,000/</h2> -->
@@ -301,8 +324,18 @@ echo $date->format('l, F jS, Y');
 
                                     <div>
                                     </div>
-
-                                    <div>
+                                    <?php
+function isLoginSessionExpired() {
+	$login_session_duration = 10; 
+	$current_time = time(); 
+	if(isset($_SESSION['loggedin_time']) and isset($_SESSION["username"])){  
+		if(((time() - $_SESSION['loggedin_time']) > $login_session_duration)){ 
+			return true; 
+		} 
+	}
+	return false;
+}
+   ?> <div>
                                     </div>
                                     <div>
                                     </div>

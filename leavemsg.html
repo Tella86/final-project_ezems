@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leave us a Message</title>
+<style>
+  #chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="chat-widget">
+  <h3>Chat us</h3>
+  <div class="form-cotainer col-6">
+    <form action="./contact-us/send-message.php" method="POST">
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" name="message" id="message" cols="30" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-control">Send Message</button>
+    </form>
+</div>
+
+<button id="toggle-chat" style="display:none;">Leave us a message</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var chatWidget = document.getElementById('chat-widget');
+  var toggleChatButton = document.getElementById('toggle-chat');
+  var messageForm = document.getElementById('message-form');
+  var nameInput = document.getElementById('name');
+  var emailInput = document.getElementById('email');
+  var messageInput = document.getElementById('message');
+
+  // Show the chat widget after 5 seconds (5000 milliseconds)
+  setTimeout(function() {
+    chatWidget.style.display = 'block';
+    toggleChatButton.style.display = 'none'; // Hide the toggle button after showing the chat widget
+  }, 5000);
+
+  messageForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var name = nameInput.value.trim();
+    var email = emailInput.value.trim();
+    var message = messageInput.value.trim();
+    if (name !== '' && email !== '' && message !== '') {
+      // Here you can handle sending the message, for simplicity, just alerting it
+      alert('Message sent:\nName: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+      nameInput.value = ''; // Clear the input fields
+      emailInput.value = '';
+      messageInput.value = '';
+    } else {
+      alert('Please fill in all fields');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -170,7 +170,7 @@ if (isset($_POST['img'])) {
     $mydb->setQuery($sql);
     @$cur = $mydb->loadSingleResult();
 
-    echo '<img title="profile image" id="imgprofile" class="img-hover"   src="' . web_root . 'student/photo' . @$cur->StudPhoto . '" />';
+    echo '<img title="profile image" id="imgprofile" class="img-hover"   src="' . web_root . 'student/photo' . @$result->StudPhoto . '" />';
 }
 
 // $Attendance_message = '<h2>Attendance Checked</h2>';

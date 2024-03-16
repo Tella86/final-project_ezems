@@ -102,3 +102,13 @@
                                         { "Name": "MpesaReceiptNumber", "Value": "SCF76CDGD7" },
                                         { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240315235341 },
                                         { "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }
+{ "Body": { "stkCallback": { "MerchantRequestID": "51dd-4635-bbb6-170aeb781b92106077205",
+                        "CheckoutRequestID": "ws_CO_16032024141340289799086123",
+                        "ResultCode": 1, "ResultDesc": "The balance is insufficient for the transaction." } } }
+{ "Body": { "stkCallback": { "MerchantRequestID": "db57-40e1-af85-2424fab5a2e684484491",
+                        "CheckoutRequestID": "ws_CO_16032024142712285799086123",
+                        "ResultCode": 0, "ResultDesc": "The service request is processed successfully.",
+                        "CallbackMetadata": { "Item": [ { "Name": "Amount", "Value": 2 },
+                                        { "Name": "MpesaReceiptNumber", "Value": "SCG67WKTYY" },
+                                        { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240316142720 },
+                                        { "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }

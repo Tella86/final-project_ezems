@@ -59,7 +59,7 @@ function hidePrintButton($printinvoice) {
     </style>
 </head>
 
-<body bgcolor="whitesmoke">
+<body bgcolor="whitesmoke" onload="window.print();">
     <br>
 
     <img src="../img/sclogo.png" alt="Company Logo" height="80px" width="80px">

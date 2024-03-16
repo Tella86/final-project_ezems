@@ -89,7 +89,7 @@ $mydb->setQuery($query);
 $cur = $mydb->loadResultList();
 
 foreach ($cur as $result) {
-    echo  $result->ransactionIDtID ;
+    echo  $result->TransactionID;
 
 }
 ?>

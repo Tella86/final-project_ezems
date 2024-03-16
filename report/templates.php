@@ -204,16 +204,10 @@ if ($_SESSION['ACCOUNT_TYPE'] == 'Student') {
         </div>
 
 
-        <?php
-if ($title != 'Home') {
-    echo ' <div class="row  breadcrumb"> <a href="' . web_root . 'index.php" title="Home" >Home</a>  /
-                        <a href="index.php" title="' . $title . '" >' . $title . '</a>
-                        ' . (isset($header) ? ' / ' . $header : '') . ' </div>';
-}?>
 
     </div>
 
-    <?php require_once $content;?>
+<!--     
 
     <section id="bottoms" style="border-bottom:5px solid #0000 ">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -227,10 +221,10 @@ if ($title != 'Home') {
 
 
     </section>
-    
+     -->
 
-    <!--/#bottom-->
-    <center>
+    <!-- /#bottom -->
+    <!-- <center>
     <footer id="footer" class="midnight-blue" style="">
         <div class="container">
             <div class="row">
@@ -238,7 +232,7 @@ if ($title != 'Home') {
                      &copy; 2023-2024 <a target="_blank" href=""
                             title="Free Twitter Bootstrap WordPress Themes and HTML templates">EZEMS</a>. All Rights
                         Reserved.</center>
-                </div>
+                </div> -->
                 <!--   <div class="col-sm-6">
                     <ul class="pull-right">
                         <li><a href="#">Home</a></li>

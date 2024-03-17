@@ -142,7 +142,7 @@ if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
                                 </li>
                                 <li class="<?php echo ($title == 'Logs') ? "active" : false; ?>"><a
                                         href="<?php echo web_root; ?>report/index.php?view=logs">Logs</a></li>
-                                        <li class="<?php echo ($title == 'Transactions') ? "active" : false; ?>"><a
+                                <li class="<?php echo ($title == 'Transactions') ? "active" : false; ?>"><a
                                         href="<?php echo web_root; ?>report/transactions.php">Transactions</a></li>
                                 <?php }?>
                                 <li class="<?php echo ($title == 'Tally of Votes') ? "active" : false; ?>"><a
@@ -151,7 +151,7 @@ if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
                                 <li class="<?php echo ($title == 'Election Winners') ? "active" : false; ?>"><a
                                         href="<?php echo web_root; ?>report/index.php?view=electionwinners">Election
                                         Winners</a></li>
-                                
+
                                 <!-- <li><a href="shortcodes.html">Shortcodes</a></li> -->
                                 <?php
 if ($_SESSION['ACCOUNT_TYPE'] == 'Student') {
@@ -227,19 +227,20 @@ if ($title != 'Home') {
 
 
     </section>
-    
+
 
     <!--/#bottom-->
     <center>
-    <footer id="footer" class="midnight-blue" style="">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                     &copy; 2023-2024 <a target="_blank" href=""
+        <footer id="footer" class="midnight-blue" style="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        &copy; 2023-2024 <a target="_blank" href=""
                             title="Free Twitter Bootstrap WordPress Themes and HTML templates">EZEMS</a>. All Rights
-                        Reserved.</center>
-                </div>
-                <!--   <div class="col-sm-6">
+                        Reserved.
+    </center>
+    </div>
+    <!--   <div class="col-sm-6">
                     <ul class="pull-right">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
@@ -248,8 +249,8 @@ if ($title != 'Home') {
                     </ul>
                 </div> -->
 
-            </div>
-        </div>
+    </div>
+    </div>
     </footer>
     <!--/#footer-->
 
@@ -290,7 +291,7 @@ if ($title != 'Home') {
 
 
     <!-- Custom Theme JavaScript -->
-
+   
 
     <script type="text/javascript" language="javascript" src="<?php echo web_root; ?>js/janobe.js"></script>
 

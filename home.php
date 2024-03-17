@@ -1,10 +1,10 @@
 <style type="text/css">
 
-/*.bg{
+.bg{
 
-  background:url(../images/bg/home_bg.png) no-repeat;
+  background:url(images/bg/bg-3-full.jpg) no-repeat;
 }
-*/
+
 .ssgmenu  > li > a {
 
   font-size: 25px;
@@ -41,11 +41,15 @@
     font-size: 28px;
     color: #007bff; /* Change color as needed */
   }
+  
 </style>
 
 <link rel="shortcut icon" href="images/ico/favicon.ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <section id="feature" class="transparent-bg"   >
+  <!-- <body style="background:url(images/bg/bg-3-full.jpg)"> -->
+    
+
+<section id="feature" class="transparent-bg"   >
         <div class="container bg">
           <div class="row">
             <div class="center wow fadeInDown ">

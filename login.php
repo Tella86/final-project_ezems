@@ -57,6 +57,59 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                     color: #007bff;
                     /* Change color as needed */
                 }
+                body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/bg/bg-3-full.jpg');
+            background-size: cover; /* Cover the entire container */
+            background-position: auto; /* Center the background image */
+            height: 100vh; /* Set the height of the body to viewport height */
+            display: auto;
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        /* Define styles for the header */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .content {
+            text-align: center;
+            color: #fff;
+        }
+
+
+        /* Define styles for the main content */
+        .container {
+            max-width: 800px; /* Adjust as needed */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Define styles for the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                max-width: 90%; 
+                max-height: fit-content;/* Adjust as needed for smaller screens */  
+            }
+            body {
+                background-size: contain; /* Ensure the entire image is visible */
+            }
+          }
+          
                 </style>
 
                 <div class="collapse navbar-collapse">
@@ -89,7 +142,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
         </div>
     </div>
 
-<body id="login" style="background:url(images/bg/bgtest2.png)">
+<body id="login" style="background:url(images/bg/bg-3-full.jpg)" >
 
     <div class="container">
         <div class="row-fluid">
@@ -123,6 +176,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                         <!--/. tells about what would be the log-in appearance -->
                         <div class="overlay">
                             <!--/. Starting code for the log-in interface appearance -->
+                            <fieldset>
                             <form id="login_form1" class="form-signin" method="post">
 
                                 <h3 class="form-signin-heading" style="color:#fff">
@@ -138,6 +192,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                                     in</button>
 
                             </form>
+                            </fieldset>
                             <script type="text/javascript">
 idleMax = 10;// Logout after 10 minutes of IDLE
 idleTime = 0;

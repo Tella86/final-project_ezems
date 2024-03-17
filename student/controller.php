@@ -181,10 +181,10 @@ function doEdit()
 function doDelete()
 {
     global $db;
-    $id = $_GET['studid'];
+    $ID = $_GET['studid'];
 
-    // $student = new Student();
-    // $student->delete($id);
+    $student = new Student();
+    $student->delete($ID);
     // if($student){
     //     message("Student(s) already Deleted!", "success");
     //     redirect('index.php');

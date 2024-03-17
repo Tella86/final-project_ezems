@@ -72,12 +72,52 @@ $data = json_decode($stkCallbackResponse);
         border: none;
         cursor: pointer;
     }
+    /* Add your CSS styles here */
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Define styles for the header */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Define styles for the main content */
+        .container {
+            max-width: 800px; /* Adjust as needed */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Define styles for the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                max-width: 90%; /* Adjust as needed for smaller screens */
+            }
+          }
     </style>
 </head>
 
 <body>
 
-    <header></header>
+    <header>
+
+    </header>
+    <div class="container">
     <fieldset>
         <form action="login.php" method="post">
             <?php check_message();?>

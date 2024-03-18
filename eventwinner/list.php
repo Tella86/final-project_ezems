@@ -26,6 +26,7 @@
 								  		<th>Description</th>   
 								  		<th>Date of Events</th>
 								  		<th>Time of Events</th>
+										  <th>Position</th>
 								  		<th>Winners</th>  
 								  		<!-- <th width="14%" >Action</th> -->
 								 
@@ -34,7 +35,7 @@
 								  <tbody>
 								  	<?php  
 
-								  		$mydb->setQuery("SELECT * FROM `tbleventwinner` ew, `tblevents` e WHERE ew.`EventID`=e.`EventID` ORDER BY EWID desc");
+								  		$mydb->setQuery("SELECT * FROM `tbleventwinner` ew, `tblevents` e  WHERE ew.`EventID`=e.`EventID`  ORDER BY EWID desc");
 
 								  		$cur = $mydb->loadResultList();
 
@@ -49,6 +50,7 @@
 								  		echo '<td>'. $result->Description.'</td>'; 
 								  		echo '<td>'. date_format(date_create($result->EventDate),'M d, Y') .'</td>';
 								  		echo '<td>'. $result->EventTime.'</td>'; 
+										echo '<td>'. $result->Position.'</td>';
 								  		echo '<td>'. $result->EWinners.'</td>';
 								  		// echo '<td>' .$age.'</td>';
 								  		// echo '<td>'. date_format(date_create($result->EventDate),'M d, Y') .'</td>';

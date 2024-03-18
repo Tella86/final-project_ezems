@@ -154,7 +154,7 @@
         </style>
     </head>
 
-<body style="background:url(images/bg/bg.png)">
+<body bgcolor="grey">
 
     <nav>
         <br>

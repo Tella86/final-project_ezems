@@ -1,37 +1,36 @@
 <?php
 require_once "include/initialize.php";
-// require_once "templates.php";
-if(isset($_SESSION["username"])) {
-	if(isLoginSessionExpired()) {
+
+// session_start();
+include("functions.php");
+$message="";
+if(count($_POST)>0) {
+	if( $_POST["username"] == "admin" and $_POST["password"] == "admin") {
+		$_SESSION["user_id"] = 1001;
+		$_SESSION["username"] = $_POST["username"];
+		$_SESSION['loggedin_time'] = time();  
+	} else {
+		$message = "Invalid Username or Password!";
+	}
+}
+
+if(isset($_SESSION["user_id"])) {
+	if(!isLoginSessionExpired()) {
+		header("Location:m.php");
+	} else {
 		header("Location:logout.php?session_expired=1");
 	}
 }
-?>
-<?php
+
+if(isset($_GET["session_expired"])) {
+	$message = "Session is Expired. Please Login Again.";
+}
 if (isset($_SESSION['ACCOUNT_ID'])) {
     redirect(web_root . "index.php");
     $confirmation = RandomSourceCode();
     echo $confirmation;
     $_SESSION['confirmation'] = $confirmation;
 }
-function isMobileDevice(){
-    $aMobileUA = array(
-        '/iphone/i' => 'iPhone', 
-        '/ipod/i' => 'iPod', 
-        '/ipad/i' => 'iPad', 
-        '/android/i' => 'Android', 
-        '/blackberry/i' => 'BlackBerry', 
-        '/webos/i' => 'Mobile'
-    );
-
-    //Return true if Mobile User Agent is detected
-    foreach($aMobileUA as $sMobileKey => $sMobileOS){
-        if(preg_match($sMobileKey, $_SERVER['HTTP_USER_AGENT'])){
-            return true;
-        }
-    }
-    //Otherwise return false..  
-    return false;}
 ?>
 
 <!DOCTYPE html>
@@ -394,18 +393,7 @@ echo $date->format('l, F jS, Y');
 
                                     <div>
                                     </div>
-                                    <?php
-function isLoginSessionExpired() {
-	$login_session_duration = 10; 
-	$current_time = time(); 
-	if(isset($_SESSION['loggedin_time']) and isset($_SESSION["username"])){  
-		if(((time() - $_SESSION['loggedin_time']) > $login_session_duration)){ 
-			return true; 
-		} 
-	}
-	return false;
-}
-   ?> <div>
+                                    <div>
                                     </div>
                                     <div>
                                     </div>

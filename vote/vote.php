@@ -21,34 +21,42 @@ if (!isset($_SESSION['CVCodeNo'])) {
      <meta name="author" content="">
      <title>Vote | EZEMS Tallying</title>
      <script type="text/javascript" src="admin/js/bootstrap.js"></script>
-<script type="text/javascript" src="admin/js/bootstrap-transition.js"></script>
-<script type="text/javascript" src="admin/js/bootstrap-collapse.js"></script>
+     <script type="text/javascript" src="admin/js/bootstrap-transition.js"></script>
+     <script type="text/javascript" src="admin/js/bootstrap-collapse.js"></script>
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+     <link rel="stylesheet" href="/resources/demos/style.css">
+     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+     <script>
+     $(function() {
+         $("#datepicker").datepicker();
+     });
+     </script>
 
 
 
 
-		<!-- --hover pop up -->
-<script src="admin/js/main.js" type="text/javascript"></script>
-<script src="admin/js/mouseover_popup.js" type="text/javascript"></script>
+     <!-- --hover pop up -->
+     <script src="admin/js/main.js" type="text/javascript"></script>
+     <script src="admin/js/mouseover_popup.js" type="text/javascript"></script>
 
 
-<div style="display: none;
+     <div style="display: none;
  position: absolute;
  z-index:100;
  color:white;
  width:auto;
- height:auto;"
- id="preview_div"></div>
+ height:auto;" id="preview_div"></div>
 
 
 
 
 
 
-<script type="text/javascript" src="admin/js/qtip/jquery.qtip.min.js"></script>
-<link href="admin/js/qtip/jquery.qtip.min.css" rel="stylesheet" type="text/css" media="screen, projection">
+     <script type="text/javascript" src="admin/js/qtip/jquery.qtip.min.js"></script>
+     <link href="admin/js/qtip/jquery.qtip.min.css" rel="stylesheet" type="text/css" media="screen, projection">
 
-<!-- <script type="text/javascript" language="JavaScript"> -->
+     <!-- <script type="text/javascript" language="JavaScript"> -->
      <!-- core CSS -->
      <link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
      <link href="<?php echo web_root; ?>css/css/font-awesome.min.css" rel="stylesheet">
@@ -63,24 +71,24 @@ if (!isset($_SESSION['CVCodeNo'])) {
      <link rel="shortcut icon" href="images/ico/favicon.ico">
      <!-- <div class="col-lg-4 row" style="float-left"><img src="../img/sclogo.png"></div> -->
      <script type="text/javascript" src="admin/js/eye.js"></script>
-    <script type="text/javascript" src="admin/js/spacegallery.js"></script>
-    <script type="text/javascript" src="admin/js/layout.js"></script>
+     <script type="text/javascript" src="admin/js/spacegallery.js"></script>
+     <script type="text/javascript" src="admin/js/layout.js"></script>
 
-	 <link rel="stylesheet" type="text/css" href="admin/css/bootstrap.css" media="screen, projection" />
-	 <link rel="stylesheet" type="text/css" href="admin/css/bootstrap.css" media="screen, projection" />
-	 <link rel="stylesheet" type="text/css" href="admin/css/bootstrap-responsive.css" media="screen, projection" />
-	 <link rel="stylesheet" href="admin/css/font-awesome.css">
+     <link rel="stylesheet" type="text/css" href="admin/css/bootstrap.css" media="screen, projection" />
+     <link rel="stylesheet" type="text/css" href="admin/css/bootstrap.css" media="screen, projection" />
+     <link rel="stylesheet" type="text/css" href="admin/css/bootstrap-responsive.css" media="screen, projection" />
+     <link rel="stylesheet" href="admin/css/font-awesome.css">
 
-<link rel="stylesheet" type="text/css" href="admin/css/Home.css" media="screen, projection" />
+     <link rel="stylesheet" type="text/css" href="admin/css/Home.css" media="screen, projection" />
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  </head>
  <!--/head-->
 
  <body class="homepage">
 
- <?php check_message();?>
+     <?php check_message();?>
      <section id="feature" class="transparent-bg">
          <div class="container">
              <div class=" row center wow fadeInDown">
@@ -127,9 +135,9 @@ foreach ($cur as $result) {
 ?>
                                      <div class="col-md-8">
                                          <select class="form-control select2" name="President">
-                                            
+
                                              <option value="">Select</option>
-                                           
+
 
 
                                              <?php
@@ -143,7 +151,7 @@ foreach ($cur as $result) {
 }
 ?>
 
-</select>
+                                         </select>
 
                                      </div>
                                  </div>
@@ -507,15 +515,16 @@ foreach ($cur as $result) {
                                  </div>
                              </div>
                          </form>
-                         <script>function showAlert(message) {
-  document.getElementById('alertMessage').innerHTML = message;
-  document.getElementById('customAlert').style.display = 'block';
-}
+                         <script>
+                         function showAlert(message) {
+                             document.getElementById('alertMessage').innerHTML = message;
+                             document.getElementById('customAlert').style.display = 'block';
+                         }
 
-function closeAlert() {
-  document.getElementById('customAlert').style.display = 'none';
-}
-</script>>
+                         function closeAlert() {
+                             document.getElementById('customAlert').style.display = 'none';
+                         }
+                         </script>>
 
                      </div>
                  </div>
@@ -547,7 +556,7 @@ function closeAlert() {
      </footer>
      <!--/#footer-->
 
-     
+
 
      <script src="../jquery/jquery.min.js"></script>
      <script src="../js/bootstrap.min.js"></script>

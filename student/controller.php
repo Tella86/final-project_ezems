@@ -185,10 +185,10 @@ function doDelete()
 
     $student = new Student();
     $student->delete($ID);
-    // if($student){
-    //     message("Student(s) already Deleted!", "success");
-    //     redirect('index.php');
-    // }
+    if($student){
+        message("Student(s) already Deleted!", "success");
+        redirect('index.php');
+    }
 
     $sql = "DELETE  FROM tblstudent WHERE ID='" . $_GET['studid']. "'";
     $res = mysqli_query($db->conn, $sql);
@@ -200,9 +200,9 @@ function doDelete()
         redirect('index.php');
     }
 
-    // $stud = new Student();
-    // $stud->Stud_Status = '';
-    // $stud->update($_GET['studid']);
+    $stud = new Student();
+    $stud->Stud_Status = '';
+    $stud->update($_GET['studid']);
 
 }
 function doupdateimage()

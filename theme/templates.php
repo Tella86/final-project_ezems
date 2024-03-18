@@ -1,3 +1,21 @@
+<?php
+function isLoginSessionExpired() {
+	$login_session_duration = 10; 
+	$current_time = time(); 
+	if(isset($_SESSION['loggedin_time']) and isset($_SESSION["username"])){  
+		if(((time() - $_SESSION['loggedin_time']) > $login_session_duration)){ 
+			return true; 
+		} 
+	}
+	return false;
+}
+if(isset($_SESSION["username"])) {
+	if(isLoginSessionExpired()) {
+		header("Location:logout.php?session_expired=1");
+	}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,11 +37,19 @@
     <link href="<?php echo web_root; ?>css/css/prettyPhoto.css" rel="stylesheet">
     <link href="<?php echo web_root; ?>css/css/main.css" rel="stylesheet">
     <link href="<?php echo web_root; ?>css/css/responsive.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $("#datepicker").datepicker();
+    });
+    </script>
     <link href="<?php echo web_root; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet">
-    <!-- // <script src="<?php echo web_root; ?>select2/select2.min.css"></script> ./ -->
+    <script src="<?php echo web_root; ?>select2/select2.min.css"></script> .
 
     <!-- datetime picker CSS -->
     <link href="<?php echo web_root; ?>css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
@@ -291,7 +317,7 @@ if ($title != 'Home') {
 
 
     <!-- Custom Theme JavaScript -->
-   
+
 
     <script type="text/javascript" language="javascript" src="<?php echo web_root; ?>js/janobe.js"></script>
 

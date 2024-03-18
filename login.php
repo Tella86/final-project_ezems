@@ -1,7 +1,16 @@
 <?php
 require_once "include/initialize.php";
-?>
-<?php
+// session_start();
+$message="";
+if(count($_POST)>0) {
+if( $_POST["username"] == "admin" and $_POST["password"] == "admin") {
+	$_SESSION["username"] = $row['username'];
+	$_SESSION['loggedin_time'] = time();  
+} else {
+	$message = "Invalid Username or Password!";
+}
+}
+
 if (isset($_SESSION['ACCOUNT_ID'])) {
     redirect(web_root . "index.php");
 
@@ -193,34 +202,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
 
                             </form>
                             </fieldset>
-                            <script type="text/javascript">
-idleMax = 10;// Logout after 10 minutes of IDLE
-idleTime = 0;
-$(document).ready(function () {
-    var idleInterval = setInterval("timerIncrement()", 60000); 
-    $(this).mousemove(function (e) {idleTime = 0;});
-    $(this).keypress(function (e) {idleTime = 0;});
-})
-function timerIncrement() {
-    idleTime = idleTime + 1;
-    if (idleTime > idleMax) { 
-        window.location="../LOGIN_APP/";
-    }
-}
-</script>';
-                        </div>
-
-                        <?php
-function isLoginSessionExpired() {
-	$login_session_duration = 10; 
-	$current_time = time(); 
-	if(isset($_SESSION['loggedin_time']) and isset($_SESSION["username"])){  
-		if(((time() - $_SESSION['loggedin_time']) > $login_session_duration)){ 
-			return true; 
-		} 
-	}
-	return false;
-}?>
+                            
 
 
                         <div class="row-fluid">

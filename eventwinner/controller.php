@@ -77,7 +77,7 @@ switch ($action) {
 						// $EW->EWCompetitors		= $_POST['Competitors']; 
 						// $EW->EWDate				= date_format(date_create($_POST['EWDate']) ,'Y-m-d');
 						// $EW->EWTime				= date_format(date_create($_POST['EWTime']),'h:i tt');
-						// $EW->EWPlace			= $_POST['Place'];
+						$EW->Position			= $_POST['Position'];
 						$EW->EWinners 	    	= $_POST['EWinner']; 
 						$EW->ACCOUNT_ID			= $_SESSION['ACCOUNT_ID'];
 						$EW->update($_POST['EWID']);

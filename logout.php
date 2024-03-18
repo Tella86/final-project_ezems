@@ -17,7 +17,9 @@ unset($_SESSION['ACCOUNT_NAME']);
 unset($_SESSION['ACCOUNT_USERNAME']);
 unset($_SESSION['ACCOUNT_PASSWORD']);
 unset($_SESSION['ACCOUNT_TYPE']);
-
+if(isset($_GET["session_expired"])) {
+	$url .= "?session_expired=" . $_GET["session_expired"];
+}
 // 4. Destroy the session
 // session_destroy();
 redirect(web_root . "m.php?logout=1");

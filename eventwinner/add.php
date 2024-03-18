@@ -41,6 +41,7 @@
                                 </div>
                               </div>
                             </div>  
+                            
 <!-- 
                              <div class="form-group">
                               <div class="col-md-8">
@@ -97,8 +98,29 @@
                                       "A vs. B"  type="text"  required  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off"/>
                                 </div>
                               </div>
-                            </div>  -->
-                        
+                            </div>   -->
+                            <div class="form-group">
+                              <div class="col-md-8">
+                                <label class="col-md-4 control-label" for=
+                                "Event">Postion:</label>
+
+                                <div class="col-md-8">
+                                  <select class="form-control select2" name="Position">
+                                    <option>Select</option>
+                                      <?php 
+                                          $query = "SELECT * FROM `tblcandidate`";
+                                          $mydb->setQuery($query);
+                                          $cur = $mydb->loadResultList();
+
+                                        foreach ($cur as $result) {
+                                          // echo '<option value=' .$result->Position.'</option>';
+                                          echo '<option value='.'>'.$result->Position.' </option>';
+
+                                        }
+                                        ?>
+                          </div>
+                              </div>
+                            </div>  
 
                              <div class="form-group">
                               <div class="col-md-8">

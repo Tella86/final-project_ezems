@@ -1,5 +1,6 @@
 <?php
-
+// include("auth.php"); //include auth.php file on all secure pages
+include("inactive.php"); //check if user is inactive for 15 minutes
 ?>
 
 
@@ -51,6 +52,7 @@
     color: #007bff;
     /* Change color as needed */
 }
+
 </style>
 
 <link rel="shortcut icon" href="images/ico/favicon.ico">
@@ -68,6 +70,13 @@ $(function() {
 </script>
 <!-- <body style="background:url(images/bg/bg-3-full.jpg)"> -->
 
+<script>
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+</script>
 
 <section id="feature" class="transparent-bg">
     <div class="container bg">

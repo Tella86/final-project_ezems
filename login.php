@@ -1,18 +1,10 @@
 <?php
 require_once "include/initialize.php";
-// session_start();
-$message="";
-if(count($_POST)>0) {
-if( $_POST["username"] == "admin" and $_POST["password"] == "admin") {
-	$_SESSION["username"] = $row['username'];
-	$_SESSION['loggedin_time'] = time();  
-} else {
-	$message = "Invalid Username or Password!";
-}
-}
+include_once "inactive.php";
+
 
 if (isset($_SESSION['ACCOUNT_ID'])) {
-    redirect(web_root . "index.php");
+    redirect(web_root . "m.php");
 
 }
 
@@ -178,6 +170,32 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                     <?php //include('title_index.php'); ?>
                 </div>
             </div>
+            <?php
+if(isset($_GET['status']) && $_GET['status']=='inactive'){
+	echo "<h3 style='color:red;text-align: center;'>You have been log out due to inactivity!</h3>";
+}
+
+    // If form submitted, insert values into the database.
+    if (isset($_POST['ACCOUNT_USERNAME'])){
+		$username = stripslashes($_REQUEST['ACCOUNT_USERNAME']); // removes backslashes
+		$username = mysqli_real_escape_string($mysqli,$ACCOUNT_USERNAME); //escapes special characters in a string
+		$password = stripslashes($_REQUEST['ACCOUNT_PASSWORD']);
+		$password = mysqli_real_escape_string($mysqli,$ACCOUNT_PASSWORD);
+
+	//Checking is user existing in the database or not
+        $query = "SELECT * FROM `useraccounts ` WHERE ACCOUNT_NAME='$ACCOUNT_NAME' and ACCOUNT_PASSWORD='".md5($ACCOUNT_PASSWORD)."'";
+		$result = mysqli_query($con,$query) or die(mysqli_error($con));
+		$rows = mysqli_num_rows($result);
+        if($rows==1){
+			$_SESSION['ACCOUNT_USERNAME'] = $ACCOUNT_USERNAME;
+			$_SESSION['last_timestamp'] = time(); // Set the last activity timestamp
+			header("Location: index.php"); // Redirect user to index.php
+			exit();
+            }else{
+				echo "<div class='form'><h3>Username/password is incorrect.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
+				}
+    }else{}
+?>
             <div class="span6">
                 <div class="pull-right">
                     <?php check_message();?>
@@ -191,9 +209,9 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                                 <h3 class="form-signin-heading" style="color:#fff">
                                     <i class="icon-lock"></i> Please Login
                                 </h3>
-                                <input type="text" class="input-block-level" id="username" name="username"
+                                <input type="text" autofocus="autofocus" class="input-block-level" id="username" name="username"
                                     placeholder="Username" required>
-                                <input type="password" class="input-block-level" id="password" name="password"
+                                <input type="password" autofocus="autofocus" class="input-block-level" id="password" name="password"
                                     placeholder="Password" required>
 
                                 <button data-placement="right" title="Click Here to Sign In" id="signin" name="btnLogin"

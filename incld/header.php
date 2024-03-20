@@ -53,12 +53,19 @@
             margin: 0;
             padding: 0;
             width: 1180px;
+            
 
         }
 
         /* Styling the navigation bar */
         nav {
             background-color: #333;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            height: 12%;
+            padding: 10px 0;
+            z-index: 1000; 
             /* Dark background color */
 
 
@@ -71,6 +78,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            margin-top: 0%;
             /* Ensure overflow is hidden */
         }
 
@@ -155,6 +163,15 @@
     </head>
 
 <body bgcolor="grey">
+<p id="demo"></p>
+
+<script>
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+</script>
 
     <nav>
         <br>

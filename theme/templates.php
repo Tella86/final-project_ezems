@@ -1,19 +1,5 @@
 <?php
-function isLoginSessionExpired() {
-	$login_session_duration = 10; 
-	$current_time = time(); 
-	if(isset($_SESSION['loggedin_time']) and isset($_SESSION["username"])){  
-		if(((time() - $_SESSION['loggedin_time']) > $login_session_duration)){ 
-			return true; 
-		} 
-	}
-	return false;
-}
-if(isset($_SESSION["username"])) {
-	if(isLoginSessionExpired()) {
-		header("Location:logout.php?session_expired=1");
-	}
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -78,6 +64,13 @@ if(isset($_SESSION["username"])) {
 <!--/head-->
 
 <body class="homepage">
+<script>
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+</script>
 
     <header id="header">
 

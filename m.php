@@ -1,36 +1,8 @@
 <?php
 require_once "include/initialize.php";
 
-// session_start();
-include("functions.php");
-$message="";
-if(count($_POST)>0) {
-	if( $_POST["username"] == "admin" and $_POST["password"] == "admin") {
-		$_SESSION["user_id"] = 1001;
-		$_SESSION["username"] = $_POST["username"];
-		$_SESSION['loggedin_time'] = time();  
-	} else {
-		$message = "Invalid Username or Password!";
-	}
-}
-
-if(isset($_SESSION["user_id"])) {
-	if(!isLoginSessionExpired()) {
-		header("Location:m.php");
-	} else {
-		header("Location:logout.php?session_expired=1");
-	}
-}
-
-if(isset($_GET["session_expired"])) {
-	$message = "Session is Expired. Please Login Again.";
-}
-if (isset($_SESSION['ACCOUNT_ID'])) {
-    redirect(web_root . "index.php");
-    $confirmation = RandomSourceCode();
-    echo $confirmation;
-    $_SESSION['confirmation'] = $confirmation;
-}
+// include("auth.php"); //include auth.php file on all secure pages
+include("inactive.php"); //check if user is inactive for 15 minutes
 ?>
 
 <!DOCTYPE html>
@@ -175,7 +147,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
             <!-- <link rel="stylesheet" href="style.css"> -->
 
             <style>
-            /* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"); */
+            @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
             body {
                 background-color: #eaedf4;
                 font-family: "Rubik", sans-serif;
@@ -315,19 +287,20 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                                     <button type="submit" class="btn btn-success" name="submit"
                                                         value="submit">M~PAY</button>
                                                 </div>
-                                            </form>
-                                            </fieldset>
+                                                
+                                            
                                             <div class="media mt-3 pl-2"></div>
 
-                                            <button type="submit"><a href="https://paypal.com" target="_blank"
+                                            <!-- <button type="submit"><a href="https://paypal.com" target="_blank"
                                                     class="btn btn-info" name="submit"
-                                                    value="submit">PAYPAL</button></a>
+                                                    value="submit">PAYPAL</button></a> -->
                                         </center>
-                                    </div>
+                                        </form><form>
+                                    <!-- </div> -->
                                 </div>
 
                                 <div class="container d-flex justify-content-center">
-                                    <div class="card mt-5 px-3 py-4">
+                                    <div class="card mt-2 px-1 py-2">
                                         <div class="d-flex flex-row justify-content-around">
                                             <div class="mpesa">
                                                 <h9>By Clicking The M~PAY BUTTON, You Agree to Our</h9>
@@ -337,11 +310,9 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                                         HERE</a>
                                                     <h9>View Tally</h9><a href="tallyofvotes.php">View Tally</a>
                                             </div>
-                                            </form>
-
+                                            
+                                            </fieldset>
                                         </div>
-                                    </div>
-                                </div>
                         </div>
                         <script type="text/javascript"
                             src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
@@ -351,12 +322,13 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                         <script type="text/Javascript"></script>
 
                         <div class="row-fluid">
-                            <div class="col-md-12 ">
-                                <h4 style="color:indigo"><span id="tick2">
+                            <!-- <div class="col-md-10 "> -->
+                              <h3 style="color:"><span id="tick2">
                                     </span>&nbsp;|
 
                                     <script>
                                     // <!--/. tells about the time  -->
+                                
                                     function show2() {
                                         if (!document.all && !document.getElementById)
                                             return
@@ -389,6 +361,7 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                     <?php
 $date = new DateTime();
 echo $date->format('l, F jS, Y');
+
 ?>
 
                                     <div>

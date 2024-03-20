@@ -6,26 +6,26 @@
   // $autonum = New Autonumber();
   // $res = $autonum->single_autonumber(2);
 
-   ?> 
+   ?>
 
- <section id="feature" class="transparent-bg">
-        <div class="container">
-           <div class="center wow fadeInDown">
-                 <h2 class="page-header">Set a New Winner</h2>
-           </div>
+  <section id="feature" class="transparent-bg">
+      <div class="container">
+          <div class="center wow fadeInDown">
+              <h2 class="page-header">Set a New Winner</h2>
+          </div>
 
-            <div class="row">
-                <div class="features">
+          <div class="row">
+              <div class="features">
 
-                        <form class="form-horizontal span6  wow fadeInDown" action="controller.php?action=add" method="POST" enctype="multipart/form-data"> 
-                          <div class="form-group">
+                  <form class="form-horizontal span6  wow fadeInDown" action="controller.php?action=add" method="POST"
+                      enctype="multipart/form-data">
+                      <div class="form-group">
+                          <div class="col-md-8">
+                              <label class="col-md-4 control-label" for="Event">Event:</label>
+
                               <div class="col-md-8">
-                                <label class="col-md-4 control-label" for=
-                                "Event">Event:</label>
-
-                                <div class="col-md-8">
                                   <select class="form-control select2" name="EventID">
-                                    <option>Select</option>
+                                      <option>Select</option>
                                       <?php 
                                           $query = "SELECT * FROM `tblevents`";
                                           $mydb->setQuery($query);
@@ -37,12 +37,12 @@
                                         }
                                         ?>
                                   </select>
-                                   
-                                </div>
+
                               </div>
-                            </div>  
-                            
-<!-- 
+                          </div>
+                      </div>
+
+                      <!-- 
                              <div class="form-group">
                               <div class="col-md-8">
                                 <label class="col-md-4 control-label" for=
@@ -99,14 +99,13 @@
                                 </div>
                               </div>
                             </div>   -->
-                            <div class="form-group">
-                              <div class="col-md-8">
-                                <label class="col-md-4 control-label" for=
-                                "Event">Postion:</label>
+                      <div class="form-group">
+                          <div class="col-md-8">
+                              <label class="col-md-4 control-label" for="Event">Postion:</label>
 
-                                <div class="col-md-8">
+                              <div class="col-md-8">
                                   <select class="form-control select2" name="Position">
-                                    <option>Select</option>
+                                      <option>Select</option>
                                       <?php 
                                           $query = "SELECT * FROM `tblcandidate`";
                                           $mydb->setQuery($query);
@@ -114,51 +113,56 @@
 
                                         foreach ($cur as $result) {
                                           // echo '<option value=' .$result->Position.'</option>';
-                                          echo '<option value='.'>'.$result->Position.' </option>';
+                                          echo '<option value='.'>'.$result->Lastname.''.$result->Position.' </option>';
 
                                         }
                                         ?>
+                              </div>
                           </div>
-                              </div>
-                            </div>  
+                      </div>
 
-                             <div class="form-group">
+                      <div class="form-group">
+                          <div class="col-md-8">
+                              <label class="col-md-4 control-label" for="EWinner">Winner:</label>
+
                               <div class="col-md-8">
-                                <label class="col-md-4 control-label" for=
-                                "EWinner">Winner:</label>
-
-                                <div class="col-md-8">
-                                <input class="form-control input-sm" id="EWinner" name="EWinner" placeholder=
-                                      "Winner" type="text"  required  onkeyup="javascript:capitalize(this.id, this.value);" autocomplete="off"/>
-                                </div>
+                                  <input class="form-control input-sm" id="EWinner" name="EWinner" placeholder="Winner"
+                                      type="text" required onkeyup="javascript:capitalize(this.id, this.value);"
+                                      autocomplete="off" />
                               </div>
-                            </div> 
+                          </div>
+                      </div>
 
 
-                           
-                              
-                       <div class="form-group">
+
+
+                      <div class="form-group">
+                          <div class="col-md-8">
+                              <label class="col-md-4 control-label" for="idno"></label>
+
                               <div class="col-md-8">
-                                <label class="col-md-4 control-label" for=
-                                "idno"></label>
-
-                                <div class="col-md-8">
-                                 <button class="btn btn-mod btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>  Save</button> 
-                                    <!-- <a href="index.php" class="btn btn-info"><span class="fa fa-arrow-circle-left fw-fa"></span></span>&nbsp;<strong>List of Users</strong></a> -->
-                                 </div>
+                                  <button class="btn btn-mod btn-sm" name="save" type="submit"><span
+                                          class="fa fa-save fw-fa"></span> Save</button>
+                                  <!-- <a href="index.php" class="btn btn-info"><span class="fa fa-arrow-circle-left fw-fa"></span></span>&nbsp;<strong>List of Users</strong></a> -->
                               </div>
-                            </div> 
+                          </div>
+                      </div>
                   </form>
-       
-                
-                </div><!--/.services-->
-            </div><!--/.row-->  
-        </div><!--/.container-->
-    </section><!--/#feature-->
- 
+
+
+              </div>
+              <!--/.services-->
+          </div>
+          <!--/.row-->
+      </div>
+      <!--/.container-->
+  </section>
+  <!--/#feature-->
+
 
   <!--   <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
         
         </div> 
-  </section> --><!--/#bottom-->
+  </section> -->
+  <!--/#bottom-->

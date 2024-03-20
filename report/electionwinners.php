@@ -49,14 +49,14 @@ if (!isset($_SESSION['ACCOUNT_ID'])) {
                 <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> -->
             </div>
 
-            <<div class="features">
+            <div class="features">
 				   			 <form class=" wow fadeInDown" action="controller.php?action=delete" Method="POST">
-								<table id="" class="table table-striped table-bordered table-hover " style="font-size:12px" cellspacing="0">
+								<table border="1" id="" class="table table-striped table-bordered table-hover " style="font-size:12px" cellspacing="0">
 
 								  <thead>
 								  	<tr>
 								  		<th> <!-- <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> -->Candidate Name </th>
-								  		<th width="14%">No. of Votes</th>
+								  		<th >No. of Votes</th>
 
 								  		<!-- <th>Status</th> -->
 								  		<th width="14%" >PartyList</th>
@@ -251,7 +251,7 @@ foreach ($cur as $row) {
 $sql = "SELECT * FROM `tblcandidate` c, `tblstudent` s
                           WHERE c.`StudentID`=s.`StudentID`
                           AND  DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' )
-                          AND `Position`='Class-Secretary' ORDER BY TotalVotes DESC LIMIT 8";
+                          AND `Position`='Class-Secretary' ORDER BY TotalVotes DESC LIMIT 1";
 $mydb->setQuery($sql);
 $cur = $mydb->loadResultList();
 

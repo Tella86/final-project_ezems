@@ -9,7 +9,7 @@ require_once "../include/initialize.php";
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Eng.Ziroh Event Management System</title>
+  <title>EZEMS</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link href="<?php echo web_root; ?>css/bootstrap.min.css" rel="stylesheet">
@@ -48,14 +48,14 @@ require_once "../include/initialize.php";
     <div class="row">
       <div class="col-xs-12">
         <h4 class="page-header ">
-          <i class="fa fa"></i>Eng.Ziroh Event Management System
+          <i class="fa fa"></i>EZEMS
            <small class="pull-right">Printed Date: <?php echo date('m/d/Y'); ?></small>
         </h4>
       </div>
       <!-- /.col -->
     </div>
     <div class="row">
-        <h2 align="center">Eng.Ziroh Election Winners</h2>
+        <h2 align="center">EZEMS Election Winners</h2>
     </div>
     <div class="row"  style="padding-bottom:10px">
         <?php
@@ -64,16 +64,17 @@ require_once "../include/initialize.php";
 echo "<h4 align='center'> As of " . date('m/d/Y - h:i') . "</h4>";
 
 ?>
+
       </div>
     <div class="row">
 
     <div class="features">
 				   			 <form class=" wow fadeInDown" action="controller.php?action=delete" Method="POST">
-								<table id="dash-table" class="table table-striped table-bordered table-hover " style="font-size:12px" cellspacing="0">
+								<table bordered="1" id="dash-table" class="table table-striped table-bordered table-hover " style="font-size:12px" cellspacing="0">
 
 								  <thead>
 								  	<tr>
-								  		<th> <!-- <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> -->Candidate Name </th>
+								  		<th> <!-- <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> -->Candidate Name  </th>
 								  		<th width="14%">No. of Votes</th>
 
 								  		<!-- <th>Status</th> -->
@@ -94,9 +95,9 @@ foreach ($cur as $result) {
     # code...
     echo '</tr>';
     echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . '</td>';
-    echo '<td>' . $result->TotalVotes . ',' . ' ' . '</td>';
-    echo '<td>' . $result->PartyList . ',' . ' ' . '</td>';
+    echo '<td>' . $result->Firstname . ' ' . $result->Lastname . ' ' . '</td>';
+    echo '<td>' . $result->TotalVotes . '</td>';
+    echo '<td>' . $result->PartyList .  '</td>';
     echo '</tr>';
 
 }
@@ -116,9 +117,9 @@ foreach ($cur as $result) {
     # code...
     echo '</tr>';
     echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . '</td>';
-    echo '<td>' . $result->TotalVotes . ',' . ' ' . '</td>';
-    echo '<td>' . $result->PartyList . ',' . ' ' . '</td>';
+    echo '<td>' . $result->Firstname . ' ' . $result->Lastname . ' ' . '</td>';
+    echo '<td>' . $result->TotalVotes .  '</td>';
+    echo '<td>' . $result->PartyList .  '</td>';
     echo '</tr>';
 
 }
@@ -138,9 +139,9 @@ foreach ($cur as $result) {
     # code...
     echo '</tr>';
     echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . '</td>';
-    echo '<td>' . $result->TotalVotes . ',' . ' ' . '</td>';
-    echo '<td>' . $result->PartyList . ',' . ' ' . '</td>';
+    echo '<td>' . $result->Firstname . ' ' . $result->Lastname . ' ' . '</td>';
+    echo '<td>' . $result->TotalVotes .  '</td>';
+    echo '<td>' . $result->PartyList .  '</td>';
     echo '</tr>';
 
 }
@@ -160,9 +161,9 @@ foreach ($cur as $result) {
     # code...
     echo '</tr>';
     echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . '</td>';
-    echo '<td>' . $result->TotalVotes . ',' . ' ' . '</td>';
-    echo '<td>' . $result->PartyList . ',' . ' ' . '</td>';
+    echo '<td>' . $result->Firstname . ' ' . $result->Lastname . ' ' . '</td>';
+    echo '<td>' . $result->TotalVotes .  '</td>';
+    echo '<td>' . $result->PartyList .  '</td>';
     echo '</tr>';
 
 }
@@ -182,9 +183,9 @@ foreach ($cur as $result) {
     # code...
     echo '</tr>';
     echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . '</td>';
-    echo '<td>' . $result->TotalVotes . ',' . ' ' . '</td>';
-    echo '<td>' . $result->PartyList . ',' . ' ' . '</td>';
+    echo '<td>' . $result->Firstname . ' ' . $result->Lastname . ' ' . '</td>';
+    echo '<td>' . $result->TotalVotes . '</td>';
+    echo '<td>' . $result->PartyList . '</td>';
     echo '</tr>';
 
 }
@@ -204,9 +205,9 @@ foreach ($cur as $result) {
     # code...
     echo '</tr>';
     echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . '</td>';
-    echo '<td>' . $result->TotalVotes . ',' . ' ' . '</td>';
-    echo '<td>' . $result->PartyList . ',' . ' ' . '</td>';
+    echo '<td>' . $result->Firstname . ' ' . $result->Lastname . ' ' . '</td>';
+    echo '<td>' . $result->TotalVotes . '</td>';
+    echo '<td>' . $result->PartyList .  '</td>';
     echo '</tr>';
 
 }
@@ -226,9 +227,9 @@ foreach ($cur as $result) {
     # code...
     echo '</tr>';
     echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . '</td>';
-    echo '<td>' . $result->TotalVotes . ',' . ' ' . '</td>';
-    echo '<td>' . $result->PartyList . ',' . ' ' . '</td>';
+    echo '<td>' . $result->Firstname . ' ' . $result->Lastname . ' ' . '</td>';
+    echo '<td>' . $result->TotalVotes .  '</td>';
+    echo '<td>' . $result->PartyList .  '</td>';
     echo '</tr>';
 
 }
@@ -248,9 +249,9 @@ foreach ($cur as $result) {
     # code...
     echo '</tr>';
     echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . '</td>';
-    echo '<td>' . $result->TotalVotes . ',' . ' ' . '</td>';
-    echo '<td>' . $result->PartyList . ',' . ' ' . '</td>';
+    echo '<td>' . $result->Firstname . ' ' . $result->Lastname . ' ' . '</td>';
+    echo '<td>' . $result->TotalVotes . '</td>';
+    echo '<td>' . $result->PartyList .  '</td>';
     echo '</tr>';
 
 }
@@ -264,15 +265,15 @@ foreach ($cur as $result) {
 $sql = "SELECT * FROM `tblcandidate` c, `tblstudent` s
                           WHERE c.`StudentID`=s.`StudentID`
                           AND  DATE_FORMAT( `RunningDate` , '%Y' )= DATE_FORMAT(NOW() , '%Y' )
-                          AND `Position`='Class-Secretary' AND 'PartyList'='PartyList' ORDER BY TotalVotes DESC LIMIT 8";
+                          AND `Position`='Class-Secretary' AND 'PartyList'='PartyList' ORDER BY TotalVotes DESC LIMIT 1";
 $cur = $mydb->loadResultList();
 foreach ($cur as $result) {
     # code...
     echo '</tr>';
     echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . '</td>';
-    echo '<td>' . $result->TotalVotes . ',' . ' ' . '</td>';
-    echo '<td>' . $result->PartyList . ',' . ' ' . '</td>';
+    echo '<td>' . $result->Firstname . ' ' . $result->Lastname . ' ' . '</td>';
+    echo '<td>' . $result->TotalVotes .  '</td>';
+    echo '<td>' . $result->PartyList .  '</td>';
     echo '</tr>';
 
 }
@@ -292,9 +293,9 @@ foreach ($cur as $result) {
     # code...
     echo '</tr>';
     echo '<tr>';
-    echo '<td>' . $result->Firstname . ',' . $result->Lastname . ' ' . '</td>';
-    echo '<td>' . $result->TotalVotes . ',' . ' ' . '</td>';
-    echo '<td>' . $result->PartyList . ',' . ' ' . '</td>';
+    echo '<td>' . $result->Firstname . ' ' . $result->Lastname . ' ' . '</td>';
+    echo '<td>' . $result->TotalVotes .  '</td>';
+    echo '<td>' . $result->PartyList . '</td>';
     echo '</tr>';
 
 }

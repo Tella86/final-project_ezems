@@ -158,7 +158,7 @@ $date = new DateTime();
 echo $date->format('l, F jS, Y');
 ?>
                             </h2>
-
+<?php include "leavemsg.html"; ?>
                         </div>
 
                     </div>

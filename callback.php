@@ -34,12 +34,12 @@ if ($ResultCode == 0) {
 // Prepare and execute SQL statement
 $sql = "INSERT INTO transactions (ResultCode, Amount, TransactionID, TransactionDate, PhoneNumber) VALUES 
 ( '$ResultCode', '$Amount', '$TransactionID', '$TransactionDate','$PhoneNumber')";
-}
-if ($conn->query($sql) === TRUE) {
-  echo "Car ordered successfully";
-  header("location:index.html");
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+// if ($conn->query($sql) === TRUE) {
+//   echo "Car ordered successfully";
+//   header("location:index.html");
+// } else {
+//   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 // Close connection

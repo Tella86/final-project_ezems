@@ -93,7 +93,7 @@ if (isset($_SESSION['CVCodeNo'])) {
       <tbody>
         <tr>
           <td><b>Voting Code:</b></td>
-          <td><input name="VotingCodes" type="password" id="VotingCodes" placeholder="Enter Voting Code" required autocomplete="off"></td>
+          <td><input name="VotingCodes" type="password" id="VotingCodes" placeholder="Enter Voting Code" required autocomplete="on"></td>
         </tr>
         <tr>
           <td ><button type="submit" name="submit" class="button"></button></td>

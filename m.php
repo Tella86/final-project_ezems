@@ -210,6 +210,13 @@ include("inactive.php"); //check if user is inactive for 15 minutes
             button {
                 border-radius: 5px;
                 float: center;
+                width:100px;
+			height:50px;
+			background: url("images/pay.png");
+			background-size: 100px 50px;
+			background-repeat: no-repeat;
+			border:none;
+			cursor:pointer;
             }
 
             .alert {
@@ -270,22 +277,22 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                         <center>
                                             <!-- <h6>Enter Phone Number</h6> -->
                                             <fieldset>
-                                            <form class="row g-3" action="./stk_initiate.php" method="POST">
+                                            <form class="row g-3" action="stk_initiate.php" method="POST">
 
                                                 <div class="col-12">
                                                     <label for="inputAddress" class="form-label">Amount</label>
                                                     <input type="text" class="form-control" name="amount"
-                                                        placeholder="Enter Amount">
+                                                        placeholder="Enter Amount" required>
                                                 </div>
                                                 <div class="col-12">
                                                     <label for="inputAddress2" class="form-label">Phone Number</label>
                                                     <input type="text" class="form-control" name="phone"
-                                                        placeholder="Enter Phone Number">
+                                                        placeholder="Enter Phone Number" required>
                                                 </div>
 
                                                 <div class="col-12">
-                                                    <button type="submit" class="btn btn-success" name="submit"
-                                                        value="submit">M~PAY</button>
+                                                    <button type="submit" class="submit" name="submit"
+                                                        value="submit"></button>
                                                 </div>
                                                 
                                             
@@ -364,6 +371,7 @@ echo $date->format('l, F jS, Y');
 
 ?>
 
+      
                                     <div>
                                     </div>
                                     <div>

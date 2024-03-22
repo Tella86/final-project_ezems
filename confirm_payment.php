@@ -1,5 +1,6 @@
 <?php
 require_once "include/initialize.php";
+include "incld/header.php"; 
 
 if (isset($_SESSION['$stkCallbackResponse'])) {
     redirect("callback.php");

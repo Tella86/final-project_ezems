@@ -189,6 +189,7 @@ if ($_SESSION['ACCOUNT_TYPE'] == 'Student') {
                         </li>
                         <!--     <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact-us.html">Contact</a></li>   -->
+     
                         <li class="dropdown">
                             <a href="#" class="fas fa-user" data-toggle="dropdown">Hello!,
                                 <?php echo $_SESSION['ACCOUNT_NAME']; ?> <b class="caret"></b></a>

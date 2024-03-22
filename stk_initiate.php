@@ -55,6 +55,7 @@ if (isset($_POST['submit'])) {
 
     # callback url
     $CallBackURL = 'https://funny-newt-personally.ngrok-free.app/sems/callback.php';
+    // $CallBackURL = 'https://zonetella.wpcomstaging.com/callback/';
 
     $curl = curl_init($access_token_url);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -95,15 +96,16 @@ if (isset($_POST['submit'])) {
     curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
     $curl_response = curl_exec($curl);
-    // print_r($curl_response);
+    print_r($curl_response);
 
     // echo $curl_response;
 
-
+include "incld/header.php";
     // header("Location: confirm_payment.php");
     // header("Location: m.php");
 }
 ?>
+<br><br><br><br><br><br>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,10 +117,10 @@ if (isset($_POST['submit'])) {
 <body>
 
 <!-- Your payment confirmation icon -->
-
-</body>
-</html>
+<center>
 <class="divider-vertical"></li>
                         <class="active"><a href="confirm_payment.php">
                                 <h3><i class="fas fa-check-circle" style="color: green;"></i>&nbsp;confirm_payment</h3>
-                            </a></li>
+                            </a></li></center>
+</body>
+</html>

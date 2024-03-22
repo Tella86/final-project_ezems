@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
+    <title>EZEMS</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="../images/ico/favicon.ico">
+    <!-- <link rel="shortcut icon" href="../images/ico/favicon.ico"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -184,7 +184,7 @@ x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
             <li><a href="developers.php">Developerst</a></li>
             <li><a href="history.php">Company History</a></li>
             <li><a href="about.php">Mission | Vision</a></li>
-            <li><a href="#">Home</a></li>
+            <li><a href="m.php">Home</a></li>
         </ul>
         <br>
     </nav>

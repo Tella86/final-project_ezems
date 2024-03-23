@@ -22,15 +22,15 @@ if (isset($_POST["message"])) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'tellaenterprises@gmail.com';
-        $mail->Password = 'gjpj rusu acel hpdi ';
+        $mail->Username = 'ezems.developers@gmail.com';
+        $mail->Password = 'glgu ktrc jcgf jety ';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
         // Recipients
-        $mail->setFrom('tellaenterprises@gmail.com', 'EZEMS');
+        $mail->setFrom('ezems.developers@gmail.com', 'EZEMS');
         $mail->addAddress($_POST["email"]);
-        $mail->addReplyTo('tellaenterprises@gmail.com', 'EZEMS');
+        $mail->addReplyTo('ezems.developers@gmail.com', 'EZEMS');
 
         // Content
         $mail->isHTML(true);

@@ -67,7 +67,7 @@
 
                 <h6><span><i class="fa-solid fa-location-dot"></i></span> 24/7., Kilifi, Kenya </h6>
 
-                <h6><span><i class="fa-solid fa-envelope"></i></span> tellaenterprises@gmail.com</h6>
+                <h6><span><i class="fa-solid fa-envelope"></i></span> ezems.developers@gmail.com</h6>
 
                 <h6><span><i class="fa-solid fa-phone"></i></span> (254)1010086123</h6>
 

@@ -330,7 +330,7 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
 
                         <div class="row-fluid">
                             <!-- <div class="col-md-10 "> -->
-                              <h3 style="color:"><span id="tick2">
+                              <h3 style="color:blue"><span id="tick2">
                                     </span>&nbsp;|
 
                                     <script>

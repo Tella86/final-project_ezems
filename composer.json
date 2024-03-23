@@ -16,27 +16,12 @@
         "laravel/framework": "^9.2",
         "laravelsanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
-        "phpunit/phpuint": "^9.5",
+       
 
     
 
     },
-    "autoload": {
-        "psr-4": {
-            // Autoload mapping for your project's classes
-            // Example: "Namespace\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            // Autoload mapping for development-specific classes
-            // Example: "Namespace\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        // List of scripts to execute during various events
-        // Example: "post-install-cmd": "php artisan migrate"
-    },
+    
     "minimum-stability": "stable",
     "prefer-stable": true,
     "repositories": [],

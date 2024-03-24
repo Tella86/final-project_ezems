@@ -119,6 +119,9 @@
             display: auto;
             /* justify-content: center; */
             /* align-items: center; */
+            
+          background: url(../images/bg/mainbg.png);
+      
         }
         .content {
             text-align: center;
@@ -162,7 +165,7 @@
         </style>
     </head>
 
-<body bgcolor="grey">
+<body id="login" style="background:url(images/bg/mainbg.png)">
 <!-- <p id="demo"></p>
 
 <script>
@@ -178,7 +181,7 @@ x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
         <!-- <img src="../img/sclogo.png" alt="Company Logo" height="80px" width="80px"> -->
 
         <ul>
-            <li><a href="https://localhost/sems/incld/subscription.php">Subscribe</a></li>
+            <li><a href="./incld/subscription.php">Subscribe</a></li>
             <li><a href="https://youtu.be/hAbaBLnxnzU">Demo</a></li>
             <li><a href="./contact-us/index.php">Contact Us</a></li>
             <li><a href="developers.php">Developerst</a></li>
@@ -189,6 +192,6 @@ x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
         <br>
     </nav>
 
-</body>
+</body >
 
 </html>

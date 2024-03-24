@@ -77,7 +77,10 @@ function hidePrintButton($printinvoice) {
     <center>
         <P>TELL:254101086123</P>
     </center>
-    
+    <div class="span10">
+                                    <img src="../img/pay.png" height="200px" width="200px">
+                                    
+                                </div>
     <form id="invoiceForm" action="contoller.php" method="post">
 
         <table>
@@ -111,8 +114,8 @@ $currentDateTime= date("d-m-Y H:i:s");echo "" . $currentDateTime;
                             value="<?php echo $_SESSION['confirmation']; ?>" </td>
                     <td><select id="description" name="description" required>
                             <option value="Basic Package (kSH.145/Per Voter)">Basic Package (kSH.145/Per Voter)</option>
-                            <option value="Standard Package (KSH.35090/P.a)">Standard Package (KSH.35090/P.a)</option>
-                            <option value="Premium Package (KSH.150000/Life Time))">Premium Package (KSH.150000/Life Time)</option>
+                            <!-- <option value="Standard Package (KSH.35090/P.a)">Standard Package (KSH.35090/P.a)</option> -->
+                            <option value="Premium Package (KSH.150000/Life Time))">Premium Package (KSH.150000/P.a)</option>
                     </td>
                     <td><input type="number" name="quantity" oninput="calculateTotal(this)"></td>
                     <td><input type="number" name="price" oninput="calculateTotal(this)"></td>

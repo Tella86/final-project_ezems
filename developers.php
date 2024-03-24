@@ -84,7 +84,7 @@ require_once "include/initialize.php";
                               <div class="container">
                                   <div id="" class="muted pull-right">
                                       <a id="return" data-placement="left" title="Click to Return" href="m.php"><i
-                                              class="icon-arrow-left"></i> Back</a>
+                                              class="btn btn-primary-left"></button> Back</button>
                                   </div>
                               </div>
                           </div>

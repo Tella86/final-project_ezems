@@ -55,7 +55,7 @@
         }
     </style>
 </head>
-<body>
+<body id="login" style="background:url(../images/bg/mainbg.png)">
 
 
     <div class="main">
@@ -82,15 +82,15 @@
             <div class="form-cotainer col-6">
                 <form action="./send-message.php" method="POST">
                     <div class="form-group">
-                        <label for="name">Your Name:</label>
+                        <label for="name" style="color:black">Your Name:</label>
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Your Email:</label>
+                        <label for="email" style="color:black">Your Email:</label>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message:</label>
+                        <label for="message" style="color:black">Message:</label>
                         <textarea class="form-control" name="message" id="message" cols="30" rows="3"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary form-control">Send Message</button>

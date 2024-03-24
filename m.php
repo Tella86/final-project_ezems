@@ -51,6 +51,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
         display: auto;
         /* justify-content: center; */
         /* align-items: center; */
+        background: url(images/bg/mainbg.png);
     }
 
     .content {
@@ -117,7 +118,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                 </div>
 
 
-<body>
+<body >
     </div>
     <?php include 'incld/header.php';?>
     <!-- </div> -->
@@ -352,7 +353,7 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
 
                                         <div class="row-fluid">
                                             <!-- <div class="col-md-10 "> -->
-                                            <h3 style="color:blue"><span id="tick2">
+                                            <h3 style="color:white"><span id="tick2">
                                                 </span>&nbsp;|
 
                                                 <script>

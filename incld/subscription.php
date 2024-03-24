@@ -115,19 +115,19 @@
         </style>
         </head>
 
-        <body>
-            <?php check_message();?>
+        <body id="login" style="background:url(../images/bg/mainbg.png)">
+           
             <nav>
                 <br>
                 <!-- <a class="navbar-brand" href=""><img style="width:50px" src="../img/ust.jpg" alt="logo"></a> -->
 
                 <ul>
-                    <li><a href="https://localhost/sems/incld/subscription.php">Subscribe</a></li>
+                    <li><a href="./subscription.php">Subscribe</a></li>
                     <li><a href="https://youtu.be/hAbaBLnxnzU">Demo</a></li>
-                    <li><a href="./contact-us/index.php">Contact Us</a></li>
-                    <li><a href="developers.php">Developerst</a></li>
-                    <li><a href="history.php">Company History</a></li>
-                    <li><a href="about.php">Mission | Vision</a></li>
+                    <li><a href="../contact-us/index.php">Contact Us</a></li>
+                    <li><a href="../developers.php">Developerst</a></li>
+                    <li><a href="../history.php">Company History</a></li>
+                    <li><a href="../about.php">Mission | Vision</a></li>
                     <li><a href="../m.php">Home</a></li>
                 </ul>
                 <br>
@@ -145,8 +145,8 @@
             <select id="package" name="package" required>
                 <option value="Basic Package (kSH.145/Per Voter)">Basic Package
                     (kSH.145/Per Voter)</option>
-                <option value="Premium Package (KSH.150000/Life Time)">Premium Package
-                    (KSH.150000/Life Time)</option>
+                <option value="Premium Package (KSH.150000/P.a)">Premium Package
+                    (KSH.150000/P.a)</option>
             </select><br>
             <label for="phone">M~pesa Number:</label><br>
             <input type="text" id="phone" name="phone" required><br>

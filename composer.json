@@ -27,11 +27,12 @@
         }
     },
     "require": {
-        "php": ">=8.1.14",
+        "php": "^8.1.2|8.1.14",
         "ext-json": "*",
         "ext-pcre": "*",
         "ext-SPL": "*",
-        "lib-pcre": "*"
+        "lib-pcre": "*",
+        "dallgoot/yaml": "^0.9.1"
     },
 
     "require-dev": {

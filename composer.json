@@ -32,7 +32,8 @@
         "ext-pcre": "*",
         "ext-SPL": "*",
         "lib-pcre": "*",
-        "dallgoot/yaml": "^0.9.1"
+        "dallgoot/yaml": "^0.9.1",
+        "google/apiclient": "2.15.0"
     },
 
     "require-dev": {

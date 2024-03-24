@@ -4,7 +4,7 @@ include_once "inactive.php";
 
 
 if (isset($_SESSION['ACCOUNT_ID'])) {
-    redirect(web_root . "m.php");
+    // redirect(web_root . "m.php");
 
 }
 
@@ -58,59 +58,154 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                     color: #007bff;
                     /* Change color as needed */
                 }
+
                 body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('images/bg/bg-3-full.jpg');
-            background-size: cover; /* Cover the entire container */
-            background-position: auto; /* Center the background image */
-            height: 100vh; /* Set the height of the body to viewport height */
-            display: auto;
-            /* justify-content: center; */
-            /* align-items: center; */
-        }
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-image: url('images/bg/bg-3-full.jpg');
+                    background-size: cover;
+                    /* Cover the entire container */
+                    background-position: auto;
+                    /* Center the background image */
+                    height: 100vh;
+                    /* Set the height of the body to viewport height */
+                    display: auto;
+                    /* justify-content: center; */
+                    /* align-items: center; */
+                }
 
-        /* Define styles for the header */
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .content {
-            text-align: center;
-            color: #fff;
-        }
+                /* Define styles for the header */
+                header {
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    padding: 20px 0;
+                }
+
+                .content {
+                    text-align: center;
+                    color: #fff;
+                }
 
 
-        /* Define styles for the main content */
-        .container {
-            max-width: 800px; /* Adjust as needed */
-            margin: 0 auto;
-            padding: 20px;
-        }
+                /* Define styles for the main content */
+                .container {
+                    max-width: 800px;
+                    /* Adjust as needed */
+                    margin: 0 auto;
+                    padding: 20px;
+                }
 
-        /* Define styles for the footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        @media screen and (max-width: 768px) {
-            .container {
-                max-width: 90%; 
-                max-height: fit-content;/* Adjust as needed for smaller screens */  
-            }
-            body {
-                background-size: contain; /* Ensure the entire image is visible */
-            }
-          }
-          
+                /* Define styles for the footer */
+                footer {
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    padding: 20px 0;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                }
+
+                @media screen and (max-width: 768px) {
+                    .container {
+                        max-width: 90%;
+                        max-height: fit-content;
+                        /* Adjust as needed for smaller screens */
+                    }
+
+                    body {
+                        background-size: contain;
+                        /* Ensure the entire image is visible */
+                    }
+                }
+
+                /* The typing effect */
+                @keyframes typing {
+                    from {
+                        width: 0;
+                    }
+
+                    to {
+                        width: 100%;
+                    }
+                }
+
+                /* The blinking cursor effect */
+                @keyframes blink {
+                    50% {
+                        border-color: gold;
+                    }
+                }
+
+                /* The container for the text */
+                .typewriter-container {
+                    overflow: hidden;
+                    border-right: .17em solid white;
+                    /* The typewriter cursor */
+                    white-space: nowrap;
+                    /* Keeps the content on a single line */
+                    margin: 0 auto;
+                    /* Center the container */
+                    letter-spacing: .15em;
+                    /* Adjust letter spacing for a typewriter effect */
+                    animation: typing 6s steps(45) infinite, .90s step-end infinite;
+                    font-size: 28px;
+                }
+
+                @keyframes rotate180 {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                .rotate-image {
+                    animation: rotate180 2s linear forwards;
+                    /* Animation lasts for 2 seconds and stops at the end */
+                }
+
+                @keyframes blink {
+                    0% {
+                        opacity: 1;
+                    }
+
+                    50% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+                .blink {
+                    animation: blink 1s infinite;
+                    color: red;
+                }
+
+                .animation-container {
+                    text-align: center;
+                }
+
+                .please-login {
+                    display: inline-block;
+                    font-size: 24px;
+                }
+
+                .icon-locked::before {
+                    content: "\1F512";
+                    /* Unicode for locked symbol */
+                    font-family: Arial, sans-serif;
+                    /* Use a font that supports the locked symbol */
+                    font-size: 24px;
+                    /* Adjust size as needed */
+                    display: inline-block;
+                }
                 </style>
 
                 <div class="collapse navbar-collapse">
@@ -143,7 +238,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
         </div>
     </div>
 
-<body id="login" style="background:url(images/bg/bg-3-full.jpg)" >
+<body id="login" style="background:url(images/bg/bg-3-full.jpg)">
 
     <div class="container">
         <div class="row-fluid">
@@ -155,13 +250,18 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                         <div class="span12"></div>
                         <div class="row-fluid">
                             <div class="span10">
-                                <img class="index_logo" src="img/santotomas.png">
+                                <!-- <img class="index_logo" src="img/santotomas.png"> -->
+                                <img src="img/santotomas.png" alt="Rotating Image" class="rotate-image">
+
                             </div>
                             <div class="span12">
                                 <div class="motto">
 
                                     <h3>
-                                        <p>WELCOME&nbsp;&nbsp;TO EZEMS</p>
+                                        <div class="typewriter-container">
+                                            <span>WELCOME TO EZEMS</span>
+                                        </div>
+
                                     </h3>
                                 </div>
                             </div>
@@ -204,82 +304,87 @@ if(isset($_GET['status']) && $_GET['status']=='inactive'){
                         <div class="overlay">
                             <!--/. Starting code for the log-in interface appearance -->
                             <fieldset>
-                            <form id="login_form1" class="form-signin" method="post">
+                                <form id="login_form1" class="form-signin" method="post">
 
-                                <h3 class="form-signin-heading" style="color:#fff">
-                                    <i class="icon-lock"></i> Please Login
-                                </h3>
-                                <input type="text" autofocus="autofocus" class="input-block-level" id="username" name="username"
-                                    placeholder="Username" required>
-                                <input type="password" autofocus="autofocus" class="input-block-level" id="password" name="password"
-                                    placeholder="Password" required>
+                                    <h3 class="form-signin-heading" style="color:#fff">
+                                        <div class="animation-container">
+                                            <span class=""></span>
+                                            <span class="Please Login blink">Please Login</span>
+                                            <span class="icon-locked"></span>
+                                        </div>
+                                    </h3>
+                                    <input type="text" autofocus="autofocus" class="input-block-level" id="username"
+                                        name="username" placeholder="Username" required>
+                                    <input type="password" autofocus="autofocus" class="input-block-level" id="password"
+                                        name="password" placeholder="Password" required>
 
-                                <button data-placement="right" title="Click Here to Sign In" id="signin" name="btnLogin"
-                                    class="btn btn-info" type="submit"><i class="icon-signin icon-large"></i> Log
-                                    in</button>
+                                    <button data-placement="right" title="Click Here to Sign In" id="signin"
+                                        name="btnLogin" class="btn btn-info" type="submit"><i
+                                            class="icon-signin icon-large"></i> Log
+                                        in</button>
 
-                            </form>
+                                </form>
                             </fieldset>
-                            
-
-
-                        <div class="row-fluid">
-                            <div class="col-md-12 ">
-                                <h4 style="color:#fff"><span id="tick2">
-                                    </span>&nbsp;|
 
 
 
-                                    <script>
-                                    // <!--/. tells about the time  -->
-                                    function show2() {
-                                        if (!document.all && !document.getElementById)
-                                            return
-                                        thelement = document.getElementById ? document.getElementById("tick2") :
-                                            document.all.tick2
-                                        var Digital = new Date()
-                                        var hours = Digital.getHours()
-                                        var minutes = Digital.getMinutes()
-                                        var seconds = Digital.getSeconds()
-                                        var dn = "PM"
-                                        if (hours < 12)
-                                            dn = "AM"
-                                        if (hours > 12)
-                                            hours = hours - 12
-                                        if (hours == 0)
-                                            hours = 12
-                                        if (minutes <= 9)
-                                            minutes = "0" + minutes
-                                        if (seconds <= 9)
-                                            seconds = "0" + seconds
-                                        var ctime = hours + ":" + minutes + ":" + seconds + " " + dn
-                                        thelement.innerHTML = ctime
-                                        setTimeout("show2()", 1000)
-                                    }
-                                    window.onload = show2
-                                    //-->
-                                    </script>
-                                    <!--/. Script where the format of the interface time,month,day and year relies -->
+                            <div class="row-fluid">
+                                <div class="col-md-12 ">
+                                    <h4 style="color:#fff"><span id="tick2">
+                                        </span>&nbsp;|
 
-                                    <?php
+
+
+                                        <script>
+                                        // <!--/. tells about the time  -->
+                                        function show2() {
+                                            if (!document.all && !document.getElementById)
+                                                return
+                                            thelement = document.getElementById ? document.getElementById("tick2") :
+                                                document.all.tick2
+                                            var Digital = new Date()
+                                            var hours = Digital.getHours()
+                                            var minutes = Digital.getMinutes()
+                                            var seconds = Digital.getSeconds()
+                                            var dn = "PM"
+                                            if (hours < 12)
+                                                dn = "AM"
+                                            if (hours > 12)
+                                                hours = hours - 12
+                                            if (hours == 0)
+                                                hours = 12
+                                            if (minutes <= 9)
+                                                minutes = "0" + minutes
+                                            if (seconds <= 9)
+                                                seconds = "0" + seconds
+                                            var ctime = hours + ":" + minutes + ":" + seconds + " " + dn
+                                            thelement.innerHTML = ctime
+                                            setTimeout("show2()", 1000)
+                                        }
+                                        window.onload = show2
+                                        //-->
+                                        </script>
+                                        <!--/. Script where the format of the interface time,month,day and year relies -->
+
+                                        <?php
 $date = new DateTime();
 echo $date->format('l, F jS, Y');
 ?>
-                                    <h4>
+                                        <h4>
+                                </div>
                             </div>
+                            <?php include "leavemsg.html";?>
                         </div>
-<?php include "leavemsg.html";?>
-                    </div>
 
+
+                    </div>
+                    <!--/.  END -->
 
                 </div>
-                <!--/.  END -->
 
+                <?php //include('login_form.php'); ?>
             </div>
-
-            <?php //include('login_form.php'); ?>
         </div>
-    </div>
 
 
     </div>

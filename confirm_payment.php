@@ -67,12 +67,32 @@ $data = json_decode($stkCallbackResponse);
     .button {
         width: 110px;
         height: 50px;
-        background: url("images/login.png");
+        background: url("images/paynoe.jpg");
         background-size: 110px 50px;
         background-repeat: no-repeat;
         border: none;
         cursor: pointer;
+        font-size: 16px;
     }
+
+    .myButton {
+        /* width: 110px;
+        height: 50px; */
+        background: url("images/paynoe.jpg");
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 8px;
+        display: inline-block;
+        cursor: pointer;
+        margin: 4px 2px;
+        font-size: 16px;
+    }
+
+    /* .btn:hover {
+        background-color: #0056b3;
+    } */
 
     /* Add your CSS styles here */
     body {
@@ -114,6 +134,34 @@ $data = json_decode($stkCallbackResponse);
             /* Adjust as needed for smaller screens */
         }
     }
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .blink {
+        animation: blink 1s infinite;
+        color: red;
+    }
+
+    .animation-container {
+        text-align: center;
+    }
+
+    .confirm-payment {
+        display: inline-block;
+        font-size: 24px;
+    }
     </style>
 </head>
 
@@ -130,16 +178,7 @@ $data = json_decode($stkCallbackResponse);
                 <div id="page">
                     <div id="header">
                         <div id="container" align="center">
-                            <?php
-$query = "SELECT * FROM  transactions WHERE 'TransactionID' = 'MpesaReceiptNumber'";
-$mydb->setQuery($query);
-$cur = $mydb->loadResultList();
 
-foreach ($cur as $result) {
-    echo  $result->TransactionID;
-
-}
-?>
                             <table>
 
                                 <tbody>
@@ -165,7 +204,11 @@ foreach ($cur as $result) {
                                         }
                                         </style>
                                         <p>Click Get login Details Before You Confirm payment</p>
-                                        <p>Confirm payment </p>
+                                        <div class="animation-container">
+                                            <span class="confirm-payment blink">Confirm</span>
+                                            <span class="confirm-payment blink">Payment</span>
+                                        </div>
+
                                         <!-- <td colspan="2" align="right"><button type="submit" name="submit" class="button">Confirm</button></td> -->
                                     </tr>
                                 </tbody>
@@ -174,20 +217,19 @@ foreach ($cur as $result) {
                     </div>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-success" name="submit" value="submit">Confirm Pay</button>
-                    <a href="creditional.php" class="btn btn-primary">Get login Details</a>
+                    <button type="submit" class="myButton" name="submit" value="submit"
+                        onclick="confirmPaySlide()">confirm Pay</button>
+                    <button><a href="creditional.php" class="btn btn-primary">Get login Details</a></button>
                 </div>
             </form>
     </div>
 
-    <!-- <div id="message">
-  <h3>Password must contain the following:</h3>
-  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-  <p id="number" class="invalid">A <b>number</b></p>
-  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-</div> -->
     <script>
+    function confirmPaySlide() {
+        // Add your confirmation logic here
+        alert(' confirm payment!');
+        // You can replace the alert with any other action you want to perform upon confirmation
+    }
     var myInput = document.getElementById("psw");
     var letter = document.getElementById("letter");
     var capital = document.getElementById("capital");

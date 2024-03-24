@@ -222,12 +222,22 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                 float: center;
                 width: 100px;
                 height: 50px;
-                background: url("images/pay.png");
+                background: url("images/paynoe.jpg");
                 background-size: 100px 50px;
                 background-repeat: no-repeat;
                 border: none;
                 cursor: pointer;
             }
+            @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .blinking-button {
+    animation: blink 1s infinite;
+  }
+
 
             .alert {
                 color: white;
@@ -302,7 +312,7 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                                     </div>
 
                                                     <div class="col-12">
-                                                        <button type="submit" class="submit" name="submit"
+                                                        <button type="submit" class="blinking-button" name="submit"
                                                             value="submit"></button>
                                                     </div>
 

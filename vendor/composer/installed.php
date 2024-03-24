@@ -3,7 +3,7 @@
         'name' => 'tella86/final-project_ezems',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4d7ac5317017d96519a0961698ff26fcac66d5e8',
+        'reference' => '175c8e70030ad6a3ac2b164fd207b82be656df0e',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -79,6 +79,15 @@
             'reference' => '49787fa30b8d8313146a61efbf77ed1fede723c2',
             'type' => 'library',
             'install_path' => __DIR__ . '/../google/apiclient',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'google/apiclient-services' => array(
+            'pretty_version' => 'v0.340.0',
+            'version' => '0.340.0.0',
+            'reference' => 'c89999ea477da2b0803b2b4f14c9e7fc23b6344a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../google/apiclient-services',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -403,8 +412,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'ralouphie/getallheaders' => array(
@@ -644,7 +653,7 @@
         'tella86/final-project_ezems' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4d7ac5317017d96519a0961698ff26fcac66d5e8',
+            'reference' => '175c8e70030ad6a3ac2b164fd207b82be656df0e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

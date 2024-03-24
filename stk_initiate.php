@@ -54,8 +54,8 @@ if (isset($_POST['submit'])) {
     $initiate_url = 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
     # callback url
-    $CallBackURL = 'https://funny-newt-personally.ngrok-free.app/sems/callback.php';
-    // $CallBackURL = 'https://zonetella.wpcomstaging.com/callback/';
+    // $CallBackURL = 'https://funny-newt-personally.ngrok-free.app/sems/callback.php';
+    $CallBackURL = 'https://equipped-set-perch.ngrok-free.app/sems/callback.php';
 
     $curl = curl_init($access_token_url);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -96,7 +96,7 @@ if (isset($_POST['submit'])) {
     curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
     $curl_response = curl_exec($curl);
-    print_r($curl_response);
+    // print_r($curl_response);
 
     // echo $curl_response;
 

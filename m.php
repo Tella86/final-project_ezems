@@ -2,7 +2,7 @@
 require_once "include/initialize.php";
 
 // include("auth.php"); //include auth.php file on all secure pages
-include("inactive.php"); //check if user is inactive for 15 minutes
+include "inactive.php"; //check if user is inactive for 15 minutes
 ?>
 
 <!DOCTYPE html>
@@ -36,59 +36,68 @@ include("inactive.php"); //check if user is inactive for 15 minutes
     <!-- <link rel="shortcut icon" href="images/ico/favicon.ico"> -->
 
     <link rel="stylesheet" href="admin/css/font-awesome.css">
-<style>
+    <style>
     body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            /* background-image: url('images/bg/bg.png'); */
-            background-size: cover; /* Cover the entire container */
-            background-position: auto; /* Center the background image */
-            height: 100vh; /* Set the height of the body to viewport height */
-            display: auto;
-            /* justify-content: center; */
-            /* align-items: center; */
-        }
-        .content {
-            text-align: center;
-            color: #fff;
-        }
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* background-image: url('images/bg/bg.png'); */
+        background-size: cover;
+        /* Cover the entire container */
+        background-position: auto;
+        /* Center the background image */
+        height: 100vh;
+        /* Set the height of the body to viewport height */
+        display: auto;
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
 
-        /* Define styles for the header */
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
+    .content {
+        text-align: center;
+        color: #fff;
+    }
 
-        /* Define styles for the main content */
+    /* Define styles for the header */
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    /* Define styles for the main content */
+    .container {
+        max-width: 800px;
+        /* Adjust as needed */
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Define styles for the footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
         .container {
-            max-width: 800px; /* Adjust as needed */
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 90%;
+            max-height: fit-content;
+            /* Adjust as needed for smaller screens */
         }
 
-        /* Define styles for the footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        body {
+            background-size: contain;
+            /* Ensure the entire image is visible */
         }
-        @media screen and (max-width: 768px) {
-            .container {
-                max-width: 90%; 
-                max-height: fit-content;/* Adjust as needed for smaller screens */  
-            }
-            body {
-                background-size: contain; /* Ensure the entire image is visible */
-            }
-          }
-</style>
+    }
+    </style>
 
 
     <div class="navbar">
@@ -148,6 +157,7 @@ include("inactive.php"); //check if user is inactive for 15 minutes
 
             <style>
             @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+
             body {
                 background-color: #eaedf4;
                 font-family: "Rubik", sans-serif;
@@ -210,13 +220,13 @@ include("inactive.php"); //check if user is inactive for 15 minutes
             button {
                 border-radius: 5px;
                 float: center;
-                width:100px;
-			height:50px;
-			background: url("images/pay.png");
-			background-size: 100px 50px;
-			background-repeat: no-repeat;
-			border:none;
-			cursor:pointer;
+                width: 100px;
+                height: 50px;
+                background: url("images/pay.png");
+                background-size: 100px 50px;
+                background-repeat: no-repeat;
+                border: none;
+                cursor: pointer;
             }
 
             .alert {
@@ -249,7 +259,7 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                                 <select id="package" name="package" required>
                                                     <option value="Basic Package (kSH.145/Per Voter)">Basic Package
                                                         (kSH.145/Per Voter)</option>
-                                                    
+
                                                     <option value="Premium Package (KSH.150000/Life Time)">Premium
                                                         Package
                                                         (KSH.150000/P.a)</option>
@@ -277,112 +287,115 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                         <center>
                                             <!-- <h6>Enter Phone Number</h6> -->
                                             <fieldset>
-                                            <form class="row g-3" action="stk_initiate.php" method="POST">
+                                                <form class="row g-3" action="stk_initiate.php" method="POST">
 
-                                                <div class="col-12">
-                                                    <label for="inputAddress" class="form-label">Amount</label>
-                                                    <input type="text" class="form-control" name="amount"
-                                                        placeholder="Enter Amount" required>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label for="inputAddress2" class="form-label">Phone Number</label>
-                                                    <input type="text" class="form-control" name="phone"
-                                                        placeholder="Enter Phone Number" required>
-                                                </div>
+                                                    <div class="col-12">
+                                                        <label for="inputAddress" class="form-label">Amount</label>
+                                                        <input type="text" class="form-control" name="amount"
+                                                            placeholder="Enter Amount" required>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <label for="inputAddress2" class="form-label">Phone
+                                                            Number</label>
+                                                        <input type="text" class="form-control" name="phone"
+                                                            placeholder="Enter Phone Number" required>
+                                                    </div>
 
-                                                <div class="col-12">
-                                                    <button type="submit" class="submit" name="submit"
-                                                        value="submit"></button>
-                                                </div>
-                                                
-                                            
-                                            <div class="media mt-3 pl-2"></div>
+                                                    <div class="col-12">
+                                                        <button type="submit" class="submit" name="submit"
+                                                            value="submit"></button>
+                                                    </div>
 
-                                            <!-- <button type="submit"><a href="https://paypal.com" target="_blank"
+
+                                                    <div class="media mt-3 pl-2"></div>
+
+                                                    <!-- <button type="submit"><a href="https://paypal.com" target="_blank"
                                                     class="btn btn-info" name="submit"
                                                     value="submit">PAYPAL</button></a> -->
                                         </center>
-                                        </form><form>
-                                    <!-- </div> -->
-                                </div>
+                                        </form>
+                                        <form>
+                                            <!-- </div> -->
+                                    </div>
 
-                                <div class="container d-flex justify-content-center">
-                                    <div class="card mt-2 px-1 py-2">
-                                        <div class="d-flex flex-row justify-content-around">
-                                            <div class="mpesa">
-                                                <h9>By Clicking The M~PAY BUTTON, You Agree to Our</h9>
-                                                <a href="">Terms And condition</a> and <a href="">Policy Privacy</a>
-                                                <h9>Already Paid Click? <a href="login.php">Login Here</a>
-                                                    <h9>You Want To Vote</h9><a href="../sems/vote/index.php">VOTE
-                                                        HERE</a>
-                                                    <h9>View Tally</h9><a href="tallyofvotes.php">View Tally</a>
+                                    <div class="container d-flex justify-content-center">
+                                        <div class="card mt-2 px-1 py-2">
+                                            <div class="d-flex flex-row justify-content-around">
+                                                <div class="mpesa">
+                                                    <h9>By Clicking The M~PAY BUTTON, You Agree to Our</h9>
+                                                    <a href="">Terms And condition</a> and <a href="">Policy Privacy</a>
+                                                    <h9>Already Paid Click? <a href="login.php">Login Here</a>
+                                                        <h9>You Want To Vote</h9><a href="../sems/vote/index.php">VOTE
+                                                            HERE</a>
+                                                        <h9>View Tally</h9><a href="tallyofvotes.php">View Tally</a>
+                                                </div>
+
+                                                </fieldset>
                                             </div>
-                                            
-                                            </fieldset>
                                         </div>
-                        </div>
-                        <script type="text/javascript"
-                            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
-                        </script>
-                        <script type="text/javascript" src="script.js"></script>
-                        <script type="text/javascript" src=""></script>
-                        <script type="text/Javascript"></script>
+                                        <script type="text/javascript"
+                                            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+                                        </script>
+                                        <script type="text/javascript" src="script.js"></script>
+                                        <script type="text/javascript" src=""></script>
+                                        <script type="text/Javascript"></script>
 
-                        <div class="row-fluid">
-                            <!-- <div class="col-md-10 "> -->
-                              <h3 style="color:blue"><span id="tick2">
-                                    </span>&nbsp;|
+                                        <div class="row-fluid">
+                                            <!-- <div class="col-md-10 "> -->
+                                            <h3 style="color:blue"><span id="tick2">
+                                                </span>&nbsp;|
 
-                                    <script>
-                                    // <!--/. tells about the time  -->
-                                
-                                    function show2() {
-                                        if (!document.all && !document.getElementById)
-                                            return
-                                        thelement = document.getElementById ? document.getElementById("tick2") :
-                                            document.all.tick2
-                                        var Digital = new Date()
-                                        var hours = Digital.getHours()
-                                        var minutes = Digital.getMinutes()
-                                        var seconds = Digital.getSeconds()
-                                        var dn = "PM"
-                                        if (hours < 12)
-                                            dn = "AM"
-                                        if (hours > 12)
-                                            hours = hours - 12
-                                        if (hours == 0)
-                                            hours = 12
-                                        if (minutes <= 9)
-                                            minutes = "0" + minutes
-                                        if (seconds <= 9)
-                                            seconds = "0" + seconds
-                                        var ctime = hours + ":" + minutes + ":" + seconds + " " + dn
-                                        thelement.innerHTML = ctime
-                                        setTimeout("show2()", 1000)
-                                    }
-                                    window.onload = show2
-                                    //-->
-                                    </script>
-                                    <!--/. Script where the format of the interface time,month,day and year relies -->
+                                                <script>
+                                                // <!--/. tells about the time  -->
 
-                                    <?php
+                                                function show2() {
+                                                    if (!document.all && !document.getElementById)
+                                                        return
+                                                    thelement = document.getElementById ? document.getElementById(
+                                                            "tick2") :
+                                                        document.all.tick2
+                                                    var Digital = new Date()
+                                                    var hours = Digital.getHours()
+                                                    var minutes = Digital.getMinutes()
+                                                    var seconds = Digital.getSeconds()
+                                                    var dn = "PM"
+                                                    if (hours < 12)
+                                                        dn = "AM"
+                                                    if (hours > 12)
+                                                        hours = hours - 12
+                                                    if (hours == 0)
+                                                        hours = 12
+                                                    if (minutes <= 9)
+                                                        minutes = "0" + minutes
+                                                    if (seconds <= 9)
+                                                        seconds = "0" + seconds
+                                                    var ctime = hours + ":" + minutes + ":" + seconds + " " + dn
+                                                    thelement.innerHTML = ctime
+                                                    setTimeout("show2()", 1000)
+                                                }
+                                                window.onload = show2
+                                                //-->
+                                                </script>
+                                                <!--/. Script where the format of the interface time,month,day and year relies -->
+
+                                                <?php
 $date = new DateTime();
 echo $date->format('l, F jS, Y');
 
 ?>
 
-      
-                                    <div>
-                                    </div>
-                                    <div>
-                                    </div>
-                                    <div>
-                                    </div>
-                                    <div>
 
-                                    </div>
-                                    
-</body>
+                                                <div>
+                                                </div>
+                                                <div>
+                                                </div>
+                                                <div>
+                                                </div>
+                                                <div>
+
+                                                </div>
+
+                            </body>
 
 
 

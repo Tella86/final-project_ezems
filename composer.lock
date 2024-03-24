@@ -3168,7 +3168,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": "^8.1.2|8.2.12 ",
                 "symfony/polyfill-ctype": "~1.8",
                 "symfony/polyfill-intl-grapheme": "~1.0",
                 "symfony/polyfill-intl-normalizer": "~1.0",

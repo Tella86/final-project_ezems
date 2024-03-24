@@ -37,6 +37,7 @@ class ComposerStaticInit2676b84c844b8cd410bf758699c86574
         ),
         'T' => 
         array (
+            'Tella86/final-project_ezems\\Yaml\\Tests\\' => 39,
             'Tella86/final-project_ezems\\Yaml\\' => 33,
         ),
         'S' => 
@@ -68,7 +69,6 @@ class ComposerStaticInit2676b84c844b8cd410bf758699c86574
             'Doctrine\\Deprecations\\' => 22,
             'DeepCopy\\' => 9,
             'Dallgoot\\Yaml\\' => 14,
-            'DTella86/final-project_ezems\\Yaml\\Tests\\' => 40,
         ),
         'C' => 
         array (
@@ -96,6 +96,10 @@ class ComposerStaticInit2676b84c844b8cd410bf758699c86574
         'VarRepresentation\\' => 
         array (
             0 => __DIR__ . '/..' . '/tysonandre/var_representation_polyfill/src/VarRepresentation',
+        ),
+        'Tella86/final-project_ezems\\Yaml\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
         ),
         'Tella86/final-project_ezems\\Yaml\\' => 
         array (
@@ -172,10 +176,6 @@ class ComposerStaticInit2676b84c844b8cd410bf758699c86574
         'Dallgoot\\Yaml\\' => 
         array (
             0 => __DIR__ . '/..' . '/dallgoot/yaml/src',
-        ),
-        'DTella86/final-project_ezems\\Yaml\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests',
         ),
         'Composer\\XdebugHandler\\' => 
         array (

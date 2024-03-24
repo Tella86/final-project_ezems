@@ -3,7 +3,7 @@
         'name' => 'tella86/final-project_ezems',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '21f98d38d8e515adbbdfc2921cb53ae79bbdf938',
+        'reference' => 'a67bb374b19a6f98f6247eb9d73e9ac3f735c209',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -481,7 +481,7 @@
         'tella86/final-project_ezems' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '21f98d38d8e515adbbdfc2921cb53ae79bbdf938',
+            'reference' => 'a67bb374b19a6f98f6247eb9d73e9ac3f735c209',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

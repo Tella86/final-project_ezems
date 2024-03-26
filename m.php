@@ -37,67 +37,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
 
     <link rel="stylesheet" href="admin/css/font-awesome.css">
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        /* background-image: url('images/bg/bg.png'); */
-        background-size: cover;
-        /* Cover the entire container */
-        background-position: auto;
-        /* Center the background image */
-        height: 100vh;
-        /* Set the height of the body to viewport height */
-        display: auto;
-        /* justify-content: center; */
-        /* align-items: center; */
-        background: url(images/bg/mainbg.png);
-    }
-
-    .content {
-        text-align: center;
-        color: #fff;
-    }
-
-    /* Define styles for the header */
-    header {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    /* Define styles for the main content */
-    .container {
-        max-width: 800px;
-        /* Adjust as needed */
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    /* Define styles for the footer */
-    footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-
-    @media screen and (max-width: 768px) {
-        .container {
-            max-width: 90%;
-            max-height: fit-content;
-            /* Adjust as needed for smaller screens */
-        }
-
-        body {
-            background-size: contain;
-            /* Ensure the entire image is visible */
-        }
-    }
+    
     </style>
 
 
@@ -136,7 +76,15 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                             <div class="span12"></div>
                             <div class="row-fluid">
                                 <div class="span10">
-                                    <img class="index_logo" src="img/santotomas.png" height="200px" width="590px">
+                                <style>
+  img {
+    max-width: 100%; /* Maximum width of the image */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    display: block; /* Ensures image behaves as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+</style>
+                                    <img class="index_logo" src="img/santotomas.png">
                                 </div>
 
                             </div>
@@ -163,6 +111,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                 background-color: #eaedf4;
                 font-family: "Rubik", sans-serif;
                 /* background-color: #74992e; */
+                
 
             }
 

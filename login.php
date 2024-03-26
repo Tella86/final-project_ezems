@@ -44,6 +44,11 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+   
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeDmaQpAAAAAEwsQjBGVQQhg9Z4aUXqRoWdlfaL"></script>
+ 
+</head>
     <div class="navbar">
         <div class="navbar-inner">
             <div class="container-fluid">
@@ -296,7 +301,56 @@ if(isset($_GET['status']) && $_GET['status']=='inactive'){
 				}
     }else{}
 ?>
-            <div class="span6">
+<?php
+// Verify reCAPTCHA response
+function verifyRecaptcha($secretKey, $response) {
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+    $data = array(
+        'secret' => $secretKey,
+        'response' => $response
+    );
+
+    $options = array(
+        'http' => array(
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        )
+    );
+    
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+    
+    if ($result === false) {
+        return false; // Failed to contact Google reCAPTCHA
+    }
+    
+    $responseJson = json_decode($result, true);
+    
+    return $responseJson['success'];
+}
+
+// Your reCAPTCHA secret key
+$secretKey = '6LeDmaQpAAAAAF42-St0gtxrPKHSp2BjiSp-Ca2u';
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verify reCAPTCHA
+    $response = $_POST['g-recaptcha-response'];
+    $recaptchaResult = verifyRecaptcha($secretKey, $response);
+    
+    if ($recaptchaResult) {
+        // reCAPTCHA verification successful, handle your form submission here
+        echo "reCAPTCHA verification successful. Your form submission is valid.";
+    } else {
+        // reCAPTCHA verification failed
+        echo "reCAPTCHA verification failed. Please try again.";
+    }
+}
+?>
+
+
+<div class="span6">
                 <div class="pull-right">
                     <?php check_message();?>
                     <div id="home">
@@ -304,8 +358,9 @@ if(isset($_GET['status']) && $_GET['status']=='inactive'){
                         <div class="overlay">
                             <!--/. Starting code for the log-in interface appearance -->
                             <fieldset>
-                                <form id="login_form1" class="form-signin" method="post">
-
+                                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  id="login_form1" class="form-signin" method="post">
+                                <!-- reCAPTCHA -->
+                                <!-- <div class="g-recaptcha" data-sitekey="6LeDmaQpAAAAAEwsQjBGVQQhg9Z4aUXqRoWdlfaL"></div> -->
                                     <h3 class="form-signin-heading" style="color:#fff">
                                         <div class="animation-container">
                                             <span class=""></span>
@@ -324,6 +379,8 @@ if(isset($_GET['status']) && $_GET['status']=='inactive'){
                                         in</button>
 
                                 </form>
+                                <!-- Include reCAPTCHA JavaScript -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
                             </fieldset>
 
 
@@ -373,7 +430,7 @@ echo $date->format('l, F jS, Y');
                                         <h4>
                                 </div>
                             </div>
-                            <?php include "leavemsg.html";?>
+                           
                         </div>
 
 

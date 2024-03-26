@@ -68,15 +68,7 @@ $(function() {
     $("#datepicker").datepicker();
 });
 </script>
-<!-- <body style="background:url(images/bg/bg-3-full.jpg)"> -->
-
-<script>
-var w = window.innerWidth;
-var h = window.innerHeight;
-
-var x = document.getElementById("demo");
-x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
-</script>
+<body>
 
 <section id="feature" class="transparent-bg">
     <div class="container bg">
@@ -158,7 +150,7 @@ $date = new DateTime();
 echo $date->format('l, F jS, Y');
 ?>
                             </h2>
-<?php include "leavemsg.html"; ?>
+<!-- <?php include "leavemsg.html"; ?> -->
                         </div>
 
                     </div>

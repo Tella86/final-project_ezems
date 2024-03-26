@@ -28,50 +28,45 @@ require_once "include/initialize.php";
       <!-- <div class="col-lg-4 row" style="float-left"><img src="../img/sclogo.png"></div> -->
       <style>
       fieldset {
-          text-align: center;
-          width: 500px;
-          background-color: white;
-          height: auto;
-          margin-left: 30%;
-          margin-top: 85px;
-          border-radius: 10px;
-          box-shadow: 2px 4px 10px rgba(0, 0, 0, .6)
-      }
+         text-align: center;
+         width: 500px;
+         
+         height: auto;
+         margin-left: 30%;
+         margin-top: 85px;
+         border-radius: 10px;
+         box-shadow: 2px 4px 10px rgba(0, 0, 0, .6)
+        
+     }
 
-      form INPUT {
-          padding: 10px;
-      }
+     form INPUT {
+         padding: 10px;
+     }
 
-      body {
-          background: url(images/bg/mainbg.png);
-      }
+     body {
+         background: url(images/bg/mainbg.png);
+     }
 
-      .button {
-          width: 110px;
-          height: 50px;
-          background: url("../images/login.png");
-          background-size: 110px 50px;
-          background-repeat: no-repeat;
-          border: none;
-          cursor: pointer;
-      }
+     .button {
+         width: 110px;
+         height: 50px;
+         background: url("../images/login.png");
+         background-size: 110px 50px;
+         background-repeat: no-repeat;
+         border: none;
+         cursor: pointer;
+     }
 
-      a:hover {
-          color: #fff;
-      }
+     a:hover {
+         color: #fff;
+     }
 
-      .block {
-          text-align: center;
-          width: 100%;
-          font-size: large;
-          background: wheat;
-      }
-
-      .bloc-h3 {
-          justify-content: left;
-          padding: 5px;
-          margin-left: 35px;
-      }
+     .block {
+         text-align: center;
+         font-size: large;
+         width: 100%;
+         text-emphasis-color: white;
+     }
       </style>
   </head>
   <!--/head-->
@@ -91,24 +86,13 @@ require_once "include/initialize.php";
                                   </div>
                               </div>
                           </div>
-
-                          <div class="block-content collapse in">
-                              <div class="span12">
-
-                                  <?php
-// $history_query = mysql_query("select * from content where title  = 'History' ")or die(mysql_error());
-// $history_row = mysql_fetch_array($history_query);
-// echo $history_row['content'];
-?>
-
-                              </div>
-                          </div>
-                      </div>
                       <!-- /block -->
                       <div class=block>
+                      <div class="block-content collapse in">
+                             <div class="span12">
                           <p>
-                          <h2>AN INTRODUCTION TO E.Z.E.M.S</h2>
-                          EZEMS is a dully registered business under
+                          <h2 style="color:white"><u> INTRODUCTION TO E.Z.E.M.S</u></h2>
+                          <h3 style="color:white">EZEMS is a dully registered business under
                           Kenyan Law. It was registered on 9st April 2022, in
                           accordance with the provision of the Registration of
                           Business Name Act And Rule made there under (Cap. 499,
@@ -127,8 +111,8 @@ require_once "include/initialize.php";
                           business with government agencies for enterprises owned by
                           Youth.
                           <br>
-                          <h2>TEAM EZEMS</h2>
-                          <center>
+                          <h2 style="color:white"><u> EZEMS</u></h2>
+                          <center style="color:white">
                               1. ENG. ZIROH K. MAE - CEO<br>
                               2. ENG. DZUMBE SARO -HEAD OF SALES & MARKETING<br>
                               3. MR. TEVIN K. MWARINGA - DESGNER<br>

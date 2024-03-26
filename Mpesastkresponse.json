@@ -133,4 +133,25 @@
                                         { "Name": "MpesaReceiptNumber", "Value": "SCN6X9DFJM" },
                                         { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240323183512 },
                                         { "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }
-                                        
+{ "Body": { "stkCallback": { "MerchantRequestID": "db57-40e1-af85-2424fab5a2e6108850744",
+                        "CheckoutRequestID": "ws_CO_25032024154307898799086123",
+                        "ResultCode": 0, "ResultDesc": "The service request is processed successfully.",
+                        "CallbackMetadata": { "Item": [ { "Name": "Amount", "Value": 1 },
+                                        { "Name": "MpesaReceiptNumber", "Value": "SCP246IJW8" },
+                                        { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240325154315 },
+                                        { "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }
+{ "Body": { "stkCallback": { "MerchantRequestID":"847c-4573-85db-96a68dacad19104805249,
+                        "CheckoutRequestID": "ws_CO_26032024081601346799086123",
+                        "ResultCode": 0, "ResultDesc": "The service request is processed successfully.",
+                        "CallbackMetadata": { "Item": [ { "Name": "Amount", "Value": 1 },
+                                        { "Name": "MpesaReceiptNumber", "Value": "SCQ06AVREW" },
+                                        { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240326081613 },
+                                        { "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }
+{ "Body": { "stkCallback": { "MerchantRequestID": "db57-40e1-af85-2424fab5a2e6110680181",
+                        "CheckoutRequestID": "ws_CO_26032024093054716799086123",
+                        "ResultCode": 0, "ResultDesc": "The service request is processed successfully.",
+                        "CallbackMetadata": { "Item": [ { "Name": "Amount", "Value": 1 },
+                                        { "Name": "MpesaReceiptNumber", "Value": "SCQ86IHB7O" },
+                                        { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240326093105 }, {
+                                                "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }
+                                                

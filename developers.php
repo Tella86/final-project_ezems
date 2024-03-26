@@ -89,7 +89,7 @@ require_once "include/initialize.php";
                               </div>
                           </div>
                           <div class="block-content collapse in">
-                              <h1></i><i class="icon-group"></i>&nbsp;Team EZEMS Developers</h1>
+                          <center><h1></i><i class="icon-group"></i>&nbsp;<u>Team EZEMS Developers</u></h1> </center>
                               <hr>
                               <div class="span3">
                                   <center>

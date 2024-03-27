@@ -69,7 +69,7 @@ $(function() {
 });
 </script>
 <body>
-
+<?php include "social.html";?>
 <section id="feature" class="transparent-bg">
     <div class="container bg">
         <div class="row">
@@ -150,7 +150,7 @@ $date = new DateTime();
 echo $date->format('l, F jS, Y');
 ?>
                             </h2>
-<!-- <?php include "leavemsg.html"; ?> -->
+<?php include "leavemsg.html"; ?>
                         </div>
 
                     </div>

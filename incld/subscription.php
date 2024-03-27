@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Subscription Form</title>
     <style>
     body {
@@ -61,7 +62,18 @@
     <div>
         <style>
         /* Resetting default margin and padding */
-        body,
+        body{
+            font-family: Arial, sans-serif;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-position: auto;
+            height: 100vh;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            background: url(../images/bg/mainbg.png);
+        }
         ul {
             margin: 0;
             padding: 0;
@@ -113,26 +125,24 @@
             /* Darker background color on hover */
         }
         </style>
+        
         </head>
 
-        <body id="login" style="background:url(../images/bg/mainbg.png)">
-           
-            <nav>
-                <br>
-                <!-- <a class="navbar-brand" href=""><img style="width:50px" src="../img/ust.jpg" alt="logo"></a> -->
-
-                <ul>
-                    <li><a href="./subscription.php">Subscribe</a></li>
-                    <li><a href="https://youtu.be/hAbaBLnxnzU">Demo</a></li>
-                    <li><a href="../contact-us/index.php">Contact Us</a></li>
-                    <li><a href="../developers.php">Developerst</a></li>
-                    <li><a href="../history.php">Company History</a></li>
-                    <li><a href="../about.php">Mission | Vision</a></li>
-                    <li><a href="../m.php">Home</a></li>
-                </ul>
-                <br>
-            </nav>
-    </div>
+        <body>
+        
+        <nav>
+        <ul>
+            <li><a href="subscription.php">Subscribe</a></li>
+            <li><a href="https://youtu.be/hAbaBLnxnzU">Demo</a></li>
+            <li><a href="../contact-us/index.php">Contact Us</a></li>
+            <li><a href="../developers.php">Developerst</a></li>
+            <li><a href="../about.php">Mission | Vision</a></li>
+            <li><a href="../history.php">Company History</a></li>
+            <li><a href="../m.php">Home</a></li>
+        </ul>
+        <br>
+    </nav>
+         
 
     <div class="container">
         <h2>Subscribe to our Package</h2>
@@ -158,7 +168,7 @@
         </form>
 
     </div>
-
+    
 </body>
 
 </html>

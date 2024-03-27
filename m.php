@@ -10,10 +10,10 @@ include "inactive.php"; //check if user is inactive for 15 minutes
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="">
     <meta name="author" content="">
     <title>PAY EZEMS&nbsp;</title>
@@ -34,10 +34,11 @@ include "inactive.php"; //check if user is inactive for 15 minutes
     <!-- <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen"> -->
     <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
     <!-- <link rel="shortcut icon" href="images/ico/favicon.ico"> -->
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/012bcdc32f133da4a633912a5/b6d79479130d364b25d141763.js");</script>
 
     <link rel="stylesheet" href="admin/css/font-awesome.css">
     <style>
-    
+
     </style>
 
 
@@ -58,9 +59,58 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                 </div>
 
 
-<body >
+<body>
     </div>
-    <?php include 'incld/header.php';?>
+    <?php include 'incld/header.php';
+
+    ?>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .social-icons {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        /* background-color: #333; */
+        padding: 10px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    .social-icons a img {
+        width: 30px;
+        /* Adjust icon size as needed */
+        height: auto;
+    }
+
+    .social-icons a:hover {
+        color: #ff9900;
+        /*Change color on hover*/
+    }
+    </style>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/zirohm" target="_blank"><img src="images/face.png" alt="Facebook"></a>
+        <a href="https://www.youtube.com/channel/UC5bVql7uEr2GDCPE_RJUQjg" target="_blank"><img src="images/you.png"
+                alt="Youtube"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="images/insta.jpg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/ziroh-mae-ba13302b5/" target="_blank"><img src="images/link.png"
+                alt="Linkedin"></a>
+        <a href="https://wa.me/c/254101086123" target="_blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
+        <!-- Add more social media icons as needed -->
+    </div>
     <!-- </div> -->
     <div class="container">
         <div class="row-fluid">
@@ -76,14 +126,18 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                             <div class="span12"></div>
                             <div class="row-fluid">
                                 <div class="span10">
-                                <style>
-  img {
-    max-width: 100%; /* Maximum width of the image */
-    height: auto; /* Automatically adjust height to maintain aspect ratio */
-    display: block; /* Ensures image behaves as a block element */
-    margin: 0 auto; /* Center the image horizontally */
-  }
-</style>
+                                    <style>
+                                    img {
+                                        max-width: 100%;
+                                        /* Maximum width of the image */
+                                        height: auto;
+                                        /* Automatically adjust height to maintain aspect ratio */
+                                        display: block;
+                                        /* Ensures image behaves as a block element */
+                                        margin: 0 auto;
+                                        /* Center the image horizontally */
+                                    }
+                                    </style>
                                     <img class="index_logo" src="img/santotomas.png">
                                 </div>
 
@@ -111,7 +165,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                 background-color: #eaedf4;
                 font-family: "Rubik", sans-serif;
                 /* background-color: #74992e; */
-                
+
 
             }
 
@@ -153,7 +207,6 @@ include "inactive.php"; //check if user is inactive for 15 minutes
             h6 {
                 font-size: 18px;
             }
-
             .mpesa {
                 background-color: green !important;
             }
@@ -178,15 +231,24 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                 border: none;
                 cursor: pointer;
             }
-            @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-  }
 
-  .blinking-button {
-    animation: blink 1s infinite;
-  }
+            @keyframes blink {
+                0% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .blinking-button {
+                animation: blink 1s infinite;
+            }
 
 
             .alert {
@@ -236,11 +298,11 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                         </div>
                                         <div>
                                             <center>
-                                                <h7>You will receive a popup on your phone</h7>
+                                                <h8>You will receive a popup on your phone</h8>
                                         </div>
                                         <div>
                                             <center>
-                                                <h7>Enter your MPESA PIN</h7>
+                                                <h8>Enter your MPESA PIN</h8>
                                             </center>
                                         </div>
                                         <div class="media mt-3 pl-2"></div>
@@ -299,61 +361,64 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                         <script type="text/javascript" src="script.js"></script>
                                         <script type="text/javascript" src=""></script>
                                         <script type="text/Javascript"></script>
+                                        <br>
+                                        <div class="pull-right">
+                                            <div class="pull-left">
+                                                <h3 style="color:white"><span id="tick2">
+                                                    </span>&nbsp;|
 
-                                        <div class="row-fluid">
-                                            <!-- <div class="col-md-10 "> -->
-                                            <h3 style="color:white"><span id="tick2">
-                                                </span>&nbsp;|
+                                                    <script>
+                                                    // <!--/. tells about the time  -->
 
-                                                <script>
-                                                // <!--/. tells about the time  -->
 
-                                                function show2() {
-                                                    if (!document.all && !document.getElementById)
-                                                        return
-                                                    thelement = document.getElementById ? document.getElementById(
-                                                            "tick2") :
-                                                        document.all.tick2
-                                                    var Digital = new Date()
-                                                    var hours = Digital.getHours()
-                                                    var minutes = Digital.getMinutes()
-                                                    var seconds = Digital.getSeconds()
-                                                    var dn = "PM"
-                                                    if (hours < 12)
-                                                        dn = "AM"
-                                                    if (hours > 12)
-                                                        hours = hours - 12
-                                                    if (hours == 0)
-                                                        hours = 12
-                                                    if (minutes <= 9)
-                                                        minutes = "0" + minutes
-                                                    if (seconds <= 9)
-                                                        seconds = "0" + seconds
-                                                    var ctime = hours + ":" + minutes + ":" + seconds + " " + dn
-                                                    thelement.innerHTML = ctime
-                                                    setTimeout("show2()", 1000)
-                                                }
-                                                window.onload = show2
-                                                //-->
-                                                </script>
-                                                <!--/. Script where the format of the interface time,month,day and year relies -->
+                                                    function show2() {
+                                                        if (!document.all && !document.getElementById)
+                                                            return
+                                                        thelement = document.getElementById ? document.getElementById(
+                                                                "tick2") :
+                                                            document.all.tick2
+                                                        var Digital = new Date()
+                                                        var hours = Digital.getHours()
+                                                        var minutes = Digital.getMinutes()
+                                                        var seconds = Digital.getSeconds()
+                                                        var dn = "PM"
+                                                        if (hours < 12)
+                                                            dn = "AM"
+                                                        if (hours > 12)
+                                                            hours = hours - 12
+                                                        if (hours == 0)
+                                                            hours = 12
+                                                        if (minutes <= 9)
+                                                            minutes = "0" + minutes
+                                                        if (seconds <= 9)
+                                                            seconds = "0" + seconds
+                                                        var ctime = hours + ":" + minutes + ":" + seconds + " " + dn
+                                                        thelement.innerHTML = ctime
+                                                        setTimeout("show2()", 1000)
+                                                    }
+                                                    window.onload = show2
+                                                    //-->
+                                                    </script>
+                                                    <!--/. Script where the format of the interface time,month,day and year relies -->
 
-                                                <?php
+                                                    <?php
 $date = new DateTime();
 echo $date->format('l, F jS, Y');
 
 ?>
 
 
-                                                <div>
-                                                </div>
-                                                <div>
-                                                </div>
-                                                <div>
-                                                </div>
-                                                <div>
+                                                    <div>
+                                                    </div>
+                                                    <div>
+                                                    </div>
+                                                    <div>
+                                                    </div>
+                                                    <div>
 
-                                                </div>
+                                                    </div>
+                                                   <?php include "sub.html"; ?>
+
 
                             </body>
 

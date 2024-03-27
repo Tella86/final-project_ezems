@@ -1,6 +1,6 @@
 <?php
 require_once "include/initialize.php";
-// include "incld/header.php"; 
+
 
 if (isset($_SESSION['$stkCallbackResponse'])) {
     redirect("callback.php");
@@ -27,31 +27,36 @@ $data = json_decode($stkCallbackResponse);
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>EZEMS&nbsp;</title>
+    <title>Confirm Payment&nbsp;</title>
+
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo web_root; ?>css/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link href="<?php echo web_root; ?>css/css/index_background.css" rel="stylesheet" media="screen">
+    <!-- <link href="<?php echo web_root; ?>css/css/index_background.css" rel="stylesheet" media="screen"> -->
     <link href="<?php echo web_root; ?>css/css/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
     <link href="<?php echo web_root; ?>css/css/my_style.css" rel="stylesheet" media="screen">
     <link href="<?php echo web_root; ?>css/css/styles.css" rel="stylesheet" media="screen">
-    <link href="<?php echo web_root; ?>css/css/index.css" rel="stylesheet" media="screen">
+    <!-- <link href="<?php echo web_root; ?>css/css/index.css" rel="stylesheet" media="screen"> -->
     <link href="<?php echo web_root; ?>css/css/DT_bootstrap.css" rel="stylesheet" media="screen">
-
     <link href="<?php echo web_root; ?>css/css/fullcalendar/fullcalendar.css" rel="stylesheet" media="screen">
     <link href="<?php echo web_root; ?>css/css/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" rel="stylesheet"
         media="screen">
     <!-- <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen"> -->
     <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
+    <!-- <link rel="shortcut icon" href="images/ico/favicon.ico"> -->
+
+    <link rel="stylesheet" href="admin/css/font-awesome.css">
     <style>
     fieldset {
         text-align: center;
-        width: 500px;
+        width: 100px;
         background-color: white;
         height: auto;
         margin-left: 30%;
@@ -62,6 +67,7 @@ $data = json_decode($stkCallbackResponse);
 
     form INPUT {
         padding: 10px;
+        float: left;
     }
 
     .button {
@@ -162,17 +168,14 @@ $data = json_decode($stkCallbackResponse);
         display: inline-block;
         font-size: 24px;
     }
+   
     </style>
 </head>
 
 <body>
-
-    <header>
-
-    </header>
-    <div class="container">
+    <div class="pull left">
         <fieldset>
-            <form action="login.php" method="post">
+        <center><form action="login.php" method="post">
                 <?php check_message();?>
                 <img src="img/sclogo.png" height="150px" width="500px" alt="site logo">
                 <div id="page">
@@ -221,7 +224,7 @@ $data = json_decode($stkCallbackResponse);
                         onclick="confirmPaySlide()">confirm Pay</button>
                     <button><a href="creditional.php" class="btn btn-primary">Get login Details</a></button>
                 </div>
-            </form>
+            </form></center>
     </div>
 
     <script>
@@ -303,27 +306,7 @@ $data = json_decode($stkCallbackResponse);
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </a>
-                            <!--
-                  <div class="center collapse navbar-collapse">
-                    <ul class="nav navbar-nav" id="footer_nav">
-                      <li class="divider-vertical"></li>
-
-                          <li class="active"><a href="<?php echo web_root; ?>index.php"><i class="icon-home"></i>&nbsp;Home</a></li>
-                          <li class="divider-vertical"></li>
-
-                        <li class="active"><a href="about.php"><i class="icon-info-sign"></i>&nbsp;Mission & Vision</a></li>
-                        <li class="divider-vertical"></li>
-
-                          <li class="active"><a href="history.php"><i class="icon-file"></i>&nbsp;School History</a></li>
-                        <li class="divider-vertical"></li>
-
-                          <li class="active"><a href="developers.php"><i class="icon-group"></i>&nbsp;Developers</a></li>
-
-                      <li class="divider-vertical"></li>
-
-                      </ul>
-                   </div> -->
-                            <!--/.nav-collapse -->
+                           
                         </div>
                     </div>
                 </div>

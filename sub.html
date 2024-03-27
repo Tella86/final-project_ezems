@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"rel="stylesheet"/>
+<link rel="stylesheet" href="css/sub.css" />
+<title>Ezems Subscription</title>
+
+</head>
+<body>
+
+    <!-- !-- PopUp --> 
+    <div class="popup hide-popup">
+      <div class="popup-content">
+        <div class="popup-close">
+          <i class='bx bx-x'></i>
+        </div>
+        <div class="popup-left">
+          <div class="popup-img-container">
+            <img class="popup-img" src="./images/law.jpg" alt="popup">
+          </div>
+        </div>
+        <div class="popup-right">
+          <div class="right-content">
+            <h1>Get Discount <span>20%</span> Off</h1>
+            <p>Sign up to our newsletter and save 20% for you next purchase. No spam, we promise!
+            </p>
+            <form action="dbcon.php" method="post">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email"  class="popup-form" required>
+              
+              <a type="submit"  href="dbcon.php" >Subscribe</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+  <!-- <script src="./js/slider.js"></script> -->
+  <script src="./js/index.js"></script>
+</html>

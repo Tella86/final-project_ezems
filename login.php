@@ -16,7 +16,8 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="">
     <meta name="author" content="">
     <title>EZEMS&nbsp;</title>
@@ -46,7 +47,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
    
-  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeDmaQpAAAAAEwsQjBGVQQhg9Z4aUXqRoWdlfaL"></script>
+  <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeDmaQpAAAAAEwsQjBGVQQhg9Z4aUXqRoWdlfaL"></script> -->
  
 </head>
     <div class="navbar">
@@ -212,6 +213,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                     display: inline-block;
                 }
                 </style>
+                <?php include "social.html";?>
 
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav" id="footer_nav">
@@ -301,54 +303,6 @@ if(isset($_GET['status']) && $_GET['status']=='inactive'){
 				}
     }else{}
 ?>
-<?php
-// Verify reCAPTCHA response
-function verifyRecaptcha($secretKey, $response) {
-    $url = 'https://www.google.com/recaptcha/api/siteverify';
-    $data = array(
-        'secret' => $secretKey,
-        'response' => $response
-    );
-
-    $options = array(
-        'http' => array(
-            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
-            'method' => 'POST',
-            'content' => http_build_query($data)
-        )
-    );
-    
-    $context = stream_context_create($options);
-    $result = file_get_contents($url, false, $context);
-    
-    if ($result === false) {
-        return false; // Failed to contact Google reCAPTCHA
-    }
-    
-    $responseJson = json_decode($result, true);
-    
-    return $responseJson['success'];
-}
-
-// Your reCAPTCHA secret key
-$secretKey = '6LeDmaQpAAAAAF42-St0gtxrPKHSp2BjiSp-Ca2u';
-
-// Check if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verify reCAPTCHA
-    $response = $_POST['g-recaptcha-response'];
-    $recaptchaResult = verifyRecaptcha($secretKey, $response);
-    
-    if ($recaptchaResult) {
-        // reCAPTCHA verification successful, handle your form submission here
-        echo "reCAPTCHA verification successful. Your form submission is valid.";
-    } else {
-        // reCAPTCHA verification failed
-        echo "reCAPTCHA verification failed. Please try again.";
-    }
-}
-?>
-
 
 <div class="span6">
                 <div class="pull-right">
@@ -358,9 +312,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="overlay">
                             <!--/. Starting code for the log-in interface appearance -->
                             <fieldset>
-                                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  id="login_form1" class="form-signin" method="post">
-                                <!-- reCAPTCHA -->
-                                <!-- <div class="g-recaptcha" data-sitekey="6LeDmaQpAAAAAEwsQjBGVQQhg9Z4aUXqRoWdlfaL"></div> -->
+                                <form action=""  id="login_form1" class="form-signin" method="post">
+                                
                                     <h3 class="form-signin-heading" style="color:#fff">
                                         <div class="animation-container">
                                             <span class=""></span>
@@ -379,15 +332,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         in</button>
 
                                 </form>
-                                <!-- Include reCAPTCHA JavaScript -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
                             </fieldset>
 
 
 
                             <div class="row-fluid">
                                 <div class="col-md-12 ">
-                                    <h4 style="color:#fff"><span id="tick2">
+                                    <h4 style="color:black"><span id="tick2">
                                         </span>&nbsp;|
 
 

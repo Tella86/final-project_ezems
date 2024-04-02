@@ -1,12 +1,18 @@
-const express = require('express');
-const app = express();
-const http = require('http');
-const server = http.createServer(app);
+// When the form is submitted
+$('form').submit(function (e) {
+  // Avoid submitting it through HTTP
+  e.preventDefault();
 
-app.get('/', (req, res) => {
-  res.send('<h1>Hello world</h1>');
-});
+  // Retrieve the message from the user
+  var message = $(e.target).find('input').val();
 
-server.listen(3000, () => {
-  console.log('listening on *:3000');
+  // Send the message to the server
+  socket.emit('message', {
+    user: cookie.get('user') || 'Anonymous',
+    message: message
+  });
+
+  // Clear the input and focus it for a new message
+  e.target.reset();
+  $(e.target).find('input').focus();
 });

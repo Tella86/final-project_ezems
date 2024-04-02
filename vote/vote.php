@@ -2,7 +2,7 @@
 require_once "../include/initialize.php";
 
 if (!isset($_SESSION['CVCodeNo'])) {
-    redirect(web_root . "vote/index.php?view=login");
+    // redirect(web_root . "vote/index.php?view=login");
     redirect("thankyou.php");
 }
 ?>

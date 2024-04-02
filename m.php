@@ -34,36 +34,15 @@ include "inactive.php"; //check if user is inactive for 15 minutes
     <!-- <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen"> -->
     <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
     <!-- <link rel="shortcut icon" href="images/ico/favicon.ico"> -->
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/012bcdc32f133da4a633912a5/b6d79479130d364b25d141763.js");</script>
-
+    <script id="mcjs">
+    ! function(c, h, i, m, p) {
+        m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m,
+            p)
+    }(document, "script",
+        "https://chimpstatic.com/mcjs-connected/js/users/012bcdc32f133da4a633912a5/b6d79479130d364b25d141763.js");
+    </script>
     <link rel="stylesheet" href="admin/css/font-awesome.css">
-    <style>
 
-    </style>
-
-
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span
-                        class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav" id="footer_nav">
-                        <li class="divider-vertical"></li>
-
-                        <li class="divider-vertical"></li>
-
-                </div>
-
-
-<body>
-    </div>
-    <?php include 'incld/header.php';
-
-    ?>
     <style>
     body {
         margin: 0;
@@ -91,7 +70,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
     }
 
     .social-icons a img {
-        width: 30px;
+        width: 20px;
         /* Adjust icon size as needed */
         height: auto;
     }
@@ -100,9 +79,178 @@ include "inactive.php"; //check if user is inactive for 15 minutes
         color: #ff9900;
         /*Change color on hover*/
     }
+
+    .marque {
+        font-size: 24px;
+        color: white;
+    }
+
+    img {
+        max-width: 100%;
+        /* Maximum width of the image */
+        height: auto;
+        /* Automatically adjust height to maintain aspect ratio */
+        display: block;
+        /* Ensures image behaves as a block element */
+        margin: 0 auto;
+        /* Center the image horizontally */
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+
+    body {
+        background-color: #eaedf4;
+        font-family: "Rubik", sans-serif;
+        /* background-color: #74992e; */
+
+
+    }
+
+    .card {
+        width: 335px;
+        border: none;
+        border-radius: 10px;
+        float: right;
+    }
+
+    .justify-content-around div {
+        border: none;
+        border-radius: 5px;
+        /* background: #f3f4f6; */
+        padding: 5px 10px 5px;
+        color: #8d9297;
+    }
+
+    .justify-content-around span {
+        font-size: 1px;
+    }
+
+    .justify-content-around div:hover {
+        /* background: #545ebd; */
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .justify-content-around div:nth-child(1) {
+        /* background: #545ebd; */
+        color: #fff;
+    }
+
+    span.mt-0 {
+        color: #8d9297;
+        font-size: 12px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+    .mpesa {
+        background-color: green !important;
+        color: black;
+    }
+
+    .terms {
+        background-color: green !important;
+        font-size: 12px;
+        text-decoration-color: black;
+    }
+    .terms-h9{
+        color:black;
+    }
+
+    .terms-a {
+        font-size: 12px;
+        color: black;
+    }
+
+    button {
+        border-radius: 5px;
+        float: center;
+        width: 100px;
+        height: 50px;
+        background: url("images/paynoe.jpg");
+        background-size: 100px 50px;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .blinking-button {
+        animation: blink 1s infinite;
+    }
+
+
+    .alert {
+        color: white;
+        border: red 1px solid;
+        background: red;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 31px;
+        border-radius: 4px;
+        width: 305px;
+    }
+
+    /* Style for the slideshow container */
+    .slideshow-container {
+        max-width: 600px;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Style for the images */
+    .mySlides img {
+        width: 100%;
+        height: auto;
+    }
     </style>
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span
+                        class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" id="footer_nav">
+                        <li class="divider-vertical"></li>
+
+                        <li class="divider-vertical"></li>
+
+                </div>
+
+
+<body>
+    </div>
+    <?php include 'incld/header.php';
+
+    ?>
+
     <div class="social-icons">
-        <a href="https://www.facebook.com/zirohm" target="_blank"><img src="images/face.png" alt="Facebook"></a>
+        <a href="https://www.facebook.com/EZEMStech" target="_blank"><img src="images/face.png" alt="Facebook"></a>
         <a href="https://www.youtube.com/channel/UC5bVql7uEr2GDCPE_RJUQjg" target="_blank"><img src="images/you.png"
                 alt="Youtube"></a>
         <a href="https://www.instagram.com" target="_blank"><img src="images/insta.jpg" alt="Instagram"></a>
@@ -111,7 +259,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
         <a href="https://wa.me/c/254101086123" target="_blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
         <!-- Add more social media icons as needed -->
     </div>
-    <!-- </div> -->
+    
     <div class="container">
         <div class="row-fluid">
 
@@ -126,21 +274,54 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                             <div class="span12"></div>
                             <div class="row-fluid">
                                 <div class="span10">
-                                    <style>
-                                    img {
-                                        max-width: 100%;
-                                        /* Maximum width of the image */
-                                        height: auto;
-                                        /* Automatically adjust height to maintain aspect ratio */
-                                        display: block;
-                                        /* Ensures image behaves as a block element */
-                                        margin: 0 auto;
-                                        /* Center the image horizontally */
+                                    <div class="slideshow-container">
+                                        <!-- Image slides -->
+                                        <div class="mySlides">  
+                                            <img src="img/santotomas.png" alt="Slide 1">
+                                        </div> 
+                                        
+  
+
+                                        <div class="mySlides">
+                                            <img src="img/EZEMS.png" alt="Slide 2">
+                                        </div>
+                                        <div class="mySlides">
+                                            <img src="img/santotomas.png" alt="Slide 1">
+                                        </div>
+
+                                        <div class="mySlides">
+                                            <img src="imG/EZEMS.png" alt="Slide 3">
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                    var slideIndex = 0;
+                                    showSlides();
+
+                                    function showSlides() {
+                                        var i;
+                                        var slides = document.getElementsByClassName("mySlides");
+                                        for (i = 0; i < slides.length; i++) {
+                                            slides[i].style.display = "none"; // Hide all slides
+                                        }
+                                        slideIndex++;
+                                        if (slideIndex > slides.length) {
+                                            slideIndex = 1
+                                        } // Reset index if exceeds number of slides
+                                        slides[slideIndex - 1].style.display = "block"; // Display the current slide
+                                        setTimeout(showSlides,
+                                        2000); // Change image every 2 seconds (2000 milliseconds)
                                     }
-                                    </style>
-                                    <img class="index_logo" src="img/santotomas.png">
+                                    </script>
+                                    <!-- <img class="index_logo" src="img/santotomas.png"> -->
                                 </div>
 
+                                <div class="marque">
+                                    <h3>
+                                        <marquee>Welcome to EZEMS The Home Of Developers</marquee>
+                                    </h3>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -159,109 +340,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
             <!-- <link rel="stylesheet" href="style.css"> -->
 
             <style>
-            @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 
-            body {
-                background-color: #eaedf4;
-                font-family: "Rubik", sans-serif;
-                /* background-color: #74992e; */
-
-
-            }
-
-            .card {
-                width: 335px;
-                border: none;
-                border-radius: 10px;
-                float: right;
-            }
-
-            .justify-content-around div {
-                border: none;
-                border-radius: 5px;
-                /* background: #f3f4f6; */
-                padding: 5px 10px 5px;
-                color: #8d9297;
-            }
-
-            .justify-content-around span {
-                font-size: 1px;
-            }
-
-            .justify-content-around div:hover {
-                /* background: #545ebd; */
-                color: #fff;
-                cursor: pointer;
-            }
-
-            .justify-content-around div:nth-child(1) {
-                /* background: #545ebd; */
-                color: #fff;
-            }
-
-            span.mt-0 {
-                color: #8d9297;
-                font-size: 12px;
-            }
-
-            h6 {
-                font-size: 18px;
-            }
-            .mpesa {
-                background-color: green !important;
-            }
-
-            h9 {
-                font-size: 12px;
-            }
-
-            a {
-                font-size: 12px;
-                color: black;
-            }
-
-            button {
-                border-radius: 5px;
-                float: center;
-                width: 100px;
-                height: 50px;
-                background: url("images/paynoe.jpg");
-                background-size: 100px 50px;
-                background-repeat: no-repeat;
-                border: none;
-                cursor: pointer;
-            }
-
-            @keyframes blink {
-                0% {
-                    opacity: 1;
-                }
-
-                50% {
-                    opacity: 0;
-                }
-
-                100% {
-                    opacity: 1;
-                }
-            }
-
-            .blinking-button {
-                animation: blink 1s infinite;
-            }
-
-
-            .alert {
-                color: white;
-                border: red 1px solid;
-                background: red;
-                padding: 20px;
-                font-size: 18px;
-                font-weight: bold;
-                margin-top: 31px;
-                border-radius: 4px;
-                width: 305px;
-            }
             </style>
             <?php $message = "kindly subscribe By Clicking the Subscribe Button before making payment!";
 echo "<script type='text/javascript'>alert('$message');</script>"?>
@@ -343,7 +422,7 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                     <div class="container d-flex justify-content-center">
                                         <div class="card mt-2 px-1 py-2">
                                             <div class="d-flex flex-row justify-content-around">
-                                                <div class="mpesa">
+                                                <div class="terms">
                                                     <h9>By Clicking The M~PAY BUTTON, You Agree to Our</h9>
                                                     <a href="">Terms And condition</a> and <a href="">Policy Privacy</a>
                                                     <h9>Already Paid Click? <a href="login.php">Login Here</a>
@@ -417,7 +496,7 @@ echo $date->format('l, F jS, Y');
                                                     <div>
 
                                                     </div>
-                                                   <?php include "sub.html"; ?>
+                                                    <?php include "sub.html"; ?>
 
 
                             </body>

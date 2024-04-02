@@ -2,14 +2,12 @@
 require_once "include/initialize.php";
 include_once "inactive.php";
 
-
 if (isset($_SESSION['ACCOUNT_ID'])) {
     // redirect(web_root . "m.php");
 
 }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,204 +44,207 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-   
-  <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeDmaQpAAAAAEwsQjBGVQQhg9Z4aUXqRoWdlfaL"></script> -->
- 
+
+    <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeDmaQpAAAAAEwsQjBGVQQhg9Z4aUXqRoWdlfaL"></script> -->
+    <div class="marque">
+<marquee style="color:white">Welecome to EZEMS kindly insert your personal Details Corectly. Thank You!</marquee>
 </head>
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span
-                        class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <style>
-                .attendance-icon {
-                    font-size: 28px;
-                    color: #007bff;
-                    /* Change color as needed */
+
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <style>
+            .attendance-icon {
+                font-size: 28px;
+                color: #007bff;
+                /* Change color as needed */
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-image: url('images/bg/bg-3-full.jpg');
+                background-size: cover;
+                /* Cover the entire container */
+                background-position: auto;
+                /* Center the background image */
+                height: 100vh;
+                /* Set the height of the body to viewport height */
+                display: auto;
+                /* justify-content: center; */
+                /* align-items: center; */
+            }
+
+            /* Define styles for the header */
+            header {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            .content {
+                text-align: center;
+                color: #fff;
+            }
+
+
+            /* Define styles for the main content */
+            .container {
+                max-width: 800px;
+                /* Adjust as needed */
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            /* Define styles for the footer */
+            footer {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 20px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+            @media screen and (max-width: 768px) {
+                .container {
+                    max-width: 90%;
+                    max-height: fit-content;
+                    /* Adjust as needed for smaller screens */
                 }
 
                 body {
-                    font-family: Arial, sans-serif;
-                    margin: 0;
-                    padding: 0;
-                    background-image: url('images/bg/bg-3-full.jpg');
-                    background-size: cover;
-                    /* Cover the entire container */
-                    background-position: auto;
-                    /* Center the background image */
-                    height: 100vh;
-                    /* Set the height of the body to viewport height */
-                    display: auto;
-                    /* justify-content: center; */
-                    /* align-items: center; */
+                    background-size: contain;
+                    /* Ensure the entire image is visible */
+                }
+            }
+
+            /* The typing effect */
+            @keyframes typing {
+                from {
+                    width: 0;
                 }
 
-                /* Define styles for the header */
-                header {
-                    background-color: #333;
-                    color: #fff;
-                    text-align: center;
-                    padding: 20px 0;
-                }
-
-                .content {
-                    text-align: center;
-                    color: #fff;
-                }
-
-
-                /* Define styles for the main content */
-                .container {
-                    max-width: 800px;
-                    /* Adjust as needed */
-                    margin: 0 auto;
-                    padding: 20px;
-                }
-
-                /* Define styles for the footer */
-                footer {
-                    background-color: #333;
-                    color: #fff;
-                    text-align: center;
-                    padding: 20px 0;
-                    position: fixed;
-                    bottom: 0;
+                to {
                     width: 100%;
                 }
+            }
 
-                @media screen and (max-width: 768px) {
-                    .container {
-                        max-width: 90%;
-                        max-height: fit-content;
-                        /* Adjust as needed for smaller screens */
-                    }
+            /* The blinking cursor effect */
+            @keyframes blink {
+                50% {
+                    border-color: gold;
+                }
+            }
 
-                    body {
-                        background-size: contain;
-                        /* Ensure the entire image is visible */
-                    }
+            /* The container for the text */
+            .typewriter-container {
+                overflow: hidden;
+                border-right: .17em solid white;
+                /* The typewriter cursor */
+                white-space: nowrap;
+                /* Keeps the content on a single line */
+                margin: 0 auto;
+                /* Center the container */
+                letter-spacing: .15em;
+                /* Adjust letter spacing for a typewriter effect */
+                animation: typing 6s steps(45) infinite, .90s step-end infinite;
+                font-size: 28px;
+            }
+
+            @keyframes rotate180 {
+                0% {
+                    transform: rotate(0deg);
                 }
 
-                /* The typing effect */
-                @keyframes typing {
-                    from {
-                        width: 0;
-                    }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
 
-                    to {
-                        width: 100%;
-                    }
+            .rotate-image {
+                animation: rotate180 2s linear forwards;
+                /* Animation lasts for 2 seconds and stops at the end */
+            }
+
+            @keyframes blink {
+                0% {
+                    opacity: 1;
                 }
 
-                /* The blinking cursor effect */
-                @keyframes blink {
-                    50% {
-                        border-color: gold;
-                    }
+                50% {
+                    opacity: 0;
                 }
 
-                /* The container for the text */
-                .typewriter-container {
-                    overflow: hidden;
-                    border-right: .17em solid white;
-                    /* The typewriter cursor */
-                    white-space: nowrap;
-                    /* Keeps the content on a single line */
-                    margin: 0 auto;
-                    /* Center the container */
-                    letter-spacing: .15em;
-                    /* Adjust letter spacing for a typewriter effect */
-                    animation: typing 6s steps(45) infinite, .90s step-end infinite;
-                    font-size: 28px;
+                100% {
+                    opacity: 1;
                 }
+            }
 
-                @keyframes rotate180 {
-                    0% {
-                        transform: rotate(0deg);
-                    }
+            .blink {
+                animation: blink 1s infinite;
+                color: red;
+            }
 
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
+            .animation-container {
+                text-align: center;
+            }
 
-                .rotate-image {
-                    animation: rotate180 2s linear forwards;
-                    /* Animation lasts for 2 seconds and stops at the end */
-                }
+            .please-login {
+                display: inline-block;
+                font-size: 24px;
+            }
 
-                @keyframes blink {
-                    0% {
-                        opacity: 1;
-                    }
-
-                    50% {
-                        opacity: 0;
-                    }
-
-                    100% {
-                        opacity: 1;
-                    }
-                }
-
-                .blink {
-                    animation: blink 1s infinite;
-                    color: red;
-                }
-
-                .animation-container {
-                    text-align: center;
-                }
-
-                .please-login {
-                    display: inline-block;
-                    font-size: 24px;
-                }
-
-                .icon-locked::before {
-                    content: "\1F512";
-                    /* Unicode for locked symbol */
-                    font-family: Arial, sans-serif;
-                    /* Use a font that supports the locked symbol */
-                    font-size: 24px;
-                    /* Adjust size as needed */
-                    display: inline-block;
-                }
-                </style>
-                <?php include "social.html";?>
-
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav" id="footer_nav">
-                        <!-- <li class="divider-vertical"></li> -->
-                        <li class="active"><a href="attendance/check_attendance.php">
-                                <h3><i class="attendance-icon">&#128197;</i>&nbsp;ATTENDANCE</h3>
-                            </a></li>
-                        <li class="divider-vertical"></li>
-                        <li class="active"><a href="vote/index.php">
-                                <h3><i class="fas fa-vote-yea"></i>&nbsp;VOTE</h3>
-                            </a></li>
+            .icon-locked::before {
+                content: "\1F512";
+                /* Unicode for locked symbol */
+                font-family: Arial, sans-serif;
+                /* Use a font that supports the locked symbol */
+                font-size: 24px;
+                /* Adjust size as needed */
+                display: inline-block;
+            }
+            </style>
+            <?php include "social.html";?>
+            <h2>
+                                        
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" id="footer_nav">
+                    <!-- <li class="divider-vertical"></li> -->
+                    <li class="active"><a href="attendance/check_attendance.php">
+                            <h3><i class="attendance-icon">&#128197;</i>&nbsp;ATTENDANCE</h3>
+                        </a></li>
+                    <li class="divider-vertical"></li>
+                    <li class="active"><a href="vote/index.php">
+                            <h3><i class="fas fa-vote-yea"></i>&nbsp;VOTE</h3>
+                        </a></li>
 
 
-                        <li class="divider-vertical"></li>
-                        <li class="active"><a href="add.php">
-                                <h3><i class="fas fa-vote-yea"></i>&nbsp;VOTER REGISTRATION</h3>
-                            </a></li>
-                        <li class="divider-vertical"></li>
-                        <li class="active"><a href="candadd.php">
-                                <h3><i class="icon-group"></i>&nbsp;CANDIDATE REGISTRATION</h3>
-                            </a></li>
-                        <!-- <li class="divider-vertical"></li> -->
+                    <li class="divider-vertical"></li>
+                    <li class="active"><a href="add.php">
+                            <h3><i class="fas fa-vote-yea"></i>&nbsp;VOTER REGISTRATION</h3>
+                        </a></li>
+                    <li class="divider-vertical"></li>
+                    <li class="active"><a href="candadd.php">
+                            <h3><i class="icon-group"></i>&nbsp;CANDIDATE REGISTRATION</h3>
+                        </a></li>
+                    <!-- <li class="divider-vertical"></li> -->
 
 
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
+                </ul>
             </div>
+            <!--/.nav-collapse -->
         </div>
     </div>
+</div>
 
 <body id="login" style="background:url(images/bg/bg-3-full.jpg)">
 
@@ -264,12 +265,13 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                             <div class="span12">
                                 <div class="motto">
 
-                                    <h3>
-                                        <div class="typewriter-container">
-                                            <span>WELCOME TO EZEMS</span>
+                                    <h2>
+                                        <div class="marque">
+                                            <marquee>Welcome to EZEMS The Home Of Develovers</marquee>
+
                                         </div>
 
-                                    </h3>
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -278,6 +280,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                 </div>
             </div>
             <?php
+       
 if(isset($_GET['status']) && $_GET['status']=='inactive'){
 	echo "<h3 style='color:red;text-align: center;'>You have been log out due to inactivity!</h3>";
 }
@@ -304,7 +307,7 @@ if(isset($_GET['status']) && $_GET['status']=='inactive'){
     }else{}
 ?>
 
-<div class="span6">
+            <div class="span6">
                 <div class="pull-right">
                     <?php check_message();?>
                     <div id="home">
@@ -312,8 +315,8 @@ if(isset($_GET['status']) && $_GET['status']=='inactive'){
                         <div class="overlay">
                             <!--/. Starting code for the log-in interface appearance -->
                             <fieldset>
-                                <form action=""  id="login_form1" class="form-signin" method="post">
-                                
+                                <form action="" id="login_form1" class="form-signin" method="post">
+
                                     <h3 class="form-signin-heading" style="color:#fff">
                                         <div class="animation-container">
                                             <span class=""></span>
@@ -333,9 +336,7 @@ if(isset($_GET['status']) && $_GET['status']=='inactive'){
 
                                 </form>
                             </fieldset>
-
-
-
+                
                             <div class="row-fluid">
                                 <div class="col-md-12 ">
                                     <h4 style="color:black"><span id="tick2">
@@ -381,7 +382,7 @@ echo $date->format('l, F jS, Y');
                                         <h4>
                                 </div>
                             </div>
-                           
+
                         </div>
 
 

@@ -152,6 +152,11 @@
                         "ResultCode": 0, "ResultDesc": "The service request is processed successfully.",
                         "CallbackMetadata": { "Item": [ { "Name": "Amount", "Value": 1 },
                                         { "Name": "MpesaReceiptNumber", "Value": "SCQ86IHB7O" },
-                                        { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240326093105 }, {
-                                                "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }
-                                                
+                                        { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240326093105 },
+                                        { "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }
+{ "Body": { "stkCallback": { "MerchantRequestID": "3fec-4d4e-8899-f63434996274116574224",
+                        "CheckoutRequestID": "ws_CO_30032024095840232795225009",
+                        "ResultCode": 1032, "ResultDesc": "Request cancelled by user" } } }
+{ "Body": { "stkCallback": { "MerchantRequestID": "b31f-4564-95fc-12ecddde605b130180484",
+                        "CheckoutRequestID": "ws_CO_02042024092719363799086123",
+                        "ResultCode": 1037, "ResultDesc": "DS timeout user cannot be reached" } } }

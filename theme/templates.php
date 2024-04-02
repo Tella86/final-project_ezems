@@ -155,6 +155,8 @@ if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
                                         href="<?php echo web_root; ?>report/index.php?view=logs">Logs</a></li>
                                 <li class="<?php echo ($title == 'Transactions') ? "active" : false; ?>"><a
                                         href="<?php echo web_root; ?>report/transactions.php">Transactions</a></li>
+                                        <li class="<?php echo ($title == 'Invoices') ? "active" : false; ?>"><a
+                                        href="<?php echo web_root; ?>report/invoices.php">Invoices</a></li>
                                 <?php }?>
                                 <li class="<?php echo ($title == 'Tally of Votes') ? "active" : false; ?>"><a
                                         href="<?php echo web_root; ?>report/index.php?view=tallyofvotes">Tally of

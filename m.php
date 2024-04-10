@@ -399,7 +399,7 @@ echo "<script type='text/javascript'>alert('$message');</script>"?>
                                                         <label for="inputAddress2" class="form-label">Phone
                                                             Number</label>
                                                         <input type="text" class="form-control" name="phone"
-                                                            placeholder="Enter Phone Number" required>
+                                                            placeholder="254700000000" required>
                                                     </div>
 
                                                     <div class="col-12">

@@ -148,7 +148,7 @@
         <h2>Subscribe to our Package</h2>
         <form id="subscriptionForm" action="controller.php" method="post">
             <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
+            <input type="text" id="name" name="name" required onkeyup="capitalize(this)"><br>
             <label for="email">Email:</label><br>
             <input id="emailInput" type="email" id="email" name="email" required><br>
             <label for="package">Select Package:</label><br>
@@ -167,31 +167,11 @@
             <input type="submit" value="Subscribe">
         </form>
         <script>
-document.getElementById("subscriptionForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
-
-    var formData = new FormData(this);
-
-    // AJAX request to submit form data
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "subscribe.php", true);
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            // Handle successful subscription
-            alert("Subscription successful!");
-        } else {
-            // Handle error
-            alert("Subscription failed. Please try again later.");
-        }
-    };
-    xhr.onerror = function() {
-        // Handle error
-        alert("Subscription failed. Please try again later.");
-    };
-    xhr.send(formData);
-});
+    // JavaScript function to capitalize input value
+    function capitalize(input) {
+        input.value = input.value.toUpperCase();
+    }
 </script>
-
     </div>
     
 </body>

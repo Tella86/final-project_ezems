@@ -1,8 +1,8 @@
 <?php
 require_once "include/initialize.php";
+// require_once "stk_initiate.php";
 
-
-if (isset($_SESSION['$stkCallbackResponse'])) {
+if (isset($_SESSION['stkCallbackResponse'])) {
     redirect("callback.php");
 
     header("Content-Type: application/json");
@@ -170,6 +170,12 @@ $data = json_decode($stkCallbackResponse);
     }
    
     </style>
+    <script>
+    // JavaScript function to capitalize input value
+    function capitalize(input) {
+        input.value = input.value.toUpperCase();
+    }
+</script>
 </head>
 
 <body>
@@ -195,7 +201,7 @@ $data = json_decode($stkCallbackResponse);
                                         <label for="password"></label>
                                         <!-- <td><input type="text" id="pw" name="M~pesa Code" pattern="echo RandomSourceCode" placeholder="Enter Code"required> -->
                                         <td><input type="text" id="psw" name="psw"
-                                                pattern="(?=.*\d)(?=.*[0-9])(?=.*[A-Z]).{8,}" title="" required></td>
+                                                pattern="(?=.*\d)(?=.*[0-9])(?=.*[A-Z]).{8,}" title="" required ></td>
                                         <!-- <td><input name="pswd" type="password" id="pswd"  placeholder="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}" required></td> -->
 
                                         </td>
@@ -222,7 +228,7 @@ $data = json_decode($stkCallbackResponse);
                 <div class="col-12">
                     <button type="submit" class="myButton" name="submit" value="submit"
                         onclick="confirmPaySlide()">confirm Pay</button>
-                    <button><a href="creditional.php" class="btn btn-primary">Get login Details</a></button>
+                    <button><a href="" class="btn btn-primary">Get login Details</a></button>
                 </div>
             </form></center>
     </div>

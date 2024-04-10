@@ -12,13 +12,14 @@ function RandomSourceCode()
         $i++;
     }
     return $rand_Code;
-} 
+}
 $confirmation = RandomSourceCode();
 // echo $confirmation;
 $_SESSION['confirmation'] = $confirmation;
 ?>
 <?php
-function hidePrintButton($printinvoice) {
+function hidePrintButton($printinvoice)
+{
     if ($printinvoice == 'paid') {
         // Invoice is paid, so hide the print button
         echo '<style>.print-button { display: none; }</style>';
@@ -56,6 +57,12 @@ function hidePrintButton($printinvoice) {
         display: block;
         margin-top: 20px;
     }
+    @media print {
+            /* Hide the submit button when printing */
+            .submit-button {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -79,18 +86,19 @@ function hidePrintButton($printinvoice) {
     </center>
     <div class="span10">
                                     <img src="../img/pay.png" height="200px" width="200px">
-                                    
+
                                 </div>
     <form id="invoiceForm" action="contoller.php" method="post">
 
         <table>
-        <?php 
-    date_default_timezone_set('Africa/Nairobi');
+        <?php
+date_default_timezone_set('Africa/Nairobi');
 echo "<div style='text-align: left;'>";
-$currentDateTime= date("d-m-Y H:i:s");echo "Invoice Date:" . $currentDateTime;
+$currentDateTime = date("d-m-Y H:i:s");
+echo "Invoice Date:" . $currentDateTime;
 echo "</div>";
-    
-    ?>
+
+?>
             <thead>
                 <tr>
                 <th>Invoice Date</th>
@@ -103,12 +111,13 @@ echo "</div>";
                 </tr>
             </thead>
             <tbody>
-                <tr> 
+                <tr>
                 <td><input class="form-control input-sm" name="InvoiceDate" type="shown"
-                            value="<?php  date_default_timezone_set('Africa/Nairobi');
+                            value="<?php date_default_timezone_set('Africa/Nairobi');
 
-$currentDateTime= date("d-m-Y H:i:s");echo "" . $currentDateTime;
- ?>" </td>
+$currentDateTime = date("d-m-Y H:i:s");
+echo "" . $currentDateTime;
+?>" </td>
 
                     <td><input class="form-control input-sm" name="invoiceNumber" type="shown"
                             value="<?php echo $_SESSION['confirmation']; ?>" </td>
@@ -122,30 +131,82 @@ $currentDateTime= date("d-m-Y H:i:s");echo "" . $currentDateTime;
                     <td><input type="text" name="total" readonly></td>
                     <td><input type="text" name="Phone"></td>
                 </tr>
-            </tbody>
-        </table>
-        <br>
-        <?php 
-    // Call the function with the invoice status
-    $printinvoice = 'paid'; // Replace this with your actual invoice status
-    hidePrintButton($printinvoice); 
-    ?>
-        <br>
-        <button class="print-button" onclick="window.print()">Print Invoice</button>
 
-        <center><input type="button" value="Print Invoice" onclick="window.print()"></center><br>
-        <center><button type="submit">submit Invoice</button></center>
+            </tbody>
+            <div class="total-row">
+            <table>
+                <tr>
+                    <td>Total:</td>
+                    <td><input type="text" name="subtotal" readonly></td>
+                </tr>
+                <tr>
+                    <td>VAT (16%):</td>
+                    <td><input type="text" name="vat" readonly></td>
+                </tr>
+                <tr>
+                    <td>Total Amount:</td>
+                    <td><input type="text" name="totalamount" readonly></td>
+                </tr>
+        </table>
+       
+        <?php
+// Call the function with the invoice status
+$printinvoice = 'paid'; // Replace this with your actual invoice status
+hidePrintButton($printinvoice);
+?>
+        <br>
+        <center><button class="print-button" onclick="window.print()">Print Invoice</button></center><br>
+
+        <!-- <center><input type="button" value="Print Invoice" onclick="window.print()"></center><br> -->
+        <center> <button type="submit" class="submit-button">Submit Invoice</button></center>
 
     </form>
 
-    <script>
-    function calculateTotal(input) {
-        const row = input.parentElement.parentElement;
-        const quantity = parseFloat(row.querySelector('input[name="quantity"]').value);
-        const price = parseFloat(row.querySelector('input[name="price"]').value);
-        const total = quantity * price;
-        row.querySelector('input[name="total"]').value = isNaN(total) ? '' : total.toFixed(2);
-    }
+
+   <script>
+function calculateTotal(input) {
+    const row = input.parentElement.parentElement;
+    const quantity = parseFloat(row.querySelector('input[name="quantity"]').value);
+    const price = parseFloat(row.querySelector('input[name="price"]').value);
+    const total = quantity * price;
+    row.querySelector('input[name="total"]').value = isNaN(total) ? '' : total.toFixed(2);
+    
+// Calculate subtotal
+let subtotal = 0;
+            document.querySelectorAll('input[name="total"]').forEach(function(input) {
+                subtotal += parseFloat(input.value);
+            });
+            document.querySelector('input[name="subtotal"]').value = isNaN(subtotal) ? '' : subtotal.toFixed(2);
+
+            // Calculate VAT
+            const vat = subtotal * 0.16;
+            document.querySelector('input[name="vat"]').value = isNaN(vat) ? '' : vat.toFixed(2);
+
+            // Calculate total amount
+            const totalamount = subtotal + vat;
+            document.querySelector('input[name="totalamount"]').value = isNaN(totalamount) ? '' : totalamount.toFixed(2);
+}
+// Function to hide print button when printed
+        function hidePrintButton() {
+            var printButton = document.querySelector('.print-button');
+            printButton.style.display = 'none';
+        }
+
+        // Listen for beforeprint event
+        window.addEventListener('beforeprint', hidePrintButton);
+
+        // Listen for afterprint event (optional)
+        window.addEventListener('afterprint', function() {
+            // Show the print button again if needed
+            var printButton = document.querySelector('.print-button');
+            printButton.style.display = 'block';
+        });
+        // Function to hide the submit button when printing
+        function hideSubmitButtonOnPrint() {
+            window.print(); // Print the invoice
+            document.querySelector('.submit-button').style.display = 'none'; // Hide the submit button
+        }
+
     </script>
 </body>
 <center><?php include '../incld/footer.php';?></center>

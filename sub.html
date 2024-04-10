@@ -6,9 +6,23 @@
 <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"rel="stylesheet"/>
 <link rel="stylesheet" href="css/sub.css" />
 <title>Ezems Subscription</title>
+<style>.marquee {
+  white-space: nowrap; /* Prevents the content from wrapping */
+  overflow: hidden; /* Hides the overflow content */
+  width: 100%; /* Adjust this width as needed */
+}
 
+.marquee p {
+  display: inline-block; /* Makes the content display in a single line */
+  animation: marquee 25s linear infinite; /* Adjust animation duration and timing function as needed */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); } /* Initial position, move content out of view */
+  100% { transform: translateX(-100%); } /* Final position, move content into view */
+}</style>
 </head>
-<body>
+<body >
 
     <!-- !-- PopUp --> 
     <div class="popup hide-popup">
@@ -21,15 +35,19 @@
             <img class="popup-img" src="./images/law.jpg" alt="popup">
           </div>
         </div>
-        <div class="popup-right">
+        <div class="popup-right" style="background:url(images/bg/plp.png)">
           <div class="right-content">
-            <h1>Get Discount <span>20%</span> Off</h1>
-            <p>Sign up to our newsletter and save 20% for you next purchase. No spam, we promise!
+           
+            <br><br><br><br><br>
+            <h1>Learn. <span>Code.</span> Grow</h1>
+            <p style="color:white">Power Learn Project<br>Software Development Scholarship<br>
+             <br> Application Form - May 2024 cohort!
             </p>
             <form action="conn.php" method="post">
-              <label for="email">Email:</label>
-              <input type="email" id="emailInput" name="email" placeholder="Enter your email"  class="popup-form" required>
-              <a type="submit" href="">Subscribe</a>
+              <!-- <label for="email">Email:</label>
+              <input type="email" id="emailInput" name="email" placeholder="Enter your email"  class="popup-form" required> -->
+              <a type="submit" href="https://abmcg.r.a.d.sendibm1.com/mk/cl/f/sh/1t6Af4OiGsE8LPMVyJkyQWusJF9MGr/ZymIxanT_iuW" target="_blank">Apply Now</a>
+                
             </form>
           </div>
         </div>

@@ -107,8 +107,8 @@
 }
 
 .right-content p {
-  font-size: 1.6rem;
-  color: #555;
+  font-size: 2rem;
+  color: white;
   margin-bottom: 1.6rem;
 }
 
@@ -187,7 +187,8 @@
   }
 
   .right-content p {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    color: white;
   }
 
   .popup-form {
@@ -224,7 +225,8 @@
   }
 
   .right-content p {
-    font-size: 1.4rem;
+    font-size: 2rem;
+    color: white;
   }
 
   .popup-form {

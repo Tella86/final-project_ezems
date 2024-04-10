@@ -278,7 +278,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                     </div>
                     <?php //include('title_index.php'); ?>
                 </div>
-            </div>
+        </div>
             <?php
        
 if(isset($_GET['status']) && $_GET['status']=='inactive'){

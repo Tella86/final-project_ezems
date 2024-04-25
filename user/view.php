@@ -1,11 +1,9 @@
-<?php  
-    $user = New User();
-    $res = $user->single_user($_GET['id']);
+<?php
+$user = new User();
+$res = $user->single_user($_GET['id']);
 
-   
+?>
 
-   ?>
-    
   <style type="text/css">
   #img_profile{
     width: 100%;
@@ -25,82 +23,82 @@
                  <h2 class="page-header">My Account</h2>
                 <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> -->
             </div>
-               
+
             <div class="row">
                 <div class="features">
                   <div class="wow fadeInDown">
                         <div class="col-sm-3">
-                           
-                            <div class="panel">            
+
+                            <div class="panel">
                               <div id="img_profile" class="panel-body">
                               <a href="" data-target="#studentmodal" data-toggle="modal" >
-                              <img title="profile image" class="img-hover"    src="<?php echo web_root. 'user/'.  $res->USERIMAGE; ?>">
+                              <img title="profile image" class="img-hover"    src="<?php echo web_root . 'user/' . $res->USERIMAGE; ?>">
                               </a>
                                </div>
                             <ul class="list-group">
-                            
-                           
-                                 <li class="list-group-item text-right"><span class="pull-left"><strong>Real name</strong></span> <?php echo $res->ACCOUNT_NAME; ?> </li> 
-                                  
-                              
-                            </ul> 
-                                  
+
+
+                                 <li class="list-group-item text-right"><span class="pull-left"><strong>Real name</strong></span> <?php echo $res->ACCOUNT_NAME; ?> </li>
+
+
+                            </ul>
+
                           </div>
                          </div>
-                                   
+
                                   <!--/col-3-->
-                          <div class="col-sm-9"> 
-                           
+                          <div class="col-sm-9">
+
 
                           <form action="controller.php?action=edit" class="form-horizontal" method="post" >
                             <div class="table-responsive">
                             <div class="col-md-8"><h2>Account Information</h2></div>
-                              <table class="table"> 
+                              <table class="table">
                               <tr>
                                   <td><label>Id:</label></td>
                                   <td style="pull-left" colspan="5" >
                                   <label><?php echo isset($_GET['id']) ? $_GET['id'] : '' ?></label>
                                  </td>
-                                  
+
 
                                 </tr>
                                 <tr>
                                   <td><label>Name:</label></td>
                                   <td style="pull-left" colspan="5">
-                                    <label ><?php echo  $res->ACCOUNT_NAME; ?></label>
-                                  </td>  
-                                </tr> 
+                                    <label ><?php echo $res->ACCOUNT_NAME; ?></label>
+                                  </td>
+                                </tr>
                                 <tr>
                                   <td><label>Username:</label></td>
                                   <td style="pull-left" colspan="5"  >
-                                    <label><?php echo $res->ACCOUNT_USERNAME; ?></label> 
-                                  </td> 
-                                </tr> 
+                                    <label><?php echo $res->ACCOUNT_USERNAME; ?></label>
+                                  </td>
+                                </tr>
                                 <td><label>Role:</label></td>
                                   <td style="pull-left" colspan="5">
-                                    <label><?php echo $res->ACCOUNT_TYPE; ?></label> 
+                                    <label><?php echo $res->ACCOUNT_TYPE; ?></label>
                                         </td>
-                                 
-                                </tr>   
+
+                                </tr>
                               </table>
                             </div>
                           </form>
                           </div>
 
-                  </div> 
+                  </div>
                 </div><!--/.services-->
-            </div><!--/.row-->  
+            </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#feature-->
- 
+
 
    <!--  <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-        
-        </div> 
+
+        </div>
   </section> --><!--/#bottom-->
 
- 
+
 
 
   <!-- Modal -->
@@ -118,7 +116,7 @@
                                 "post">
                                     <div class="modal-body">
                                         <div class="form-group">
-                                            <div class="rows"> 
+                                            <div class="rows">
                                                 <div class="col-md-12">
                                                     <div class="rows">
                                                         <div class="col-md-8">

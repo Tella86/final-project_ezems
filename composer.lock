@@ -1,4 +1,7 @@
 {
+    "require": {
+        "vendor/package": "2.7.4 "
+    },
     "_readme": [
         "This file locks the dependencies of your project to a known state",
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
@@ -7,7 +10,6 @@
     "content-hash": "fbccf5eaa0a5f796f77e07563efce93f",
     "packages": [
         {
-            "vendor/package": "2.7.4 ",
             "name": "bordoni/phpass",
             "version": "0.3.5",
             "source": {
@@ -15,6 +17,7 @@
                 "url": "https://github.com/bordoni/phpass.git",
                 "reference": "fd57c109213e95150b7de1dc8908c55605cd8e55"
             },
+           
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/bordoni/phpass/zipball/fd57c109213e95150b7de1dc8908c55605cd8e55",

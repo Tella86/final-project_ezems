@@ -4,6 +4,8 @@
     "type": "project",
     "license": "MIT",
     "require": {
-        "vendor/package": "2.7.4 "
+        "vendor/package": "2.7.4 ",
+        "php": "^7.2.5 || ^7.8.2.12"
     }
+        
 }

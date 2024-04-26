@@ -15,7 +15,7 @@
                 "shasum": "package-sha1-hash"
             },
             "require": {
-                "php": "^7.2"
+                "php": "^7.8.2.12"
             }
         }
       
@@ -27,6 +27,6 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "7.4.3"
+        "php": "^7.8.2.12"
     }
 }

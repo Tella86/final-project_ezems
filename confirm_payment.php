@@ -6,13 +6,13 @@ if (isset($_SESSION['stkCallbackResponse'])) {
     redirect("callback.php");
 
     header("Content-Type: application/json");
-$stkCallbackResponse = file_get_contents('php://input');
-$logfile = "Mpesastkresponse.json";
-$log = fopen($logfile, "a");
-fwrite($log, $stkCallbackResponse);
-fclose($log);
+    $stkCallbackResponse = file_get_contents('php://input');
+    $logfile = "Mpesastkresponse.json";
+    $log = fopen($logfile, "a");
+    fwrite($log, $stkCallbackResponse);
+    fclose($log);
 
-$data = json_decode($stkCallbackResponse);
+    $data = json_decode($stkCallbackResponse);
 }
 
 // $data = json_decode($stkCallbackResponse);
@@ -51,7 +51,7 @@ $data = json_decode($stkCallbackResponse);
     <!-- <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen"> -->
     <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
     <!-- <link rel="shortcut icon" href="images/ico/favicon.ico"> -->
-
+    <script src="assets/js/p.js"></script>
     <link rel="stylesheet" href="admin/css/font-awesome.css">
     <style>
     fieldset {
@@ -168,14 +168,9 @@ $data = json_decode($stkCallbackResponse);
         display: inline-block;
         font-size: 24px;
     }
-   
+
     </style>
-    <script>
-    // JavaScript function to capitalize input value
-    function capitalize(input) {
-        input.value = input.value.toUpperCase();
-    }
-</script>
+
 </head>
 
 <body>
@@ -200,11 +195,13 @@ $data = json_decode($stkCallbackResponse);
                                         <td><b>M~pesa Code:</b></td>
                                         <label for="password"></label>
                                         <!-- <td><input type="text" id="pw" name="M~pesa Code" pattern="echo RandomSourceCode" placeholder="Enter Code"required> -->
-                                        <td><input type="text" id="psw" name="psw"
-                                                pattern="(?=.*\d)(?=.*[0-9])(?=.*[A-Z]).{8,}" title="" required ></td>
+                                        <td>
+                                            <input type="text" id="psw" name="psw" pattern="(?=.*\d)(?=.*[0-9])(?=.*[A-Z]).{8,}" title="" required onkeyup="capitalizeInput(this)">
+                                        </td>
+
                                         <!-- <td><input name="pswd" type="password" id="pswd"  placeholder="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}" required></td> -->
 
-                                        </td>
+
                                     </tr>
                                     <tr>
                                         <style>
@@ -257,45 +254,54 @@ $data = json_decode($stkCallbackResponse);
 
     // When the user starts to type something inside the password field
     myInput.onkeyup = function() {
-        // Validate lowercase letters
-        var lowerCaseLetters = /[a-z]/g;
-        if (myInput.value.match(lowerCaseLetters)) {
-            letter.classList.remove("invalid");
-            letter.classList.add("valid");
-        } else {
-            letter.classList.remove("valid");
-            letter.classList.add("invalid");
-        }
+    // Capitalize input
+    capitalizeInput(myInput);
 
-        // Validate capital letters
-        var upperCaseLetters = /[A-Z]/g;
-        if (myInput.value.match(upperCaseLetters)) {
-            capital.classList.remove("invalid");
-            capital.classList.add("valid");
-        } else {
-            capital.classList.remove("valid");
-            capital.classList.add("invalid");
-        }
-
-        // Validate numbers
-        var numbers = /[0-9]/g;
-        if (myInput.value.match(numbers)) {
-            number.classList.remove("invalid");
-            number.classList.add("valid");
-        } else {
-            number.classList.remove("valid");
-            number.classList.add("invalid");
-        }
-
-        // Validate length
-        if (myInput.value.length >= 8) {
-            length.classList.remove("invalid");
-            length.classList.add("valid");
-        } else {
-            length.classList.remove("valid");
-            length.classList.add("invalid");
-        }
+    // Validate lowercase letters
+    var lowerCaseLetters = /[a-z]/g;
+    if (myInput.value.match(lowerCaseLetters)) {
+        letter.classList.remove("invalid");
+        letter.classList.add("valid");
+    } else {
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
     }
+
+    // Validate capital letters
+    var upperCaseLetters = /[A-Z]/g;
+    if (myInput.value.match(upperCaseLetters)) {
+        capital.classList.remove("invalid");
+        capital.classList.add("valid");
+    } else {
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
+    }
+
+    // Validate numbers
+    var numbers = /[0-9]/g;
+    if (myInput.value.match(numbers)) {
+        number.classList.remove("invalid");
+        number.classList.add("valid");
+    } else {
+        number.classList.remove("valid");
+        number.classList.add("invalid");
+    }
+
+    // Validate length
+    if (myInput.value.length >= 8) {
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+    } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+    }
+}
+
+function capitalizeInput(input) {
+    input.value = input.value.toUpperCase();
+}
+
+
     </script>
     </fieldset>
 </body>
@@ -312,7 +318,7 @@ $data = json_decode($stkCallbackResponse);
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </a>
-                           
+
                         </div>
                     </div>
                 </div>

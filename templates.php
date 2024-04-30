@@ -20,7 +20,7 @@
     <link href="<?php echo web_root; ?>css/css/responsive.css" rel="stylesheet">
 
     <link href="<?php echo web_root; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
+    <script src="assets/js/p.js"></script>
 <link href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet">
 <!-- // <script src="<?php echo web_root; ?>select2/select2.min.css"></script> ./ -->
 

@@ -247,7 +247,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
     </div>
     <?php include 'incld/header.php';
 
-    ?>
+?>
 
     <div class="social-icons">
         <a href="https://www.facebook.com/EZEMStech" target="_blank"><img src="images/face.png" alt="Facebook"></a>
@@ -259,7 +259,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
         <a href="https://wa.me/c/254101086123" target="_blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
         <!-- Add more social media icons as needed -->
     </div>
-    
+
     <div class="container">
         <div class="row-fluid">
 
@@ -276,11 +276,11 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                                 <div class="span10">
                                     <div class="slideshow-container">
                                         <!-- Image slides -->
-                                        <div class="mySlides">  
+                                        <div class="mySlides">
                                             <img src="img/santotomas.png" alt="Slide 1">
-                                        </div> 
-                                        
-  
+                                        </div>
+
+
 
                                         <div class="mySlides">
                                             <img src="img/EZEMS.png" alt="Slide 2">
@@ -318,7 +318,7 @@ include "inactive.php"; //check if user is inactive for 15 minutes
 
                                 <div class="marque">
                                     <h3>
-                                        <marquee>Welcome to EZEMS The Home Of Developers</marquee>
+                                        <marquee>Welcome to Ezems Tech Developers</marquee>
                                     </h3>
 
                                 </div>
@@ -496,7 +496,7 @@ echo $date->format('l, F jS, Y');
                                                     <div>
 
                                                     </div>
-                                                    <?php include "sub.html"; ?>
+                                                    <?php include "sub.html";?>
 
 
                             </body>

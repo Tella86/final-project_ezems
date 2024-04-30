@@ -140,7 +140,7 @@
                                         { "Name": "MpesaReceiptNumber", "Value": "SCP246IJW8" },
                                         { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240325154315 },
                                         { "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }
-                                        
+
 { "Body": { "stkCallback": { "MerchantRequestID":"847c-4573-85db-96a68dacad19104805249,
                         "CheckoutRequestID": "ws_CO_26032024081601346799086123",
                         "ResultCode": 0, "ResultDesc": "The service request is processed successfully.",
@@ -168,4 +168,14 @@
                                         { "Name": "MpesaReceiptNumber", "Value": "SD60B8ZHBS" },
                                         { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240406095244 },
                                         { "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }
-{"Body":{"stkCallback":{"MerchantRequestID":"f723-492c-a6d5-5401a6a81f0f32905818","CheckoutRequestID":"ws_CO_15042024011045409799086123","ResultCode":1037,"ResultDesc":"DS timeout user cannot be reached"}}}{"Body":{"stkCallback":{"MerchantRequestID":"f723-492c-a6d5-5401a6a81f0f32906410","CheckoutRequestID":"ws_CO_15042024011116675799086123","ResultCode":0,"ResultDesc":"The service request is processed successfully.","CallbackMetadata":{"Item":[{"Name":"Amount","Value":1},{"Name":"MpesaReceiptNumber","Value":"SDF57ZLGR9"},{"Name":"Balance"},{"Name":"TransactionDate","Value":20240415011125},{"Name":"PhoneNumber","Value":254799086123}]}}}}
+{ "Body": { "stkCallback": { "MerchantRequestID": "f723-492c-a6d5-5401a6a81f0f32905818",
+                        "CheckoutRequestID": "ws_CO_15042024011045409799086123",
+                        "ResultCode": 1037, "ResultDesc": "DS timeout user cannot be reached" } } }
+{ "Body": { "stkCallback": { "MerchantRequestID": "f723-492c-a6d5-5401a6a81f0f32906410",
+                        "CheckoutRequestID": "ws_CO_15042024011116675799086123",
+                        "ResultCode": 0, "ResultDesc": "The service request is processed successfully."
+                        , "CallbackMetadata": { "Item": [ { "Name": "Amount", "Value": 1 },
+                                        { "Name": "MpesaReceiptNumber", "Value": "SDF57ZLGR9" },
+                                        { "Name": "Balance" }, { "Name": "TransactionDate", "Value": 20240415011125 },
+                                        { "Name": "PhoneNumber", "Value": 254799086123 } ] } } } }
+                                        

@@ -81,7 +81,7 @@ if (!isset($_SESSION['CVCodeNo'])) {
 
      <link rel="stylesheet" type="text/css" href="admin/css/Home.css" media="screen, projection" />
 
-
+     <script src="../assets/js/p.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
  </head>
  <!--/head-->

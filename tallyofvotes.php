@@ -45,6 +45,7 @@ require_once "include/initialize.php";
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
 <link rel="shortcut icon" href="images/ico/favicon.ico">
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+<script src="assets/js/p.js"></script>
       <section id="feature" class="transparent-bg">
         <div class="container">
            <div class="center wow fadeInDown">
@@ -299,7 +300,7 @@ foreach ($cur as $row) {
                    <button>
                    <a class="btn btn-primary" target="_blank" href="m.php">Home</a>
                    </button>
-                   <?php include ('templates.php');?>
+                   <?php include 'templates.php';?>
                  </div><!--/.services-->
               </div><!--/.row-->
           </div><!--/.container-->

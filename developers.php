@@ -25,7 +25,7 @@ require_once "include/initialize.php";
       <link rel="shortcut icon" href="images/ico/favicon.ico">
       <!-- datetime picker CSS -->
       <link rel="stylesheet" href="<?php echo web_root; ?>select2/select2.min.css">
-
+      <script src="assets/js/p.js"></script>
       <div class="col-lg-4 row" style="float-left"><img src="../img/sclogo.png"></div>
 
       <style>

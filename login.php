@@ -41,13 +41,14 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
     <link rel="stylesheet" href="admin/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="admin/css/Home.css" media="screen, projection" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/p.js"></script>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
     <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeDmaQpAAAAAEwsQjBGVQQhg9Z4aUXqRoWdlfaL"></script> -->
     <div class="marque">
-<marquee style="color:white">Welecome to EZEMS kindly insert your personal Details Corectly. Thank You!</marquee>
+<marquee style="color:white">Welecome to ETD kindly insert your personal Details Corectly. Thank You!</marquee>
 </head>
 
 
@@ -215,7 +216,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
             </style>
             <?php include "social.html";?>
             <h2>
-                                        
+
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav" id="footer_nav">
                     <!-- <li class="divider-vertical"></li> -->
@@ -267,7 +268,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
 
                                     <h2>
                                         <div class="marque">
-                                            <marquee>Welcome to EZEMS The Home Of Develovers</marquee>
+                                            <marquee>Welcome to Ezems Tech Developers</marquee>
 
                                         </div>
 
@@ -280,31 +281,31 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                 </div>
         </div>
             <?php
-       
-if(isset($_GET['status']) && $_GET['status']=='inactive'){
-	echo "<h3 style='color:red;text-align: center;'>You have been log out due to inactivity!</h3>";
+
+if (isset($_GET['status']) && $_GET['status'] == 'inactive') {
+    echo "<h3 style='color:red;text-align: center;'>You have been log out due to inactivity!</h3>";
 }
 
-    // If form submitted, insert values into the database.
-    if (isset($_POST['ACCOUNT_USERNAME'])){
-		$username = stripslashes($_REQUEST['ACCOUNT_USERNAME']); // removes backslashes
-		$username = mysqli_real_escape_string($mysqli,$ACCOUNT_USERNAME); //escapes special characters in a string
-		$password = stripslashes($_REQUEST['ACCOUNT_PASSWORD']);
-		$password = mysqli_real_escape_string($mysqli,$ACCOUNT_PASSWORD);
+// If form submitted, insert values into the database.
+if (isset($_POST['ACCOUNT_USERNAME'])) {
+    $username = stripslashes($_REQUEST['ACCOUNT_USERNAME']); // removes backslashes
+    $username = mysqli_real_escape_string($mysqli, $ACCOUNT_USERNAME); //escapes special characters in a string
+    $password = stripslashes($_REQUEST['ACCOUNT_PASSWORD']);
+    $password = mysqli_real_escape_string($mysqli, $ACCOUNT_PASSWORD);
 
-	//Checking is user existing in the database or not
-        $query = "SELECT * FROM `useraccounts ` WHERE ACCOUNT_NAME='$ACCOUNT_NAME' and ACCOUNT_PASSWORD='".md5($ACCOUNT_PASSWORD)."'";
-		$result = mysqli_query($con,$query) or die(mysqli_error($con));
-		$rows = mysqli_num_rows($result);
-        if($rows==1){
-			$_SESSION['ACCOUNT_USERNAME'] = $ACCOUNT_USERNAME;
-			$_SESSION['last_timestamp'] = time(); // Set the last activity timestamp
-			header("Location: index.php"); // Redirect user to index.php
-			exit();
-            }else{
-				echo "<div class='form'><h3>Username/password is incorrect.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
-				}
-    }else{}
+    //Checking is user existing in the database or not
+    $query = "SELECT * FROM `useraccounts ` WHERE ACCOUNT_NAME='$ACCOUNT_NAME' and ACCOUNT_PASSWORD='" . md5($ACCOUNT_PASSWORD) . "'";
+    $result = mysqli_query($con, $query) or die(mysqli_error($con));
+    $rows = mysqli_num_rows($result);
+    if ($rows == 1) {
+        $_SESSION['ACCOUNT_USERNAME'] = $ACCOUNT_USERNAME;
+        $_SESSION['last_timestamp'] = time(); // Set the last activity timestamp
+        header("Location: index.php"); // Redirect user to index.php
+        exit();
+    } else {
+        echo "<div class='form'><h3>Username/password is incorrect.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
+    }
+} else {}
 ?>
 
             <div class="span6">
@@ -336,7 +337,7 @@ if(isset($_GET['status']) && $_GET['status']=='inactive'){
 
                                 </form>
                             </fieldset>
-                
+
                             <div class="row-fluid">
                                 <div class="col-md-12 ">
                                     <h4 style="color:black"><span id="tick2">

@@ -10,7 +10,7 @@
     <script src="../assets/js/p.js"></script>
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
+    <link rel="shortcut icon" href="../img/favicon-color.png">
     <style>
         * {
             margin: 0;

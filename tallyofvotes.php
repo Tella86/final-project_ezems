@@ -43,7 +43,7 @@ require_once "include/initialize.php";
 }
 </style>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
-<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="shortcut icon" href="img/favicon-color.png">
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
 <script src="assets/js/p.js"></script>
       <section id="feature" class="transparent-bg">

@@ -33,7 +33,8 @@ include "inactive.php"; //check if user is inactive for 15 minutes
         media="screen">
     <!-- <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen"> -->
     <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
-    <!-- <link rel="shortcut icon" href="images/ico/favicon.ico"> -->
+    <link rel="shortcut icon" href="img/favicon-color.png">
+
     <script id="mcjs">
     ! function(c, h, i, m, p) {
         m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m,
@@ -276,22 +277,12 @@ include "inactive.php"; //check if user is inactive for 15 minutes
                                 <div class="span10">
                                     <div class="slideshow-container">
                                         <!-- Image slides -->
+
                                         <div class="mySlides">
-                                            <img src="img/santotomas.png" alt="Slide 1">
+                                            <img src="img/logo-no-background.png" alt="Slide 1">
                                         </div>
 
 
-
-                                        <div class="mySlides">
-                                            <img src="img/EZEMS.png" alt="Slide 2">
-                                        </div>
-                                        <div class="mySlides">
-                                            <img src="img/santotomas.png" alt="Slide 1">
-                                        </div>
-
-                                        <div class="mySlides">
-                                            <img src="imG/EZEMS.png" alt="Slide 3">
-                                        </div>
                                     </div>
 
                                     <script>

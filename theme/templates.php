@@ -13,7 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | EZEMS</title>
+    <title>Ezems Tech Developers</title>
+    <link rel="shortcut icon" href="../img/favicon-color.png">
 
     <!-- core CSS -->
     <link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +27,7 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
     <script src="../assets/js/p.js"></script>
     <script>
     $(function() {
@@ -50,7 +52,7 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
@@ -79,7 +81,7 @@
                         <span style="color:#fff" class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?php echo web_root; ?>"><img style="width:60px"
-                            src="<?php echo web_root; ?>img/ust.jpg" alt="logo"></a>
+                            src="<?php echo web_root; ?>img/ezems-tech-developers-high-resolution-logo.png" alt="logo"></a>
                 </div>
 
                 <div class="collapse navbar-collapse navbar-right">
@@ -87,7 +89,8 @@
                         <?php
 if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
     # code...
-    ?><?php }?>
+    ?><?php
+}?>
                         <!-- <li class="<?php echo (currentpage_public() == 'index.php') ? "active" : false; ?>"><a href="<?php echo web_root; ?>">Home</a></li> -->
                         <li hover="ff9933"
                             class="<?php echo (currentpage_public() == 'student') ? "active" : false; ?>"> <a
@@ -123,7 +126,8 @@ if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
                                         href="<?php echo web_root; ?>department/index.php">Departments</a></li>
                                 <li class="<?php echo (currentpage_public() == 'user') ? "active" : false; ?>"><a
                                         href="<?php echo web_root; ?>user/index.php">Users</a></li>
-                                <?php }?>
+                                <?php
+}?>
                                 <li class="<?php echo (currentpage_public() == 'shortcodes') ? "active" : false; ?>"><a
                                         href="<?php echo web_root; ?>shortcodes/">Voting Codes</a></li>
                             </ul>
@@ -158,7 +162,8 @@ if ($_SESSION['ACCOUNT_TYPE'] == 'Administrator') {
                                         href="<?php echo web_root; ?>report/transactions.php">Transactions</a></li>
                                         <li class="<?php echo ($title == 'Invoices') ? "active" : false; ?>"><a
                                         href="<?php echo web_root; ?>report/invoices.php">Invoices</a></li>
-                                <?php }?>
+                                <?php
+}?>
                                 <li class="<?php echo ($title == 'Tally of Votes') ? "active" : false; ?>"><a
                                         href="<?php echo web_root; ?>report/index.php?view=tallyofvotes">Tally of
                                         Votes</a></li>
@@ -179,12 +184,13 @@ if ($_SESSION['ACCOUNT_TYPE'] == 'Student') {
                                 <!-- <li  class="<?php echo (currentpage_public() == 'candidate') ? "active" : false; ?>"> <a href="<?php echo web_root; ?>candidate/index.php">Candidates</a></li> -->
 
 
-                                <?php }?>
+                                <?php
+}?>
                             </ul>
                         </li>
                         <!--     <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact-us.html">Contact</a></li>   -->
-     
+
                         <li class="dropdown">
                             <a href="#" class="fas fa-user" data-toggle="dropdown">Hello!,
                                 <?php echo $_SESSION['ACCOUNT_NAME']; ?> <b class="caret"></b></a>

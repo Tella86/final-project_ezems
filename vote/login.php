@@ -13,7 +13,7 @@ if (isset($_SESSION['CVCodeNo'])) {
 <meta name="description" content="">
 <meta name="author" content="">
 <title>EZEMS&nbsp;</title>
-<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="shortcut icon" href="../img/favicon-color.png">
 <!-- Bootstrap core CSS -->
 <link href="<?php echo web_root; ?>css/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo web_root; ?>css/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>EZEMS&nbsp;</title>
+    <title>Ezems Tech Developers&nbsp;</title>
     <!-- <link rel="shortcut icon" href="../images/ico/favicon.ico"> -->
 
 
@@ -131,6 +131,7 @@
 <body>
 
     <nav>
+
         <ul>
             <li><a href="./incld/subscription.php">Subscribe</a></li>
             <li><a href="https://youtu.be/hAbaBLnxnzU">Demo</a></li>

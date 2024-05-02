@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Subscription Form</title>
+    <link rel="shortcut icon" href="../img/favicon-color.png">
     <script src="../assets/js/p.js"></script>
     <style>
     body {
@@ -126,11 +127,11 @@
             /* Darker background color on hover */
         }
         </style>
-        
+
         </head>
 
         <body>
-        
+
         <nav>
         <ul>
             <li><a href="subscription.php">Subscribe</a></li>
@@ -143,7 +144,7 @@
         </ul>
         <br>
     </nav>
-         
+
 
     <div class="container">
         <h2>Subscribe to our Package</h2>
@@ -174,7 +175,7 @@
     }
 </script>
     </div>
-    
+
 </body>
 
 </html>

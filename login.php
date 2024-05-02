@@ -36,7 +36,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
         media="screen">
     <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen">
     <link href="<?php echo web_root; ?>css/css/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon-color.png">
     <link rel="stylesheet" type="text/css" href="admin/css/bootstrap.css" media="screen, projection" />
     <link rel="stylesheet" href="admin/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="admin/css/Home.css" media="screen, projection" />
@@ -247,7 +247,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
     </div>
 </div>
 
-<body id="login" style="background:url(images/bg/bg-3-full.jpg)">
+<body id="login" style="background:url(images/bg/mainbg.png)">
 
     <div class="container">
         <div class="row-fluid">
@@ -260,7 +260,7 @@ if (isset($_SESSION['ACCOUNT_ID'])) {
                         <div class="row-fluid">
                             <div class="span10">
                                 <!-- <img class="index_logo" src="img/santotomas.png"> -->
-                                <img src="img/santotomas.png" alt="Rotating Image" class="rotate-image">
+                                <img src="img/logo-no-background.png" alt="Rotating Image" class="rotate-image">
 
                             </div>
                             <div class="span12">

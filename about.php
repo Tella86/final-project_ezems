@@ -21,7 +21,7 @@ require_once "include/initialize.php";
      <link href="<?php echo web_root; ?>css/css/responsive.css" rel="stylesheet">
      <link href="<?php echo web_root; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
      <link href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet">
-     <link rel="shortcut icon" href="images/ico/favicon.ico">
+     <link rel="shortcut icon" href="img/favicon-color.png">
      <!-- datetime picker CSS -->
      <link rel="stylesheet" href="<?php echo web_root; ?>select2/select2.min.css">
      <script src="assets/js/p.js"></script>

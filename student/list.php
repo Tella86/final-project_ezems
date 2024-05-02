@@ -4,8 +4,7 @@ if (!isset($_SESSION['ACCOUNT_ID'])) {
 }
 
 ?>
-<link rel="shortcut icon" href="images/ico/favicon.ico">
-<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="shortcut icon" href="img/favicon-color.png">
       <section id="feature" class="transparent-bg">
         <div class="container">
            <div class="center wow fadeInDown">

@@ -1,6 +1,6 @@
 <?php
 // include("auth.php"); //include auth.php file on all secure pages
-include("inactive.php"); //check if user is inactive for 15 minutes
+include "inactive.php"; //check if user is inactive for 15 minutes
 ?>
 
 
@@ -8,7 +8,7 @@ include("inactive.php"); //check if user is inactive for 15 minutes
 <style type="text/css">
 .bg {
 
-    background: url(images/bg/bg-3-full.jpg) no-repeat;
+    /* background: url(img/logo-no-background.png) no-repeat; */
 }
 
 .ssgmenu>li>a {
@@ -55,7 +55,7 @@ include("inactive.php"); //check if user is inactive for 15 minutes
 
 </style>
 
-<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="shortcut icon" href="/img/favicon-color.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
@@ -69,7 +69,7 @@ $(function() {
     $("#datepicker").datepicker();
 });
 </script>
-<body>
+<body id="login" style="background:url(img/logo-no-background.png)"no-repeat;>
 <?php include "social.html";?>
 <section id="feature" class="transparent-bg">
     <div class="container bg">
@@ -94,12 +94,12 @@ $(function() {
                             <div class="span12"></div>
                             <div class="row-fluid">
                                 <div class="span10">
-                                    <img class="index_logo" src="img/santotomas.jpg">
+                                    <!-- <img class="index_logo" src="img/bg-3-full.jpg"> -->
                                 </div>
                                 <div class="span12">
                                     <div class="motto">
-                                        <p>WELCOME&nbsp;&nbsp;TO:
-                                            EZEMS&nbsp;
+                                        <p>&nbsp;&nbsp;
+                                            &nbsp;
                                         </p>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@ $date = new DateTime();
 echo $date->format('l, F jS, Y');
 ?>
                             </h2>
-<?php include "leavemsg.html"; ?>
+<?php include "leavemsg.html";?>
                         </div>
 
                     </div>
